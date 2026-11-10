@@ -1,0 +1,14 @@
+{
+  "input_rows": 7043,
+  "output_rows": 7043,
+  "removed_rows": 0,
+  "decisions": [
+    "Giữ nguyên raw CSV; split giữ giá trị gốc.",
+    "TotalCharges có 11 khoảng trắng được chuyển NaN trong pipeline; median học trong từng fold/train.",
+    "Không gán 0 chỉ vì tenure=0; không xóa 11 khách mới.",
+    "ID dùng truy vết, không làm đặc trưng; Churn tách khỏi X.",
+    "SeniorCitizen là danh mục 0/1; No internet service/No phone service là giá trị có nghĩa.",
+    "Không loại outlier hoặc cân bằng lại trước chia tập; thử class_weight trong CV.",
+    "Không dùng biến churn reason/status/score hoặc thông tin tương lai."
+  ]
+}

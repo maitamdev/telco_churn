@@ -1,0 +1,58 @@
+{
+  "checked_at": "2026-11-10T10:29:24+07:00",
+  "status": "technical_checks_passed_submission_incomplete",
+  "guide_sha256": "6d9cc9630c84ad1c33e55182f867b473dd721e809c411b996fa4c95c33b2b893",
+  "model_run_id": "telco_20261110T093056_0700",
+  "model_sha256": "dfe65e1eef8a519a800875039fce0850e51d0f6809be3e45b6bebb0ea8056eb1",
+  "data_shape": [
+    7043,
+    21
+  ],
+  "invalid_rows": 0,
+  "duplicates": 0,
+  "split_sizes": {
+    "train": 4225,
+    "validation": 1409,
+    "test": 1409
+  },
+  "splits_disjoint_complete_and_raw_identical": true,
+  "test_metric_records_recomputed": 5,
+  "test_metric_max_abs_difference": 1.1102230246251565e-16,
+  "test_model_probability_max_abs_difference": 0.0,
+  "eda_png_count": 8,
+  "executed_notebook_code_cells": 6,
+  "pytest": {
+    "tests": 54,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "previous_clean_environment_reproduction": "2026-11-10T09:41:53+07:00",
+  "reproduction_source_hashes_match": {
+    "src/train.py": true,
+    "src/data.py": true,
+    "src/preprocessing.py": true,
+    "src/evaluation.py": true,
+    "src/validation.py": true,
+    "src/config.py": true,
+    "configs/project_spec.json": true
+  },
+  "model_or_threshold_changed": false,
+  "replica_source_check_performed": true,
+  "report_written": true,
+  "slides_written": false,
+  "student_contribution_recorded": false,
+  "teacher_registration_confirmed": false,
+  "bm06_available": false,
+  "limits": [
+    "No new training in this audit; prior reproduction verified against current core source hashes.",
+    "Snapshot cannot establish all features existed before a prospective prediction date.",
+    "Submission and oral defense cannot be certified by software tests."
+  ],
+  "report_review": {
+    "pages": 64,
+    "evidence": "reports/evidence/report_qa.json",
+    "sha256": "436020d2f9691283a814bf9270dbe98ec570744f8c30771e8eb8259749b5c8c3",
+    "personal_fields": "blank_by_user_request"
+  }
+}

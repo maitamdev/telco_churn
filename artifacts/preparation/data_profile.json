@@ -1,0 +1,38 @@
+{
+  "rows": 7043,
+  "columns": 21,
+  "features": 19,
+  "unique_ids": 7043,
+  "duplicate_rows": 0,
+  "label_counts": {
+    "No": 5174,
+    "Yes": 1869
+  },
+  "missing_blank": {
+    "customerID": 0,
+    "gender": 0,
+    "SeniorCitizen": 0,
+    "Partner": 0,
+    "Dependents": 0,
+    "tenure": 0,
+    "PhoneService": 0,
+    "MultipleLines": 0,
+    "InternetService": 0,
+    "OnlineSecurity": 0,
+    "OnlineBackup": 0,
+    "DeviceProtection": 0,
+    "TechSupport": 0,
+    "StreamingTV": 0,
+    "StreamingMovies": 0,
+    "Contract": 0,
+    "PaperlessBilling": 0,
+    "PaymentMethod": 0,
+    "MonthlyCharges": 0,
+    "TotalCharges": 11,
+    "Churn": 0
+  },
+  "totalcharges_blank_tenure": {
+    "0": 11
+  },
+  "scope": "Toàn bộ dữ liệu: chỉ kiểm cấu trúc/chất lượng. EDA và quyết định mô hình dùng train."
+}

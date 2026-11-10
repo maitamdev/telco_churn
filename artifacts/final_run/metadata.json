@@ -1,0 +1,176 @@
+{
+  "run_id": "telco_20261110T093056_0700",
+  "frozen_at": "2026-11-10T09:31:41+07:00",
+  "dataset_sha256": "16320c9c1ec72448db59aa0a26a0b95401046bef5d02fd3aeb906448e3055e91",
+  "split_manifest_sha256": "7826b8c402aa96287cdc4d47d5b16be410a6739258dccfb1acd283e0742cd586",
+  "spec_sha256": "fd59eae99d85a46463aa7dac9fb77abf924c037c40d3d5d43783e51aa1b95ae5",
+  "selected_model": "random_forest",
+  "best_params": {
+    "model__class_weight": "balanced",
+    "model__max_depth": null,
+    "model__min_samples_leaf": 20
+  },
+  "selection_rule": "Train CV mean AP desc; std AP asc; LR on exact tie. No test-based promotion.",
+  "selected_threshold": 0.4788031716353531,
+  "threshold_records": {
+    "logistic_regression": {
+      "threshold": 0.24399930610278062,
+      "status": "precision_constraint_met",
+      "validation_metrics": {
+        "n": 1409,
+        "threshold": 0.24399930610278062,
+        "accuracy": 0.7345635202271115,
+        "precision_churn": 0.5,
+        "recall_churn": 0.8048128342245989,
+        "f1_churn": 0.6168032786885246,
+        "roc_auc": 0.8366723500994601,
+        "average_precision": 0.6430603708396662,
+        "tn": 734,
+        "fp": 301,
+        "fn": 73,
+        "tp": 301,
+        "flagged_count": 602
+      },
+      "precision_floor": 0.5,
+      "aspirational_recall": 0.8,
+      "aspirational_recall_met": true,
+      "assumption": "precision>=0.50 và mong muốn recall>=0.80 là giả định nhóm; không phải thang điểm môn học."
+    },
+    "random_forest": {
+      "threshold": 0.4788031716353531,
+      "status": "precision_constraint_met",
+      "validation_metrics": {
+        "n": 1409,
+        "threshold": 0.4788031716353531,
+        "accuracy": 0.7352732434350603,
+        "precision_churn": 0.5008319467554077,
+        "recall_churn": 0.8048128342245989,
+        "f1_churn": 0.6174358974358974,
+        "roc_auc": 0.838150042625746,
+        "average_precision": 0.6364938507722082,
+        "tn": 735,
+        "fp": 300,
+        "fn": 73,
+        "tp": 301,
+        "flagged_count": 601
+      },
+      "precision_floor": 0.5,
+      "aspirational_recall": 0.8,
+      "aspirational_recall_met": true,
+      "assumption": "precision>=0.50 và mong muốn recall>=0.80 là giả định nhóm; không phải thang điểm môn học."
+    }
+  },
+  "cv_summary": [
+    {
+      "model": "baseline",
+      "candidates": 1,
+      "best_params": {},
+      "mean_average_precision": 0.26532544378698225,
+      "std_average_precision": 0.00047337278106509564,
+      "mean_roc_auc": 0.5,
+      "std_roc_auc": 0.0,
+      "mean_accuracy": 0.7346745562130177,
+      "std_accuracy": 0.0004733727810651178,
+      "mean_precision": 0.0,
+      "std_precision": 0.0,
+      "mean_recall": 0.0,
+      "std_recall": 0.0,
+      "mean_f1": 0.0,
+      "std_f1": 0.0
+    },
+    {
+      "model": "logistic_regression",
+      "candidates": 8,
+      "best_params": {
+        "model__C": 10,
+        "model__class_weight": null
+      },
+      "mean_average_precision": 0.667818240489443,
+      "std_average_precision": 0.024413657187260893,
+      "mean_roc_auc": 0.8483720693544677,
+      "std_roc_auc": 0.010759631886989043,
+      "mean_accuracy": 0.802603550295858,
+      "std_accuracy": 0.01205475179005618,
+      "mean_precision": 0.6499440862363766,
+      "std_precision": 0.03279994049109274,
+      "mean_recall": 0.5584563492063492,
+      "std_recall": 0.023587487848823432,
+      "mean_f1": 0.6002584139821454,
+      "std_f1": 0.021496914874382603
+    },
+    {
+      "model": "random_forest",
+      "candidates": 18,
+      "best_params": {
+        "model__class_weight": "balanced",
+        "model__max_depth": null,
+        "model__min_samples_leaf": 20
+      },
+      "mean_average_precision": 0.6725678606442275,
+      "std_average_precision": 0.013938916921031943,
+      "mean_roc_auc": 0.8497246736718687,
+      "std_roc_auc": 0.011353740160340617,
+      "mean_accuracy": 0.7531360946745562,
+      "std_accuracy": 0.012012854476165227,
+      "mean_precision": 0.5231839055558322,
+      "std_precision": 0.015239411918833415,
+      "mean_recall": 0.8019920634920636,
+      "std_recall": 0.01760195349078796,
+      "mean_f1": 0.633022101377932,
+      "std_f1": 0.01168249085369363
+    }
+  ],
+  "test_opened": true,
+  "refit_train_plus_validation": false,
+  "test_opened_at": "2026-11-10T09:31:41+07:00",
+  "pipeline_sha256": "dfe65e1eef8a519a800875039fce0850e51d0f6809be3e45b6bebb0ea8056eb1",
+  "selection_record_sha256": "9c0ea58ad1e9a67acfb53a2c26b56642c61cc76dd4b4243ec6590f45531ef83b",
+  "features": [
+    "tenure",
+    "MonthlyCharges",
+    "TotalCharges",
+    "gender",
+    "SeniorCitizen",
+    "Partner",
+    "Dependents",
+    "PhoneService",
+    "MultipleLines",
+    "InternetService",
+    "OnlineSecurity",
+    "OnlineBackup",
+    "DeviceProtection",
+    "TechSupport",
+    "StreamingTV",
+    "StreamingMovies",
+    "Contract",
+    "PaperlessBilling",
+    "PaymentMethod"
+  ],
+  "classes": [
+    0,
+    1
+  ],
+  "probability_class": 1,
+  "probability_calibrated": false,
+  "trained_rows": 4225,
+  "save_load_max_abs_difference": 0.0,
+  "elapsed_seconds": 66.44,
+  "environment": {
+    "recorded_at": "2026-11-10T09:32:03+07:00",
+    "python": "3.14.3",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "executable": "C:\\Users\\Asus\\Desktop\\TRITUENHANTAO\\DU_AN_TELCO_CHURN\\.venv\\Scripts\\python.exe",
+    "packages": {
+      "numpy": "2.5.4",
+      "pandas": "3.1.1",
+      "scikit-learn": "1.9.1",
+      "matplotlib": "3.11.2",
+      "seaborn": "0.13.2",
+      "joblib": "1.6.0",
+      "streamlit": "1.67.0",
+      "pytest": "9.2.0",
+      "nbformat": "5.11.1",
+      "nbclient": "0.11.0"
+    }
+  }
+}

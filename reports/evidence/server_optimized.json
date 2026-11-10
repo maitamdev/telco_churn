@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "health": "ok",
+  "root_http_status": 200,
+  "bind_address": "127.0.0.1",
+  "port": 53019,
+  "scope": "Real Streamlit server startup and HTTP health; UI interactions verified separately with AppTest."
+}

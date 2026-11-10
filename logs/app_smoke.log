@@ -1,0 +1,11 @@
+2026-11-10 09:34:17.817 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+    from streamlit.testing.v1 import AppTest; a=AppTest.from_file('app.py',default_timeout=30).run(); print('exceptions',a.exception); print('radios',[(r.label,r.options) for r in a.radio]); a.radio[0].set_value('M\u1ed9t kh�ch h�ng').run(); print('single',a.exception); a.button[0].click().run(); print('pred',a.exception,[(m.label,m.value) for m in a.metric]); a.radio[0].set_value('D\u1ef1 \u0111o�n CSV').run(); print('csv',a.exception); a.radio[1].set_value('M\u1eabu c� l\u1ed7i').run(); a.button[0].click().run(); print('batch',a.exception,[(m.label,m.value) for m in a.metric])
+                                                                                                                                       ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Asus\AppData\Local\Python\pythoncore-3.14-64\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u1ee9' in position 5: character maps to <undefined>
+exceptions ElementList()
+radios 

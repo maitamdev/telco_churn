@@ -1,0 +1,19 @@
+{
+  "checked_at": "2026-11-10T10:29:25+07:00",
+  "url": "http://127.0.0.1:8501/",
+  "checks": [
+    "overview shows 7043/1869/4225 and TRAIN chart scopes",
+    "single default DEMO-001 gives 60.0 percent at official 0.4788 threshold",
+    "mixed CSV returns 3 rows: 1 predicted, 2 invalid; row error details present",
+    "test confusion matrix is TN742 FP293 FN72 TP302 and displayed metrics match artifacts",
+    "threshold preview 0.479 uses validation; 600 flagged, 74 FN; official threshold displayed separately",
+    "importance chart renders with Contract, InternetService, tenure at top"
+  ],
+  "observed_browser_console_errors": 0,
+  "screenshots": [
+    "audit_evaluation.jpg",
+    "audit_csv.jpg",
+    "audit_threshold.jpg"
+  ],
+  "limits": "Live desktop checks and sample actions; full edge cases covered separately by 54 tests."
+}

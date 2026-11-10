@@ -1,0 +1,5 @@
+{
+  "warnings": [],
+  "best_index": 6,
+  "refit": "highest mean AP, lowest std AP; stable first exact tie"
+}

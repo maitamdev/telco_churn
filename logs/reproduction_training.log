@@ -1,0 +1,10 @@
+Baseline complete.
+CV starting: logistic_regression
+Fitting 5 folds for each of 8 candidates, totalling 40 fits
+CV complete: logistic_regression; AP=0.667818
+CV starting: random_forest
+Fitting 5 folds for each of 18 candidates, totalling 90 fits
+CV complete: random_forest; AP=0.672568
+Selection frozen. Opening test once for fixed evaluation.
+Computing validation permutation importance...
+Completed telco_20261110T094046_0700; winner=random_forest; threshold=0.47880317

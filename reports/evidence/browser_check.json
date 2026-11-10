@@ -1,0 +1,21 @@
+{
+  "checked_at": "2026-11-10T09:44:42+07:00",
+  "url": "http://127.0.0.1:8501",
+  "observed": [
+    "overview rendered with dataset and split counts",
+    "single real prediction 60.0 percent at official threshold 0.4788",
+    "uploaded mixed_valid_invalid.csv via actual browser file chooser",
+    "CSV returned 3 rows: 1 ok, 2 invalid; download parsed and verified",
+    "test evaluation displayed matching metrics and confusion matrix",
+    "validation-only threshold page rendered; slider isolation verified separately by AppTest"
+  ],
+  "browser_console_errors": 0,
+  "screenshots": [
+    "ui_csv_result.jpg",
+    "ui_evaluation.jpg",
+    "ui_evaluation_top.jpg",
+    "ui_overview.jpg",
+    "ui_single_prediction.jpg"
+  ],
+  "limits": "Desktop browser inspected. No mobile-device certification; threshold interaction coverage relies on AppTest."
+}

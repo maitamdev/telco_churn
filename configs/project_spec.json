@@ -1,0 +1,272 @@
+{
+  "schema_version": "1.0",
+  "status": "planning_ready_not_implemented",
+  "created_date": "2026-11-10",
+  "project": {
+    "name": "Telco Customer Churn",
+    "course_code": "04224",
+    "team_size": 5,
+    "deadline": null,
+    "schedule": "completion_milestones",
+    "report_max_total_pages": 99,
+    "report_target_total_pages": [
+      45,
+      65
+    ],
+    "report_template_status": "pending_user_template",
+    "publish_authorized": false
+  },
+  "dataset": {
+    "source_url": "https://raw.githubusercontent.com/IBM/telco-customer-churn-on-icp4d/master/data/Telco-Customer-Churn.csv",
+    "expected_sha256": "16320c9c1ec72448db59aa0a26a0b95401046bef5d02fd3aeb906448e3055e91",
+    "previously_verified_shape": [
+      7043,
+      21
+    ],
+    "id": "customerID",
+    "target": "Churn",
+    "target_mapping": {
+      "No": 0,
+      "Yes": 1
+    },
+    "positive_label": 1,
+    "temporal_claim": "classification_on_snapshot_no_proven_future_horizon",
+    "numeric_features": [
+      "tenure",
+      "MonthlyCharges",
+      "TotalCharges"
+    ],
+    "categorical_features": [
+      "gender",
+      "SeniorCitizen",
+      "Partner",
+      "Dependents",
+      "PhoneService",
+      "MultipleLines",
+      "InternetService",
+      "OnlineSecurity",
+      "OnlineBackup",
+      "DeviceProtection",
+      "TechSupport",
+      "StreamingTV",
+      "StreamingMovies",
+      "Contract",
+      "PaperlessBilling",
+      "PaymentMethod"
+    ],
+    "inference_nullable_values": [
+      "TotalCharges"
+    ],
+    "strict_required_columns": true
+  },
+  "split": {
+    "random_state": 42,
+    "train_fraction": 0.6,
+    "validation_fraction": 0.2,
+    "test_fraction": 0.2,
+    "stratify": true,
+    "algorithm": "reserve_test_0.2_then_validation_0.25_of_remaining",
+    "split_id_export": true,
+    "eda_scope": "train"
+  },
+  "preprocessing": {
+    "normalization": "stateless_trim_explicit_numeric_parse_in_pipeline",
+    "numeric_imputer": "median",
+    "numeric_missing_indicator": true,
+    "categorical_imputer": "most_frequent_defensive_only",
+    "one_hot": {
+      "handle_unknown": "ignore",
+      "drop": null,
+      "sparse_output": false
+    },
+    "scaling": {
+      "logistic_regression": "StandardScaler",
+      "random_forest": "none"
+    },
+    "resampling": "none",
+    "feature_selection": "none",
+    "pca": "none"
+  },
+  "experiments": {
+    "cv": {
+      "n_splits": 5,
+      "shuffle": true,
+      "random_state": 42
+    },
+    "refit_metric": "average_precision",
+    "additional_cv_metrics": [
+      "roc_auc",
+      "precision",
+      "recall",
+      "f1",
+      "accuracy"
+    ],
+    "tie_break": [
+      "higher_mean_AP",
+      "lower_std_AP",
+      "logistic_regression_on_exact_tie"
+    ],
+    "baseline": {
+      "estimator": "DummyClassifier",
+      "strategy": "most_frequent",
+      "tune_threshold": false
+    },
+    "models": {
+      "logistic_regression": {
+        "estimator": "LogisticRegression",
+        "fixed": {
+          "solver": "lbfgs",
+          "l1_ratio": 0,
+          "max_iter": 2000,
+          "random_state": 42
+        },
+        "grid": {
+          "C": [
+            0.01,
+            0.1,
+            1,
+            10
+          ],
+          "class_weight": [
+            null,
+            "balanced"
+          ]
+        }
+      },
+      "random_forest": {
+        "estimator": "RandomForestClassifier",
+        "fixed": {
+          "n_estimators": 300,
+          "max_features": "sqrt",
+          "random_state": 42,
+          "n_jobs": 1
+        },
+        "grid": {
+          "max_depth": [
+            4,
+            8,
+            null
+          ],
+          "min_samples_leaf": [
+            1,
+            5,
+            20
+          ],
+          "class_weight": [
+            null,
+            "balanced"
+          ]
+        }
+      }
+    },
+    "search_parallel_jobs_max": 4,
+    "convergence_retry_max_iter": 10000,
+    "convergence_retry_before_test_only": true,
+    "optional_models_enabled": false
+  },
+  "threshold": {
+    "selection_partition": "validation",
+    "comparison": ">=",
+    "precision_floor": 0.5,
+    "aspirational_recall": 0.8,
+    "business_assumption_not_course_requirement": true,
+    "rank_feasible": [
+      "higher_recall",
+      "higher_precision",
+      "higher_threshold"
+    ],
+    "minimum_flagged": 1,
+    "candidate_generation": "sorted_unique_validation_probabilities_plus_0_and_1",
+    "fallback": {
+      "threshold": 0.5,
+      "status": "precision_constraint_not_met_research_demo_only"
+    },
+    "preserve_native_baseline_predictions": true
+  },
+  "evaluation": {
+    "test_open_only_after_selection_record": true,
+    "test_thresholds": [
+      "0.5",
+      "validation_selected"
+    ],
+    "refit_after_threshold_selection": false,
+    "metric_names": [
+      "accuracy",
+      "precision_churn",
+      "recall_churn",
+      "f1_churn",
+      "roc_auc",
+      "average_precision",
+      "tn",
+      "fp",
+      "fn",
+      "tp",
+      "flagged_count"
+    ],
+    "zero_division": 0,
+    "average_precision_is_not_trapezoid_pr_auc": true,
+    "report_cv_std_not_confidence_interval": true,
+    "model_promotion_based_on_test": false,
+    "uncalibrated_probability_label": "xac_suat_uoc_luong"
+  },
+  "artifacts": {
+    "run_id_required": true,
+    "dataset_hash_required": true,
+    "split_manifest_hash_required": true,
+    "spec_hash_required": true,
+    "pipeline_filename": "churn_pipeline.joblib",
+    "metadata_filename": "metadata.json",
+    "numeric_reference_statistics_partition": "train",
+    "same_pipeline_for_report_and_demo": true
+  },
+  "application": {
+    "language": "vi",
+    "pages": [
+      "tong_quan",
+      "du_doan_mot_khach",
+      "du_doan_csv",
+      "danh_gia",
+      "nguong_va_giai_thich"
+    ],
+    "training_in_ui": false,
+    "threshold_playground_partition": "validation",
+    "csv_max_bytes": 10485760,
+    "csv_max_rows": 10000,
+    "csv_encoding": "utf-8-sig",
+    "csv_delimiter": ",",
+    "strict_category_validation": true,
+    "external_services_required": false,
+    "extra_columns": "report_and_ignore_except_required_features",
+    "unlabeled_metrics": false
+  },
+  "deliverables": [
+    "report_docx",
+    "report_pdf",
+    "slides_pptx",
+    "streamlit_app",
+    "source_code",
+    "pipeline_and_metadata",
+    "data_or_verified_download",
+    "requirements",
+    "readme",
+    "zip_and_manifest",
+    "defense_guide"
+  ],
+  "status_flags": {
+    "data_added_to_project": false,
+    "environment_created": false,
+    "models_trained": false,
+    "test_set_opened": false,
+    "app_implemented": false,
+    "report_written": false,
+    "source_review_completed": true
+  },
+  "official_references": [
+    "https://docs.streamlit.io/get-started/installation",
+    "https://docs.streamlit.io/develop/api-reference/caching-and-state/st.cache_resource",
+    "https://docs.streamlit.io/develop/api-reference/app-testing/st.testing.v1.apptest",
+    "https://scikit-learn.org/stable/common_pitfalls.html",
+    "https://scikit-learn.org/stable/modules/classification_threshold.html",
+    "https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html"
+  ]
+}

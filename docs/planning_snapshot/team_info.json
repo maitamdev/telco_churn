@@ -1,0 +1,43 @@
+{
+  "team_size": 5,
+  "class_name": null,
+  "lecturer_name": null,
+  "report_template_received": false,
+  "members": [
+    {
+      "role_id": "R1",
+      "full_name": null,
+      "student_id": null,
+      "actual_contributions": [],
+      "review_completed": false
+    },
+    {
+      "role_id": "R2",
+      "full_name": null,
+      "student_id": null,
+      "actual_contributions": [],
+      "review_completed": false
+    },
+    {
+      "role_id": "R3",
+      "full_name": null,
+      "student_id": null,
+      "actual_contributions": [],
+      "review_completed": false
+    },
+    {
+      "role_id": "R4",
+      "full_name": null,
+      "student_id": null,
+      "actual_contributions": [],
+      "review_completed": false
+    },
+    {
+      "role_id": "R5",
+      "full_name": null,
+      "student_id": null,
+      "actual_contributions": [],
+      "review_completed": false
+    }
+  ]
+}

@@ -1,0 +1,761 @@
+{
+  "version": "1.0",
+  "updated_date": "2026-11-10",
+  "schedule": "milestones_no_deadline",
+  "tasks": [
+    {
+      "id": "M0.01",
+      "milestone": "M0",
+      "title": "Kiểm kê và đối chiếu 9 nguồn",
+      "owner_role": "R1",
+      "priority": "core",
+      "status": "done",
+      "dependencies": [],
+      "output": "planning/source_manifest.json",
+      "acceptance": "Đủ 9 hash, 6 trang PDF và 347 slide"
+    },
+    {
+      "id": "M0.02",
+      "milestone": "M0",
+      "title": "Ghi ràng buộc mới và 5 vai trò",
+      "owner_role": "R1",
+      "priority": "core",
+      "status": "done",
+      "dependencies": [
+        "M0.01"
+      ],
+      "output": "planning/team_info.json",
+      "acceptance": "5 người, 99 trang tối đa, không deadline, mẫu chờ bổ sung"
+    },
+    {
+      "id": "M0.03",
+      "milestone": "M0",
+      "title": "Chuẩn bị đặc tả, ma trận và backlog",
+      "owner_role": "R3",
+      "priority": "core",
+      "status": "done",
+      "dependencies": [
+        "M0.02"
+      ],
+      "output": "docs/00..06 và planning/project_spec.json",
+      "acceptance": "Yêu cầu có đầu ra và tiêu chí kiểm tra"
+    },
+    {
+      "id": "M0.04",
+      "milestone": "M0",
+      "title": "Kiểm tra tính nhất quán bộ kế hoạch",
+      "owner_role": "R5",
+      "priority": "core",
+      "status": "done",
+      "dependencies": [
+        "M0.03"
+      ],
+      "output": "planning/preparation_check.json",
+      "acceptance": "JSON, link, task dependencies, tham số và hash nguồn hợp lệ"
+    },
+    {
+      "id": "M1.01",
+      "milestone": "M1",
+      "title": "Tạo venv và smoke test dependencies",
+      "owner_role": "R5",
+      "priority": "core",
+      "status": "planned",
+      "dependencies": [
+        "M0.04"
+      ],
+      "output": "environment.json và requirements nháp",
+      "acceptance": "Import được thư viện; Streamlit smoke test; không phụ thuộc Python hệ thống"
+    },
+    {
+      "id": "M1.02",
+      "milestone": "M1",
+      "title": "Đưa dữ liệu gốc vào dự án, kiểm provenance",
+      "owner_role": "R1",
+      "priority": "core",
+      "status": "planned",
+      "dependencies": [
+        "M1.01"
+      ],
+      "output": "data/raw và dataset_card",
+      "acceptance": "URL, hash, quyền dùng và ngày nhận được ghi"
+    },
+    {
+      "id": "M1.03",
+      "milestone": "M1",
+      "title": "Lập data dictionary và quality profile",
+      "owner_role": "R1",
+      "priority": "core",
+      "status": "planned",
+      "dependencies": [
+        "M1.02"
+      ],
+      "output": "data_profile và data_dictionary",
+      "acceptance": "21 cột được kiểm tra, đếm missing/trùng/nhãn"
+    },
+    {
+      "id": "M1.04",
+      "milestone": "M1",
+      "title": "Viết schema validator và normalization",
+      "owner_role": "R1",
+      "priority": "core",
+      "status": "planned",
+      "dependencies": [
+        "M1.03"
+      ],
+      "output": "src/validation.py",
+      "acceptance": "Phân biệt trống/sai số/thiếu cột; quan hệ dịch vụ đúng"
+    },
+    {
+      "id": "M1.05",
+      "milestone": "M1",
+      "title": "Tạo split và manifest",
+      "owner_role": "R3",
+      "priority": "core",
+      "status": "planned",
+      "dependencies": [
+        "M1.04"
+      ],
+      "output": "data/splits và split_manifest",
+      "acceptance": "60/20/20 stratify, seed 42, ID rời nhau"
+    },
+    {
+      "id": "M1.06",
+      "milestone": "M1",
+      "title": "Ghi nhật ký làm sạch và kiểm ngoại lai",
+      "owner_role": "R1",
+      "priority": "core",
+      "status": "planned",
+      "dependencies": [
+        "M1.05"
+      ],
+      "output": "cleaning_log và policy",
+      "acceptance": "Mọi biến đổi có lý do và số dòng, không học từ test"
+    },
+    {
+      "id": "M1.07",
+      "milestone": "M1",
+      "title": "Chuẩn bị notebook dữ liệu dùng module",
+      "owner_role": "R2",
+      "priority": "core",
+      "status": "planned",
+      "dependencies": [
+        "M1.06"
+      ],
+      "output": "notebooks/01_data_eda.ipynb",
+      "acceptance": "Restart/run-all phần kiểm kê và split được"
+    },
+    {
+      "id": "M1.08",
+      "milestone": "M1",
+      "title": "Ghi nhận đăng ký đề tài và nguồn với giảng viên",
+      "owner_role": "R1",
+      "priority": "core",
+      "status": "planned",
+      "dependencies": [
+        "M0.02"
+      ],
+      "output": "đề cương và ghi nhận nhóm cung cấp",
+      "acceptance": "Không tự ghi đã đăng ký nếu chưa có thông tin",
+      "external_input": "instructor_registration_status_from_group"
+    },
+    {
+      "id": "M2.01",
+      "milestone": "M2",
+      "title": "Tạo bảng nguồn cho 8 hình trên train",
+      "owner_role": "R2",
+      "priority": "core",
+      "status": "planned",
+      "dependencies": [
+        "M1.07"
+      ],
+      "output": "EDA source tables",
+      "acceptance": "Có n, số positive, rate, đơn vị/partition"
+    },
+    {
+      "id": "M2.02",
+      "milestone": "M2",
+      "title": "Sinh F01-F04",
+      "owner_role": "R2",
+      "priority": "core",
+      "status": "planned",
+      "dependencies": [
+        "M2.01"
+      ],
+      "output": "figures/F01..F04",
+      "acceptance": "Nhãn đầy đủ, đúng dữ liệu nguồn"
+    },
+    {
+      "id": "M2.03",
+      "milestone": "M2",
+      "title": "Sinh F05-F08",
+      "owner_role": "R2",
+      "priority": "core",
+      "status": "planned",
+      "dependencies": [
+        "M2.01"
+      ],
+      "output": "figures/F05..F08",
+      "acceptance": "So sánh tỷ lệ, cỡ mẫu và tương quan rõ"
+    },
+    {
+      "id": "M2.04",
+      "milestone": "M2",
+      "title": "Viết nhận định và nhóm kiểm chứng từng hình",
+      "owner_role": "R2",
+      "priority": "core",
+      "status": "planned",
+      "dependencies": [
+        "M2.02",
+        "M2.03"
+      ],
+      "output": "EDA observations",
+      "acceptance": "Quan sát định lượng, giới hạn; không kết luận nhân quả"
+    },
+    {
+      "id": "M2.05",
+      "milestone": "M2",
+      "title": "Soạn bản nháp phần dữ liệu và EDA",
+      "owner_role": "R1",
+      "priority": "core",
+      "status": "planned",
+      "dependencies": [
+        "M2.04"
+      ],
+      "output": "report content draft",
+      "acceptance": "Bảng/hình dẫn tới cùng dataset/split"
+    },
+    {
+      "id": "M3.01",
+      "milestone": "M3",
+      "title": "Xây pipeline LR/RF import được",
+      "owner_role": "R3",
+      "priority": "core",
+      "status": "planned",
+      "dependencies": [
+        "M1.06"
+      ],
+      "output": "src/preprocessing.py",
+      "acceptance": "Fit đúng fold; numeric/categorical rõ; joblib tương thích"
+    },
+    {
+      "id": "M3.02",
+      "milestone": "M3",
+      "title": "Chạy Dummy baseline",
+      "owner_role": "R3",
+      "priority": "core",
+      "status": "planned",
+      "dependencies": [
+        "M3.01"
+      ],
+      "output": "baseline logs",
+      "acceptance": "Không coi Dummy là mô hình học máy thứ hai"
+    },
+    {
+      "id": "M3.03",
+      "milestone": "M3",
+      "title": "Chạy grid Logistic Regression",
+      "owner_role": "R3",
+      "priority": "core",
+      "status": "planned",
+      "dependencies": [
+        "M3.02"
+      ],
+      "output": "LR cv_results",
+      "acceptance": "8 cấu hình, 5 fold, lưu mean/std và warnings"
+    },
+    {
+      "id": "M3.04",
+      "milestone": "M3",
+      "title": "Chạy grid Random Forest",
+      "owner_role": "R3",
+      "priority": "core",
+      "status": "planned",
+      "dependencies": [
+        "M3.02"
+      ],
+      "output": "RF cv_results",
+      "acceptance": "18 cấu hình, cùng folds, giới hạn worker"
+    },
+    {
+      "id": "M3.05",
+      "milestone": "M3",
+      "title": "Kiểm hội tụ và tái lập nghiên cứu train",
+      "owner_role": "R3",
+      "priority": "core",
+      "status": "planned",
+      "dependencies": [
+        "M3.03",
+        "M3.04"
+      ],
+      "output": "training checks",
+      "acceptance": "Cảnh báo được xử lý/ghi nhận trước test"
+    },
+    {
+      "id": "M3.06",
+      "milestone": "M3",
+      "title": "Chọn cấu hình/họ mô hình bằng quy tắc CV",
+      "owner_role": "R4",
+      "priority": "core",
+      "status": "planned",
+      "dependencies": [
+        "M3.05"
+      ],
+      "output": "best_params và model selection draft",
+      "acceptance": "Mean AP, tie-break đúng, chưa dùng test"
+    },
+    {
+      "id": "M3.07",
+      "milestone": "M3",
+      "title": "Soạn phần phương pháp bằng cấu hình thật",
+      "owner_role": "R3",
+      "priority": "core",
+      "status": "planned",
+      "dependencies": [
+        "M3.06",
+        "M2.05"
+      ],
+      "output": "method draft",
+      "acceptance": "Đúng pipeline, split, CV, grid và metric đã chạy"
+    },
+    {
+      "id": "M4.01",
+      "milestone": "M4",
+      "title": "Fit ứng viên trên train, lưu validation scores",
+      "owner_role": "R3",
+      "priority": "core",
+      "status": "planned",
+      "dependencies": [
+        "M3.06"
+      ],
+      "output": "validation_predictions",
+      "acceptance": "classes_=1 đúng, scores gắn ID"
+    },
+    {
+      "id": "M4.02",
+      "milestone": "M4",
+      "title": "Chọn threshold, ghi mục tiêu đạt/chưa đạt",
+      "owner_role": "R4",
+      "priority": "core",
+      "status": "planned",
+      "dependencies": [
+        "M4.01"
+      ],
+      "output": "threshold_sweep và threshold decision",
+      "acceptance": "Chỉ validation, precision floor và fallback đúng"
+    },
+    {
+      "id": "M4.03",
+      "milestone": "M4",
+      "title": "Đóng băng selection record trước test",
+      "owner_role": "R4",
+      "priority": "core",
+      "status": "planned",
+      "dependencies": [
+        "M4.02"
+      ],
+      "output": "selection_record.json",
+      "acceptance": "Có model/params/threshold, dataset/spec/split hashes"
+    },
+    {
+      "id": "M4.04",
+      "milestone": "M4",
+      "title": "Chạy đánh giá test cuối của ứng viên cố định",
+      "owner_role": "R4",
+      "priority": "core",
+      "status": "planned",
+      "dependencies": [
+        "M4.03"
+      ],
+      "output": "metrics và test_predictions",
+      "acceptance": "Baseline, 0.5/selected threshold; không chọn lại bằng test"
+    },
+    {
+      "id": "M4.05",
+      "milestone": "M4",
+      "title": "Tạo hình đánh giá và bảng so sánh",
+      "owner_role": "R4",
+      "priority": "core",
+      "status": "planned",
+      "dependencies": [
+        "M4.04"
+      ],
+      "output": "confusion/ROC/PR và result tables",
+      "acceptance": "Tính lại từ prediction khớp, AP ghi đúng"
+    },
+    {
+      "id": "M4.06",
+      "milestone": "M4",
+      "title": "Permutation importance và phân tích FP/FN",
+      "owner_role": "R4",
+      "priority": "core",
+      "status": "planned",
+      "dependencies": [
+        "M4.05"
+      ],
+      "output": "importance, error_cases, subgroup_errors",
+      "acceptance": "Nêu tập sử dụng, cỡ mẫu, quy tắc chọn ca"
+    },
+    {
+      "id": "M4.07",
+      "milestone": "M4",
+      "title": "Lưu pipeline/metadata và kiểm save-load",
+      "owner_role": "R3",
+      "priority": "core",
+      "status": "planned",
+      "dependencies": [
+        "M4.06"
+      ],
+      "output": "model bundle và artifact_manifest",
+      "acceptance": "Đúng pipeline đã đánh giá, allclose và hashes"
+    },
+    {
+      "id": "M4.08",
+      "milestone": "M4",
+      "title": "Soạn kết quả và nhóm rà soát diễn giải",
+      "owner_role": "R4",
+      "priority": "core",
+      "status": "planned",
+      "dependencies": [
+        "M4.07",
+        "M3.07"
+      ],
+      "output": "results/errors draft",
+      "acceptance": "Trả lời T1-T5, không thêm kết quả chưa đo"
+    },
+    {
+      "id": "M5.01",
+      "milestone": "M5",
+      "title": "Khung app, loader artifacts và state",
+      "owner_role": "R5",
+      "priority": "core",
+      "status": "planned",
+      "dependencies": [
+        "M4.07"
+      ],
+      "output": "app.py, ui, artifacts loader",
+      "acceptance": "Thiếu/lệch run báo lỗi; không train trong UI"
+    },
+    {
+      "id": "M5.02",
+      "milestone": "M5",
+      "title": "Trang tổng quan và EDA",
+      "owner_role": "R2",
+      "priority": "core",
+      "status": "planned",
+      "dependencies": [
+        "M5.01",
+        "M2.04"
+      ],
+      "output": "overview page",
+      "acceptance": "Nguồn, partition, cỡ mẫu rõ"
+    },
+    {
+      "id": "M5.03",
+      "milestone": "M5",
+      "title": "Trang dự đoán một khách",
+      "owner_role": "R5",
+      "priority": "core",
+      "status": "planned",
+      "dependencies": [
+        "M5.01"
+      ],
+      "output": "single prediction page",
+      "acceptance": "19 features, quan hệ dịch vụ, p/nhãn/ngưỡng đúng"
+    },
+    {
+      "id": "M5.04",
+      "milestone": "M5",
+      "title": "Trang CSV và xuất kết quả",
+      "owner_role": "R5",
+      "priority": "core",
+      "status": "planned",
+      "dependencies": [
+        "M5.03"
+      ],
+      "output": "batch page và sample CSV",
+      "acceptance": "Giữ dòng/ID, lỗi rõ, không dùng Churn làm X"
+    },
+    {
+      "id": "M5.05",
+      "milestone": "M5",
+      "title": "Trang đánh giá kết quả cố định",
+      "owner_role": "R4",
+      "priority": "core",
+      "status": "planned",
+      "dependencies": [
+        "M5.01",
+        "M4.05"
+      ],
+      "output": "evaluation page",
+      "acceptance": "Dữ liệu metrics cùng run, test không bị slider sửa"
+    },
+    {
+      "id": "M5.06",
+      "milestone": "M5",
+      "title": "Trang khảo sát ngưỡng và giải thích",
+      "owner_role": "R4",
+      "priority": "core",
+      "status": "planned",
+      "dependencies": [
+        "M5.05",
+        "M4.06"
+      ],
+      "output": "threshold/explanation page",
+      "acceptance": "Slider validation; không sửa official threshold"
+    },
+    {
+      "id": "M5.07",
+      "milestone": "M5",
+      "title": "Kiểm thử form/CSV/module và trình duyệt",
+      "owner_role": "R5",
+      "priority": "core",
+      "status": "planned",
+      "dependencies": [
+        "M5.02",
+        "M5.04",
+        "M5.06"
+      ],
+      "output": "app test evidence",
+      "acceptance": "Parity, sai input, layout và tải file được kiểm"
+    },
+    {
+      "id": "M5.08",
+      "milestone": "M5",
+      "title": "Chụp ảnh thật và viết chương ứng dụng",
+      "owner_role": "R5",
+      "priority": "core",
+      "status": "planned",
+      "dependencies": [
+        "M5.07"
+      ],
+      "output": "screenshots và app chapter draft",
+      "acceptance": "Ảnh đúng bản app đã kiểm, không dùng mockup thay"
+    },
+    {
+      "id": "M6.01",
+      "milestone": "M6",
+      "title": "Ghép nội dung tám chương và nguồn tham khảo",
+      "owner_role": "R1",
+      "priority": "core",
+      "status": "planned",
+      "dependencies": [
+        "M4.08",
+        "M5.08"
+      ],
+      "output": "report content master",
+      "acceptance": "Đủ RQ và G1-G8/T1-T5, không lặp thừa"
+    },
+    {
+      "id": "M6.02",
+      "milestone": "M6",
+      "title": "Bổ sung thông tin nhóm và đóng góp thực tế",
+      "owner_role": "R1",
+      "priority": "core",
+      "status": "planned",
+      "dependencies": [
+        "M6.01"
+      ],
+      "output": "team_info và contribution table",
+      "acceptance": "Tên/MSSV do người dùng cung cấp, minh chứng thật",
+      "external_input": "names_student_ids_class_lecturer_and_actual_contributions"
+    },
+    {
+      "id": "M6.03",
+      "milestone": "M6",
+      "title": "Rà soát nội dung, số liệu và khai báo AI",
+      "owner_role": "R2",
+      "priority": "core",
+      "status": "planned",
+      "dependencies": [
+        "M6.02"
+      ],
+      "output": "content review log",
+      "acceptance": "Một run, trích dẫn, đơn vị và nhận xét đúng"
+    },
+    {
+      "id": "M6.04",
+      "milestone": "M6",
+      "title": "Đọc mẫu người dùng và áp dụng bố cục",
+      "owner_role": "R5",
+      "priority": "core",
+      "status": "planned",
+      "dependencies": [
+        "M6.03"
+      ],
+      "output": "styled report.docx",
+      "acceptance": "Theo mẫu thật; không tự giả định cover/style",
+      "external_input": "report_template_from_user"
+    },
+    {
+      "id": "M6.05",
+      "milestone": "M6",
+      "title": "Xuất DOCX/PDF và kiểm mọi trang",
+      "owner_role": "R5",
+      "priority": "core",
+      "status": "planned",
+      "dependencies": [
+        "M6.04"
+      ],
+      "output": "report.docx và report.pdf",
+      "acceptance": "Nội dung khớp, render không lỗi, tối đa 99 trang"
+    },
+    {
+      "id": "M6.06",
+      "milestone": "M6",
+      "title": "Đối chiếu ma trận yêu cầu với báo cáo cuối",
+      "owner_role": "R4",
+      "priority": "core",
+      "status": "planned",
+      "dependencies": [
+        "M6.05"
+      ],
+      "output": "requirements evidence mapping",
+      "acceptance": "RQ01-RQ21 có bằng chứng hoặc trạng thái thực"
+    },
+    {
+      "id": "M7.01",
+      "milestone": "M7",
+      "title": "Làm slide từ kết quả đã chốt",
+      "owner_role": "R2",
+      "priority": "core",
+      "status": "planned",
+      "dependencies": [
+        "M6.06"
+      ],
+      "output": "slides.pptx",
+      "acceptance": "Đọc được, kết quả và nguồn đúng"
+    },
+    {
+      "id": "M7.02",
+      "milestone": "M7",
+      "title": "Kịch bản demo và dữ liệu dự phòng",
+      "owner_role": "R5",
+      "priority": "core",
+      "status": "planned",
+      "dependencies": [
+        "M7.01"
+      ],
+      "output": "demo script, sample files, screenshots",
+      "acceptance": "Đi đủ luồng và lỗi, hoạt động local"
+    },
+    {
+      "id": "M7.03",
+      "milestone": "M7",
+      "title": "Tài liệu giải thích và tập vấn đáp 5 người",
+      "owner_role": "R1",
+      "priority": "core",
+      "status": "planned",
+      "dependencies": [
+        "M7.02"
+      ],
+      "output": "defense notes và practice record",
+      "acceptance": "Từng người tự chạy/giải thích/chỉnh sửa, không ghi hoàn thành giả",
+      "external_input": "student_practice_and_actual_understanding"
+    },
+    {
+      "id": "M7.04",
+      "milestone": "M7",
+      "title": "Khóa requirements và README thực thi",
+      "owner_role": "R5",
+      "priority": "core",
+      "status": "planned",
+      "dependencies": [
+        "M7.02"
+      ],
+      "output": "requirements và README",
+      "acceptance": "Các lệnh đúng đường dẫn tương đối và đã thử"
+    },
+    {
+      "id": "M7.05",
+      "milestone": "M7",
+      "title": "Cài/chạy lại trong môi trường sạch",
+      "owner_role": "R5",
+      "priority": "core",
+      "status": "planned",
+      "dependencies": [
+        "M7.04"
+      ],
+      "output": "reproduction log",
+      "acceptance": "Notebook, train/evaluate, app và artifacts kiểm được"
+    },
+    {
+      "id": "M7.06",
+      "milestone": "M7",
+      "title": "Kiểm tra chéo báo cáo-slide-app lần cuối",
+      "owner_role": "R4",
+      "priority": "core",
+      "status": "planned",
+      "dependencies": [
+        "M7.03",
+        "M7.05"
+      ],
+      "output": "final QA record",
+      "acceptance": "Cùng model/run/threshold, trang PDF <100"
+    },
+    {
+      "id": "M7.07",
+      "milestone": "M7",
+      "title": "Đóng ZIP, hash manifest và kiểm giải nén",
+      "owner_role": "R5",
+      "priority": "core",
+      "status": "planned",
+      "dependencies": [
+        "M7.06"
+      ],
+      "output": "submission.zip và manifest",
+      "acceptance": "Đủ sản phẩm, không cache/venv/temp, README chạy được"
+    },
+    {
+      "id": "OPT.01",
+      "milestone": "OPTIONAL",
+      "title": "Thêm Gradient Boosting trước test",
+      "owner_role": "R3",
+      "priority": "optional",
+      "status": "not_selected",
+      "dependencies": [
+        "M3.05"
+      ],
+      "output": "optional cv result",
+      "acceptance": "Khai báo cùng protocol trước khi mở test"
+    },
+    {
+      "id": "OPT.02",
+      "milestone": "OPTIONAL",
+      "title": "Hiệu chỉnh xác suất trước test",
+      "owner_role": "R4",
+      "priority": "optional",
+      "status": "not_selected",
+      "dependencies": [
+        "M3.05"
+      ],
+      "output": "calibration result",
+      "acceptance": "Fit trong train/CV; không dùng test để calibration"
+    },
+    {
+      "id": "OPT.03",
+      "milestone": "OPTIONAL",
+      "title": "Khoảng tin cậy bootstrap theo kế hoạch chốt trước test",
+      "owner_role": "R4",
+      "priority": "optional",
+      "status": "not_selected",
+      "dependencies": [
+        "M4.03"
+      ],
+      "output": "confidence interval table",
+      "acceptance": "Phương pháp đã ghi trước, không lựa chọn lại theo test"
+    },
+    {
+      "id": "OPT.04",
+      "milestone": "OPTIONAL",
+      "title": "Giải thích cá nhân SHAP",
+      "owner_role": "R4",
+      "priority": "optional",
+      "status": "not_selected",
+      "dependencies": [
+        "M5.07"
+      ],
+      "output": "local explanation",
+      "acceptance": "Kiểm chứng đúng biến đổi/thang đo, không suy nhân quả"
+    }
+  ]
+}

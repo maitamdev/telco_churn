@@ -1,0 +1,5 @@
+,tenure,tenure,tenure,tenure,tenure,tenure,MonthlyCharges,MonthlyCharges,MonthlyCharges,MonthlyCharges,MonthlyCharges,MonthlyCharges,TotalCharges,TotalCharges,TotalCharges,TotalCharges,TotalCharges,TotalCharges
+,count,mean,median,std,min,max,count,mean,median,std,min,max,count,mean,median,std,min,max
+Churn,,,,,,,,,,,,,,,,,,
+No,3104,37.521907216494846,37.0,24.269929767409923,0.0,72.0,3104,61.24983891752577,64.375,30.95970963468001,18.4,118.75,3097,2566.5805134000643,1677.85,2349.1087620772205,18.9,8672.45
+Yes,1121,17.819803746654774,10.0,19.431417866913183,1.0,72.0,1121,74.54152542372881,79.75,24.624389667772295,18.85,118.35,1121,1517.742506690455,679.3,1875.062360425375,18.85,8684.8

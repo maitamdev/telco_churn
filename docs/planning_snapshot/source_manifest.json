@@ -1,0 +1,68 @@
+{
+  "review_date": "2026-11-10",
+  "sources": [
+    {
+      "name": "Huong_Dan_Do_An_CuoiKy.pdf",
+      "absolute_path": "C:\\Users\\Asus\\Desktop\\TRITUENHANTAO\\Huong_Dan_Do_An_CuoiKy.pdf",
+      "bytes": 358778,
+      "sha256": "6d9cc9630c84ad1c33e55182f867b473dd721e809c411b996fa4c95c33b2b893",
+      "pages": 6
+    },
+    {
+      "name": "Week01_AI_DS_Python_NumPy_Pandas_VI (2).pptx",
+      "absolute_path": "C:\\Users\\Asus\\Desktop\\TRITUENHANTAO\\Week01_AI_DS_Python_NumPy_Pandas_VI (2).pptx",
+      "bytes": 620819,
+      "sha256": "16f6526a82552c47fdea6cefccdb712aaafad6da0a4d2f378b0cc0f610a22fab",
+      "slides": 36
+    },
+    {
+      "name": "Week02_Visualization_DataCleaning_VI (1).pptx",
+      "absolute_path": "C:\\Users\\Asus\\Desktop\\TRITUENHANTAO\\Week02_Visualization_DataCleaning_VI (1).pptx",
+      "bytes": 621724,
+      "sha256": "343a4afe335a36ca617bbdacf870edcad2daf8d1eceb0722fd1d9f2bac7142d4",
+      "slides": 36
+    },
+    {
+      "name": "Week03_ML_Introduction_Workflow_EN.pptx",
+      "absolute_path": "C:\\Users\\Asus\\Desktop\\TRITUENHANTAO\\Week03_ML_Introduction_Workflow_EN.pptx",
+      "bytes": 638688,
+      "sha256": "6a0687f8cf38b6cb79af74bdffd9e5fc39d98c4894094fcdb01d84689e677ce6",
+      "slides": 37
+    },
+    {
+      "name": "Week04_DataPrep_Evaluation_EN.pptx",
+      "absolute_path": "C:\\Users\\Asus\\Desktop\\TRITUENHANTAO\\Week04_DataPrep_Evaluation_EN.pptx",
+      "bytes": 634999,
+      "sha256": "02453548616436253fb9f62d8220fab66647e0d2f9a09713f473154f9203bfa5",
+      "slides": 36
+    },
+    {
+      "name": "Week05_Linear_Logistic_Regression_EN.pptx",
+      "absolute_path": "C:\\Users\\Asus\\Desktop\\TRITUENHANTAO\\Week05_Linear_Logistic_Regression_EN.pptx",
+      "bytes": 622652,
+      "sha256": "b31b97a0a3a51d2be4b25095e8fdbce404e4a9a111df3f6943441c03154ec18f",
+      "slides": 36
+    },
+    {
+      "name": "Week06_Trees_Forests_SVM_EN.pptx",
+      "absolute_path": "C:\\Users\\Asus\\Desktop\\TRITUENHANTAO\\Week06_Trees_Forests_SVM_EN.pptx",
+      "bytes": 628441,
+      "sha256": "35d27236129c1f9c324808ac531109def393d95de0c8d5614a5b7c32c18d8f95",
+      "slides": 38
+    },
+    {
+      "name": "Week07_Unsupervised_Clustering_PCA_EN.pptx",
+      "absolute_path": "C:\\Users\\Asus\\Desktop\\TRITUENHANTAO\\Week07_Unsupervised_Clustering_PCA_EN.pptx",
+      "bytes": 3446137,
+      "sha256": "9ceef415993e167cfdf627667cf8ed9de343bdffd5f91a2e8f85e92254cf3815",
+      "slides": 61
+    },
+    {
+      "name": "Week08_Neural_Networks_EN.pptx",
+      "absolute_path": "C:\\Users\\Asus\\Desktop\\TRITUENHANTAO\\Week08_Neural_Networks_EN.pptx",
+      "bytes": 2415919,
+      "sha256": "e85e22eecea40f5919dfc7326dd2daa4a28eff6c48b7358779670953cc9dec8c",
+      "slides": 67
+    }
+  ]
+}

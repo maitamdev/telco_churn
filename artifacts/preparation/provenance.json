@@ -1,0 +1,10 @@
+{
+  "download_verified_at": "2026-11-10T09:28:29+07:00",
+  "url": "https://raw.githubusercontent.com/IBM/telco-customer-churn-on-icp4d/master/data/Telco-Customer-Churn.csv",
+  "sha256": "16320c9c1ec72448db59aa0a26a0b95401046bef5d02fd3aeb906448e3055e91",
+  "bytes": 970457,
+  "provider": "IBM public demonstration repository",
+  "dataset_context": "Mẫu công ty viễn thông hư cấu, không phải dữ liệu khách hàng thực do nhóm thu thập.",
+  "license_note": "Repo IBM có Apache-2.0 cho mã; không tự suy ra một giấy phép dữ liệu riêng. Giữ URL nguồn, file gốc và ghi công IBM.",
+  "target_scope": "Churn Yes/No trong snapshot. Không xác lập dự báo trước 30/60/90 ngày."
+}

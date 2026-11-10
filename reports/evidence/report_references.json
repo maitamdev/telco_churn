@@ -1,0 +1,93 @@
+[
+  {
+    "number": 1,
+    "author": "IBM",
+    "title": "Telco Customer Churn on IBM Cloud Pak for Data",
+    "url": "https://github.com/IBM/telco-customer-churn-on-icp4d",
+    "accessed": "2026-11-10"
+  },
+  {
+    "number": 2,
+    "author": "scikit-learn developers",
+    "title": "Tuning the decision threshold for class prediction",
+    "url": "https://scikit-learn.org/stable/modules/classification_threshold.html",
+    "accessed": "2026-11-10"
+  },
+  {
+    "number": 3,
+    "author": "scikit-learn developers",
+    "title": "Probability calibration",
+    "url": "https://scikit-learn.org/stable/modules/calibration.html",
+    "accessed": "2026-11-10"
+  },
+  {
+    "number": 4,
+    "author": "scikit-learn developers",
+    "title": "Imputation of missing values",
+    "url": "https://scikit-learn.org/stable/modules/impute.html",
+    "accessed": "2026-11-10"
+  },
+  {
+    "number": 5,
+    "author": "scikit-learn developers",
+    "title": "Preprocessing data",
+    "url": "https://scikit-learn.org/stable/modules/preprocessing.html",
+    "accessed": "2026-11-10"
+  },
+  {
+    "number": 6,
+    "author": "scikit-learn developers",
+    "title": "Pipelines and composite estimators",
+    "url": "https://scikit-learn.org/stable/modules/compose.html",
+    "accessed": "2026-11-10"
+  },
+  {
+    "number": 7,
+    "author": "scikit-learn developers",
+    "title": "DummyClassifier",
+    "url": "https://scikit-learn.org/stable/modules/generated/sklearn.dummy.DummyClassifier.html",
+    "accessed": "2026-11-10"
+  },
+  {
+    "number": 8,
+    "author": "scikit-learn developers",
+    "title": "LogisticRegression",
+    "url": "https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html",
+    "accessed": "2026-11-10"
+  },
+  {
+    "number": 9,
+    "author": "scikit-learn developers",
+    "title": "RandomForestClassifier",
+    "url": "https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html",
+    "accessed": "2026-11-10"
+  },
+  {
+    "number": 10,
+    "author": "scikit-learn developers",
+    "title": "Cross-validation: evaluating estimator performance",
+    "url": "https://scikit-learn.org/stable/modules/cross_validation.html",
+    "accessed": "2026-11-10"
+  },
+  {
+    "number": 11,
+    "author": "scikit-learn developers",
+    "title": "Metrics and scoring: quantifying the quality of predictions",
+    "url": "https://scikit-learn.org/stable/modules/model_evaluation.html",
+    "accessed": "2026-11-10"
+  },
+  {
+    "number": 12,
+    "author": "scikit-learn developers",
+    "title": "Permutation feature importance",
+    "url": "https://scikit-learn.org/stable/modules/permutation_importance.html",
+    "accessed": "2026-11-10"
+  },
+  {
+    "number": 13,
+    "author": "Streamlit",
+    "title": "Caching overview",
+    "url": "https://docs.streamlit.io/develop/concepts/architecture/caching",
+    "accessed": "2026-11-10"
+  }
+]

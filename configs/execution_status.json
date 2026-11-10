@@ -1,0 +1,224 @@
+{
+  "updated_at": "2026-11-10T13:25:42+07:00",
+  "technical_steps_total": 18,
+  "technical_steps_completed": 18,
+  "steps": {
+    "01": {
+      "title": "Khởi tạo thư mục riêng",
+      "status": "completed",
+      "recorded_at": "2026-11-10T09:29:16+07:00",
+      "evidence": [
+        "docs/planning_snapshot",
+        "docs/planning_documents",
+        "docs/18_BUOC_TRIEN_KHAI.md"
+      ]
+    },
+    "02": {
+      "title": "Môi trường Python",
+      "status": "completed",
+      "recorded_at": "2026-11-10T09:29:16+07:00",
+      "evidence": [
+        "requirements.txt",
+        "artifacts/preparation/environment.json"
+      ]
+    },
+    "03": {
+      "title": "Nguồn dữ liệu",
+      "status": "completed",
+      "recorded_at": "2026-11-10T09:28:29+07:00",
+      "evidence": [
+        "data/raw/Telco-Customer-Churn.csv",
+        "artifacts/preparation/provenance.json"
+      ]
+    },
+    "04": {
+      "title": "Kiểm chất lượng",
+      "status": "completed",
+      "recorded_at": "2026-11-10T09:28:30+07:00",
+      "evidence": [
+        "artifacts/preparation/data_profile.json",
+        "artifacts/preparation/cleaning_log.json",
+        "docs/DATA_DICTIONARY.md"
+      ]
+    },
+    "05": {
+      "title": "Cố định ba tập",
+      "status": "completed",
+      "recorded_at": "2026-11-10T09:28:30+07:00",
+      "evidence": [
+        "data/splits/split_manifest.json",
+        "data/splits/train.csv",
+        "data/splits/validation.csv",
+        "data/splits/test.csv",
+        "data/samples/"
+      ]
+    },
+    "06": {
+      "title": "Tám biểu đồ EDA",
+      "status": "completed",
+      "recorded_at": "2026-11-10T10:28:09+07:00",
+      "evidence": [
+        "artifacts/eda/"
+      ]
+    },
+    "07": {
+      "title": "Bổ sung bằng chứng chất lượng và nhận định EDA sau rà soát",
+      "status": "completed",
+      "recorded_at": "2026-11-10T10:29:25+07:00",
+      "evidence": [
+        "reports/evidence/data_quality_audit.csv",
+        "reports/evidence/outlier_audit_train.csv",
+        "src/eda.py",
+        "artifacts/eda/NHAN_XET_EDA.md",
+        "notebooks/01_telco_churn.ipynb",
+        "logs/notebook_requirements_audit.log"
+      ]
+    },
+    "08": {
+      "title": "Pipeline và baseline",
+      "status": "completed",
+      "recorded_at": "2026-11-10T09:30:57+07:00",
+      "evidence": [
+        "src/preprocessing.py",
+        "artifacts/final_run/baseline_cv.csv"
+      ]
+    },
+    "09": {
+      "title": "Tuning hai mô hình",
+      "status": "completed",
+      "recorded_at": "2026-11-10T09:31:41+07:00",
+      "evidence": [
+        "artifacts/final_run/cv_summary.json",
+        "artifacts/final_run/logistic_regression_cv_results.csv",
+        "artifacts/final_run/random_forest_cv_results.csv"
+      ]
+    },
+    "10": {
+      "title": "Khóa mô hình và ngưỡng trước test",
+      "status": "completed",
+      "recorded_at": "2026-11-10T09:31:41+07:00",
+      "evidence": [
+        "artifacts/final_run/selection_record.json",
+        "artifacts/final_run/validation_predictions.csv"
+      ]
+    },
+    "11": {
+      "title": "Đánh giá cố định và phân tích lỗi",
+      "status": "completed",
+      "recorded_at": "2026-11-10T09:32:02+07:00",
+      "evidence": [
+        "artifacts/final_run/test_metrics.json",
+        "artifacts/final_run/test_predictions.csv",
+        "artifacts/final_run/permutation_importance_validation.csv",
+        "artifacts/final_run/error_cases.csv",
+        "artifacts/final_run/subgroup_metrics.csv"
+      ]
+    },
+    "12": {
+      "title": "Đóng gói pipeline",
+      "status": "completed",
+      "recorded_at": "2026-11-10T09:32:03+07:00",
+      "evidence": [
+        "artifacts/final_run/churn_pipeline.joblib",
+        "artifacts/final_run/metadata.json",
+        "artifacts/final_run/artifact_manifest.json"
+      ]
+    },
+    "13": {
+      "title": "Dọn nội dung thừa trên cả năm trang",
+      "status": "completed",
+      "recorded_at": "2026-11-10T10:12:05+07:00",
+      "evidence": [
+        "app.py",
+        "ui/components.py",
+        "ui/overview.py",
+        "ui/scoring.py",
+        "ui/results.py",
+        "logs/ui_copy_cleanup_test.log",
+        "docs/GIAO_DIEN_V2.md",
+        "reports/evidence/ui_v2_clean_copy.jpg"
+      ]
+    },
+    "14": {
+      "title": "Đồng bộ ba trang còn lại theo giao diện 2.0",
+      "status": "completed",
+      "recorded_at": "2026-11-10T10:02:37+07:00",
+      "evidence": [
+        "ui/results.py",
+        "reports/evidence/ui_v2_csv.jpg",
+        "reports/evidence/ui_v2_threshold.jpg",
+        "docs/GIAO_DIEN_V2.md"
+      ]
+    },
+    "15": {
+      "title": "Kiểm tra toàn bộ kỹ thuật theo hướng dẫn cuối kỳ",
+      "status": "completed",
+      "recorded_at": "2026-11-10T10:29:25+07:00",
+      "evidence": [
+        "reports/KIEM_TRA_YEU_CAU_CUOI_KY.md",
+        "reports/evidence/requirements_audit.json",
+        "reports/evidence/pytest_requirements_audit.xml",
+        "logs/pytest_requirements_audit.log",
+        "reports/evidence/audit_browser_check.json",
+        "tools/audit_requirements.py"
+      ]
+    },
+    "16": {
+      "title": "Kiểm trình duyệt giao diện 2.0",
+      "status": "completed",
+      "recorded_at": "2026-11-10T10:02:37+07:00",
+      "evidence": [
+        "reports/evidence/ui_v2_check.json",
+        "reports/evidence/ui_v2_overview.jpg",
+        "reports/evidence/ui_v2_single.jpg",
+        "reports/evidence/ui_v2_csv.jpg",
+        "reports/evidence/ui_v2_evaluation.jpg",
+        "reports/evidence/ui_v2_threshold.jpg"
+      ]
+    },
+    "17": {
+      "title": "Môi trường sạch và tái lập",
+      "status": "completed",
+      "recorded_at": "2026-11-10T09:44:42+07:00",
+      "evidence": [
+        "logs/clean_install.log",
+        "logs/pytest_clean_env.log",
+        "reports/evidence/pytest_clean_env.xml",
+        "reports/evidence/full_reproduction.json",
+        "reports/evidence/notebook_execution.json",
+        "notebooks/01_telco_churn.ipynb",
+        "README.md",
+        "CHAY_DEMO.ps1"
+      ]
+    },
+    "18": {
+      "title": "Tổng hợp và đóng gói kỹ thuật",
+      "status": "completed",
+      "recorded_at": "2026-11-10T13:25:42+07:00",
+      "evidence": [
+        "dist/DU_AN_TELCO_CHURN_KY_THUAT.zip",
+        "dist/DU_AN_TELCO_CHURN_KY_THUAT.sha256",
+        "dist/package_verification.json",
+        "reports/evidence/package_manifest.json",
+        "docs/BANG_CHUNG_CHO_BAO_CAO.md",
+        "docs/AI_USAGE.md"
+      ]
+    }
+  },
+  "model_run_id": "telco_20261110T093056_0700",
+  "tests_passed": 76,
+  "clean_environment_tests_passed": 76,
+  "full_reproduction": "passed",
+  "interface_version": "2.0",
+  "report_written": true,
+  "slides_written": false,
+  "report_template": "reports/templates/MAU_BAO_CAO_GOC.docx",
+  "report_file": "reports/BAOCAO-TTNT.docx",
+  "report_pages": 64,
+  "report_qa": "reports/evidence/report_qa.json",
+  "student_review_and_contribution": "not_yet_recorded",
+  "deployed": false,
+  "requirements_audit": "reports/KIEM_TRA_YEU_CAU_CUOI_KY.md",
+  "report_outline": "reports/DAN_Y_BAO_CAO_CHI_TIET.md",
+  "ready_for": "Nhóm đọc lại báo cáo 6 chương, bổ sung thông tin/đóng góp thực, chuẩn bị slide và bảo vệ."
+}

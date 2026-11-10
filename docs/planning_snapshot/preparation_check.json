@@ -1,0 +1,154 @@
+{
+  "date": "2026-11-10",
+  "status": "passed",
+  "scope": "planning_only_not_model_or_app_tests",
+  "check_count": 33,
+  "checks": [
+    {
+      "name": "team_size_5",
+      "passed": true
+    },
+    {
+      "name": "report_under_100_total_pages",
+      "passed": true
+    },
+    {
+      "name": "no_deadline",
+      "passed": true
+    },
+    {
+      "name": "template_pending",
+      "passed": true
+    },
+    {
+      "name": "nineteen_distinct_features",
+      "passed": true
+    },
+    {
+      "name": "no_id_or_target_feature",
+      "passed": true
+    },
+    {
+      "name": "split_sums_to_one",
+      "passed": true
+    },
+    {
+      "name": "validation_threshold_and_sealed_test",
+      "passed": true
+    },
+    {
+      "name": "model_not_refit_after_threshold",
+      "passed": true
+    },
+    {
+      "name": "logistic_regression_valid_grid_parameters",
+      "passed": true
+    },
+    {
+      "name": "random_forest_valid_grid_parameters",
+      "passed": true
+    },
+    {
+      "name": "grid_26_candidates_130_cv_fits",
+      "passed": true
+    },
+    {
+      "name": "task_ids_unique",
+      "passed": true
+    },
+    {
+      "name": "53_core_4_optional",
+      "passed": true
+    },
+    {
+      "name": "dependency_targets_exist",
+      "passed": true
+    },
+    {
+      "name": "dependency_graph_acyclic",
+      "passed": true
+    },
+    {
+      "name": "five_roles_only",
+      "passed": true
+    },
+    {
+      "name": "all_planning_documents_present",
+      "passed": true
+    },
+    {
+      "name": "utf8_README.md",
+      "passed": true
+    },
+    {
+      "name": "utf8_00_KE_HOACH_TONG_THE.md",
+      "passed": true
+    },
+    {
+      "name": "utf8_01_MA_TRAN_YEU_CAU.md",
+      "passed": true
+    },
+    {
+      "name": "utf8_02_DU_LIEU_VA_THI_NGHIEM.md",
+      "passed": true
+    },
+    {
+      "name": "utf8_03_KIEN_TRUC_VA_STREAMLIT.md",
+      "passed": true
+    },
+    {
+      "name": "utf8_04_BAO_CAO_VA_BANG_CHUNG.md",
+      "passed": true
+    },
+    {
+      "name": "utf8_05_KIEM_THU_VA_BAO_VE.md",
+      "passed": true
+    },
+    {
+      "name": "utf8_06_CONG_VIEC_VA_TIEN_DO.md",
+      "passed": true
+    },
+    {
+      "name": "utf8_AI_USAGE.md",
+      "passed": true
+    },
+    {
+      "name": "relative_document_links_resolve",
+      "passed": true
+    },
+    {
+      "name": "21_requirement_rows",
+      "passed": true
+    },
+    {
+      "name": "30_qa_scenarios",
+      "passed": true
+    },
+    {
+      "name": "nine_original_files_unchanged",
+      "passed": true
+    },
+    {
+      "name": "original_page_slide_counts",
+      "passed": true
+    },
+    {
+      "name": "implementation_status_honest",
+      "passed": true
+    }
+  ],
+  "task_counts": {
+    "core": 53,
+    "optional": 4,
+    "done": 4,
+    "planned": 49,
+    "not_selected": 4
+  },
+  "environment_observed": {
+    "python": "3.14.3",
+    "sklearn": "1.9.1",
+    "streamlit": "not_installed_in_current_python"
+  },
+  "training_has_not_run": true,
+  "app_has_not_been_implemented": true
+}

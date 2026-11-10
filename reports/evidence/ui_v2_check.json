@@ -1,0 +1,25 @@
+{
+  "checked_at": "2026-11-10T10:02:37+07:00",
+  "interface_version": "2.0",
+  "url": "http://127.0.0.1:8501",
+  "tests_main": 54,
+  "tests_clean_environment": 54,
+  "browser_checks": [
+    "overview renders real train charts and source counts",
+    "search 8499-BRXTD returns exactly one row; missing ID empty state verified",
+    "select row and open profile pre-fills 19 model features",
+    "prefilled profile 8499-BRXTD gives 5.6 percent estimated churn",
+    "mixed CSV returns 3 rows: 1 ok, 2 invalid",
+    "validation slider zero yields precision 26.5 percent, recall 100 percent, flagged 1409; official threshold stays 0.478803",
+    "evaluation figures match frozen test metrics"
+  ],
+  "model_bundle_verified": true,
+  "browser_console_errors_observed": 0,
+  "screenshots": [
+    "ui_v2_csv.jpg",
+    "ui_v2_evaluation.jpg",
+    "ui_v2_overview.jpg",
+    "ui_v2_single.jpg",
+    "ui_v2_threshold.jpg"
+  ]
+}
