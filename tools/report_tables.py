@@ -125,10 +125,11 @@ def load_tables():
     groups=csvrows(RUN/'subgroup_metrics.csv')
     for key,features in [('subgroup_service',['Contract','InternetService']),('subgroup_demographic',['gender','SeniorCitizen'])]:
         add(key,['Nhóm','Số mẫu','Precision','Recall'],[[r['group'] if r['feature']!='SeniorCitizen' else 'SeniorCitizen='+r['group'],r['n'],dec(r['precision_churn']),dec(r['recall_churn'])] for r in groups if r['feature'] in features],[3600,1500,1980,1981])
-    testroot=ET.parse(ROOT/'reports/evidence/pytest_requirements_audit.xml').getroot()
+    testroot=ET.parse(ROOT/'reports/evidence/pytest_upgrade.xml').getroot()
     counts=collections.Counter(x.get('classname') for x in testroot.iter('testcase'))
-    testlabels={'tests.test_app':'Giao diện Streamlit','tests.test_evaluation':'Đánh giá và ngưỡng','tests.test_pipeline':'Pipeline và suy luận','tests.test_validation':'Kiểm tra dữ liệu'}
-    add('tests',['Nhóm kiểm thử','Số ca','Kết quả'],[[testlabels[k],str(v),'Đạt'] for k,v in counts.items()]+[['Tổng',str(sum(counts.values())),'54 đạt; 0 lỗi; 0 bỏ qua']],[4700,1500,2861])
+    testlabels={'tests.test_app':'Giao diện Streamlit','tests.test_evaluation':'Đánh giá và ngưỡng','tests.test_pipeline':'Pipeline và suy luận','tests.test_validation':'Kiểm tra dữ liệu','tests.test_packaging':'Đóng gói và bằng chứng','tests.test_diagnostics':'Độ bất định và sàng lọc'}
+    total=sum(counts.values())
+    add('tests',['Nhóm kiểm thử','Số ca','Kết quả'],[[testlabels[k],str(v),'Đạt'] for k,v in counts.items()]+[['Tổng',str(total),f'{total} đạt; 0 lỗi; 0 bỏ qua']],[4700,1500,2861])
     add('ui_tests',['Tình huống','Kết quả mong đợi','Kết quả thực tế'],[
         ['Mở 5 trang','Hiển thị đúng dữ liệu và thành phần','Đạt'],
         ['Hồ sơ 8499-BRXTD','Điểm khớp pipeline; không đánh dấu','Khoảng 5,6%; khớp'],
@@ -143,9 +144,20 @@ def load_tables():
         ['Nạp lại mô hình','1.409 xác suất test','Sai khác lớn nhất bằng 0'],
         ['Tính lại độ đo','5 cấu hình vận hành','Sai khác tối đa khoảng 1,11 × 10⁻¹⁶'],
         ['Notebook','6 ô mã','Đã thực thi; không có output lỗi'],
-        ['Môi trường sạch','54 ca kiểm thử','54 đạt'],
+        ['Môi trường kiểm chứng',f'{total} ca kiểm thử',f'{total} đạt'],
         ['Tái huấn luyện','CV, lựa chọn, ngưỡng, xác suất','Sai khác bằng 0 trong phép đối chiếu'],
     ],[2900,2700,3461])
+    diagnostics=json.loads((ROOT/'artifacts/diagnostics/summary.json').read_text(encoding='utf-8'))
+    labels={'precision_churn':'Precision churn','recall_churn':'Recall churn','f1_churn':'F1 churn','roc_auc':'ROC-AUC','average_precision':'Average Precision','ap_difference':'AP của RF trừ AP của LR'}
+    add('uncertainty',['Độ đo','Ước lượng','Cận dưới 95%','Cận trên 95%'],
+        [[label]+[dec(diagnostics['test_intervals'][key][c]) for c in ['estimate','lower','upper']] for key,label in labels.items()],
+        [3300,1920,1920,1921])
+    names={'logistic_regression':'Logistic Regression','random_forest':'Random Forest','train_prevalence_reference':'Tỷ lệ churn train cố định'}
+    add('calibration',['Mô hình / tham chiếu','Brier','Log loss'],
+        [[names[r['model']],dec(r['brier']),dec(r['log_loss'])] for r in diagnostics['probability_scores_validation']], [4300,2380,2381])
+    add('capacity',['Tỷ lệ xem xét','Số hồ sơ','Recall','Precision','Lift'],
+        [[f"{r['requested_fraction']:.0%}",str(r['contact_count']),dec(r['recall']),dec(r['precision']),dec(r['lift'],2)] for r in diagnostics['capacity_validation']],
+        [2100,1700,1800,1800,1661])
     return t
 
 REFERENCES = [
@@ -162,4 +174,6 @@ REFERENCES = [
     ('scikit-learn developers','Preprocessing data','https://scikit-learn.org/stable/modules/preprocessing.html'),
     ('scikit-learn developers','Probability calibration','https://scikit-learn.org/stable/modules/calibration.html'),
     ('scikit-learn developers','DummyClassifier','https://scikit-learn.org/stable/modules/generated/sklearn.dummy.DummyClassifier.html'),
+    ('SciPy developers','Bootstrap confidence intervals','https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.bootstrap.html'),
+    ('SciPy developers','Binomial proportion confidence intervals','https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats._result_classes.BinomTestResult.proportion_ci.html'),
 ]

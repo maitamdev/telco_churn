@@ -40,6 +40,8 @@ def test_package_excludes_local_secrets(tmp_path, monkeypatch):
 
     monkeypatch.setattr(package_project, "ROOT", tmp_path)
     (tmp_path / ".streamlit").mkdir()
+    (tmp_path / ".chart-data-private").mkdir()
+    (tmp_path / ".chart-data-private" / "temporary.xlsx").write_bytes(b"temporary")
     for name in ("app.py", ".env", ".env.local", ".env.example", ".streamlit/secrets.toml"):
         (tmp_path / name).write_text("fixture", encoding="utf-8")
     assert {p.name for p in package_project.files_to_ship()} == {"app.py", ".env.example"}

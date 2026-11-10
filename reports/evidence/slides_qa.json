@@ -1,0 +1,179 @@
+{
+  "status": "passed",
+  "presentation_sha256": "2134a479bbac5c6031b1b803ffbee4113c686a5687baf529dc829267026df7a9",
+  "slides": 21,
+  "output": "reports/BAO_VE_TELCO_CHURN.pptx",
+  "visual_qa_complete": true,
+  "visually_reviewed_slides": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21
+  ],
+  "renderer": "Microsoft PowerPoint PNG export, 1280x720",
+  "native_inventory": [
+    {
+      "tables": 0,
+      "charts": 0,
+      "slide": 1
+    },
+    {
+      "tables": 0,
+      "charts": 0,
+      "slide": 2
+    },
+    {
+      "tables": 1,
+      "charts": 0,
+      "slide": 3
+    },
+    {
+      "tables": 0,
+      "charts": 1,
+      "slide": 4
+    },
+    {
+      "tables": 1,
+      "charts": 0,
+      "slide": 5
+    },
+    {
+      "tables": 1,
+      "charts": 0,
+      "slide": 6
+    },
+    {
+      "tables": 0,
+      "charts": 1,
+      "slide": 7
+    },
+    {
+      "tables": 1,
+      "charts": 0,
+      "slide": 8
+    },
+    {
+      "tables": 1,
+      "charts": 0,
+      "slide": 9
+    },
+    {
+      "tables": 1,
+      "charts": 0,
+      "slide": 10
+    },
+    {
+      "tables": 0,
+      "charts": 0,
+      "slide": 11
+    },
+    {
+      "tables": 1,
+      "charts": 0,
+      "slide": 12
+    },
+    {
+      "tables": 1,
+      "charts": 0,
+      "slide": 13
+    },
+    {
+      "tables": 0,
+      "charts": 1,
+      "slide": 14
+    },
+    {
+      "tables": 0,
+      "charts": 0,
+      "slide": 15
+    },
+    {
+      "tables": 0,
+      "charts": 0,
+      "slide": 16
+    },
+    {
+      "tables": 0,
+      "charts": 0,
+      "slide": 17
+    },
+    {
+      "tables": 0,
+      "charts": 0,
+      "slide": 18
+    },
+    {
+      "tables": 1,
+      "charts": 0,
+      "slide": 19
+    },
+    {
+      "tables": 1,
+      "charts": 0,
+      "slide": 20
+    },
+    {
+      "tables": 0,
+      "charts": 0,
+      "slide": 21
+    }
+  ],
+  "rendered_sha256": {
+    "slide-01.png": "aa2bec5294f3964ae429205e7f4bae649141fa8b99626918c0bd3cc948090a1a",
+    "slide-02.png": "0b28b22d3c844fa58b4e0d2bd764e708b38417d55fcfb384360afa87e14ea33c",
+    "slide-03.png": "32f67ec1d7a1ac5a72c7d52a29ad5d7503d7fdacddd85448c9c38a5cf785848b",
+    "slide-04.png": "2e6f4041968a63abf8a628f8e74e9620eb3ea2cb2e01cecdb680046b41dc9808",
+    "slide-05.png": "5800a55de296b16af7223fecdc91719e4c7225457986c8f323114b0f516e09d1",
+    "slide-06.png": "cb7afeab157b664c17b20206264f69c51e770073c452fdfd2880bb689163c776",
+    "slide-07.png": "19b6a3544409e183d9a2d8ba7528a452c075da62dd8f2bac269f05a9059a9cb4",
+    "slide-08.png": "ccedd62988f57c206f328fb3f02dc9776873563235ea7169fe395c4438368faa",
+    "slide-09.png": "324437c03ce5764c91b4c744dbc0f3f5ee6f9642b841d140687bf77701503c28",
+    "slide-10.png": "d25595341ccfb0a026c9b5664ae8094df5f3a250f2bacdcff6b010b81812f320",
+    "slide-11.png": "d43483d5fbd5f45fa313c954f58db49927a1ece2413ec05628dfa31a75ba94cb",
+    "slide-12.png": "3798cc82c4b334ab7bf52946693979360a4cee7f11b11c6902be8dad8c05ba8e",
+    "slide-13.png": "f4409055de67c05be7d999c556f2f82fb5af306e1688e4b6df85d43587de527a",
+    "slide-14.png": "4799e4594f24e327c040b1eb4ded590b5c4a6940aae41140803a2b3b0b65096c",
+    "slide-15.png": "19c008db6e0c59da7eedc146d989e7088205091b4d9808d1fe48c0704db8f088",
+    "slide-16.png": "57b2f3a875efc75d90788311241e766dc39f17a483d3645e57e17cf869e3b7e6",
+    "slide-17.png": "dfbb6f9ba8e3df09b8ba0e324a922a86c8dfe5ad6ee92d28515e8b786537ed31",
+    "slide-18.png": "197d585177bcd05da1764b0cf9aea5b951a2984524355392ea288af1280d98df",
+    "slide-19.png": "23dd620b7342bfa7b7b764ecf58c800a016b8413bb324736a076fa16e6264766",
+    "slide-20.png": "a3611a065f24a4b7c632fe819a7507f20cdef796268c719c295ab6706187ce4d",
+    "slide-21.png": "a1f451527c1da31b582bef669da37b5248ff5052f6a30daea289d247f160f5ba"
+  },
+  "package_integrity_passed": true,
+  "layout_and_font_checks_passed": true,
+  "first_party_import_passed": true,
+  "notes_with_sources": 21,
+  "test_metrics_table_matches_artifact": true,
+  "screenshot_embedded": true,
+  "native_chart_workbooks_verified": true,
+  "sources": {
+    "artifacts/final_run/metadata.json": "e98161a5f6870a3d5f862a24e54da420bc367fcd7440d0ebd31220cd6e0874fc",
+    "artifacts/final_run/test_metrics.json": "556cd2ea8d9aa3d334cd009fce0004fee4cd7e970e4b8f5c76de6eea5e11c244",
+    "artifacts/diagnostics/summary.json": "173b6730f51a9764c592a606757027109c947a8d99d1a7505fd53f9c663a3d28",
+    "tools/build_slides.mjs": "eaa96b6e251678341ca2cd3a2bbb95fc6ae4953553b184bc9b9d2a03350327fc"
+  },
+  "resolved_findings": [
+    "Arial encoded explicitly",
+    "Demo screenshot embedded as JPEG bytes and rechecked in PowerPoint"
+  ],
+  "remaining_user_input": "Actual member identities, contributions and rehearsal; speaker notes are a guide."
+}

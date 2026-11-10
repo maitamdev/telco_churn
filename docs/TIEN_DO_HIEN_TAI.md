@@ -1,6 +1,6 @@
 # Trạng thái hiện tại
 
-Cập nhật: 2026-11-10T13:25:42+07:00. 18/18 bước kỹ thuật hoàn thành và có bằng chứng.
+Cập nhật: 2026-11-10T14:31:13+07:00. 18/18 bước kỹ thuật hoàn thành và có bằng chứng.
 
 | Phần | Bước | Trạng thái |
 |---|---|---|
@@ -11,14 +11,16 @@ Cập nhật: 2026-11-10T13:25:42+07:00. 18/18 bước kỹ thuật hoàn thành
 | Streamlit | 13–14 | Đã kiểm |
 | Kiểm thử và bàn giao | 15–18 | Đã kiểm |
 
-76 tests đạt ở môi trường chính và 76 tests đạt ở venv kiểm chứng. Bằng chứng tái huấn luyện ban đầu cho sai khác CV/metrics/xác suất = 0. Notebook thực thi đủ 6 ô mã.
+99 tests đạt ở môi trường chính và 99 tests đạt ở venv kiểm chứng. Bằng chứng tái huấn luyện ban đầu cho sai khác CV/metrics/xác suất = 0. Notebook thực thi đủ 6 ô mã.
 
 Nhật ký chi tiết: logs/NHAT_KY_THUC_HIEN.md. Gói ZIP là bộ kỹ thuật, chưa phải bộ nộp cuối.
 
 Đối chiếu hướng dẫn và việc còn thiếu: reports/KIEM_TRA_YEU_CAU_CUOI_KY.md. 18/18 bước không đồng nghĩa hoàn tất báo cáo, slide hoặc yêu cầu đóng góp/bảo vệ.
 
-Báo cáo DOCX 64 trang đã viết và kiểm tra theo mẫu; thông tin cá nhân/giảng viên để trống theo yêu cầu.
+Báo cáo DOCX 68 trang đã viết và kiểm tra theo mẫu; thông tin cá nhân/giảng viên để trống theo yêu cầu.
 
 Báo cáo hiện tại: reports/BAOCAO-TTNT.docx. Sáu chương theo mẫu đã nhận; mục lục và danh mục hình/bảng tự động; tài liệu tham khảo ở cuối; không có phụ lục.
 
-Còn lại: thông tin nhóm/giảng viên; đóng góp tự thực hiện và việc đọc/kiểm chứng của 5 người; slide và luyện bảo vệ. Chưa deploy.
+Đã có reports/BAOCAO-TTNT.pdf và 21 slide reports/BAO_VE_TELCO_CHURN.pptx, kiểm bằng Word/PowerPoint. Phân tích nâng cấp: reports/PHAN_TICH_VA_NANG_CAP.md.
+
+Còn lại: thông tin nhóm/giảng viên; đóng góp tự thực hiện và việc đọc/kiểm chứng của 5 người; luyện bảo vệ theo docs/HO_SO_BAO_VE.md. Chưa deploy.

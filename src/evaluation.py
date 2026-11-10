@@ -4,6 +4,7 @@ import pandas as pd
 from sklearn.metrics import (accuracy_score, precision_score, recall_score, f1_score,
                              roc_auc_score, average_precision_score, confusion_matrix)
 from .config import SPEC
+from .diagnostics import binary_inputs
 
 def metrics(y, probability, threshold=.5, predictions=None):
     y = np.asarray(y, dtype=int)
@@ -23,9 +24,7 @@ def metrics(y, probability, threshold=.5, predictions=None):
     }
 
 def threshold_sweep(y, probability):
-    y, p = np.asarray(y, dtype=int), np.asarray(probability, dtype=float)
-    if len(y) != len(p) or not len(y) or not np.isfinite(p).all() or ((p<0)|(p>1)).any() or not set(y).issubset({0,1}):
-        raise ValueError("y/probability không hợp lệ.")
+    y, p = binary_inputs(y, probability)
     thresholds = np.unique(np.concatenate(([0., 1.], p)))
     # Sort + suffix counts: O(n log n), không tạo ma trận n².
     order = np.argsort(p)

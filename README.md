@@ -1,6 +1,17 @@
 # Telco Customer Churn · Đề tài 01
 
-Bản triển khai cho đồ án gồm dữ liệu IBM đã kiểm hash, EDA, baseline + hai mô hình, thí nghiệm cố định, Streamlit 5 trang, notebook và bằng chứng kiểm thử. [Báo cáo Word](reports/BAOCAO-TTNT.docx) đã hoàn thiện nội dung và kiểm tra 64 trang theo mẫu người dùng cung cấp. Thông tin nhóm/lớp/giảng viên để trống theo yêu cầu; slide chưa được thực hiện.
+Bản triển khai cho đồ án gồm dữ liệu IBM đã kiểm hash, EDA, baseline + hai mô hình, thí nghiệm cố định, Streamlit 5 trang, notebook và bằng chứng kiểm thử. Đã có [báo cáo Word](reports/BAOCAO-TTNT.docx), [PDF 68 trang](reports/BAOCAO-TTNT.pdf) và [21 slide PowerPoint](reports/BAO_VE_TELCO_CHURN.pptx). Thông tin nhóm/lớp/giảng viên để trống theo yêu cầu; nhóm cần ghi đóng góp thực và luyện bảo vệ.
+
+## Nâng cấp theo hướng dẫn 6 trang
+
+Xem [phân tích mức độ đáp ứng và nâng cấp](reports/PHAN_TICH_VA_NANG_CAP.md) theo ba nhóm 4–4–2 điểm; đây không phải điểm tự chấm. [Hồ sơ bảo vệ](docs/HO_SO_BAO_VE.md) có kịch bản demo, 13 câu hỏi và bài thực hành cho 5 thành viên.
+
+- Bổ sung Wilson/paired bootstrap 95% từ prediction đã cố định; không fit/chọn lại mô hình theo test.
+- Reliability diagram, Brier/log-loss và top-K/lift trên validation; giao diện cho khảo sát năng lực xem xét hồ sơ.
+- **99 kiểm thử đạt ở cả hai venv**, bao gồm dữ liệu lỗi, hồi quy xác suất, CI/bootstrap, hash, giao diện và đóng gói.
+- Báo cáo kiểm bằng Word: 68 trang, 19 hình, 28 bảng, 15 nguồn, 155 liên kết số trang. Slide mở và kiểm toàn bộ trong PowerPoint, có bảng/biểu đồ gốc và nguồn trong notes.
+
+Test recall 80,75% có Wilson 95% 76,45–84,42%; precision 50,76% có khoảng 46,75–54,76%. Điểm quan sát không bảo đảm đạt ngưỡng trên quần thể mới. Top 20% validation gồm 282 hồ sơ, chứa 188/374 trường hợp churn (50,27%), lift 2,51; đây không phải số khách được giữ chân.
 
 ## Bản tối ưu ngày 10/11/2026
 
@@ -23,7 +34,7 @@ Sau đó làm theo phần **Máy mới / môi trường sạch** bên dưới. M
 
 Đã rà soát trực tiếp theo hướng dẫn cuối kỳ ngày 10/11/2026. Xem [biên bản đối chiếu](reports/KIEM_TRA_YEU_CAU_CUOI_KY.md): ma trận 21 yêu cầu, bằng chứng kiểm tra, 5 câu hỏi đề tài và những phần còn thiếu. Trạng thái 18/18 bước kỹ thuật không có nghĩa bộ nộp đã hoàn tất.
 
-[Cấu trúc báo cáo hiện tại](reports/DAN_Y_BAO_CAO_CHI_TIET.md) gồm 6 chương theo mẫu `MaiTranThienTam_2305CT2070.docx`, thay cho dàn ý 8 chương trước khi nhận mẫu. Báo cáo có 17 hình, 25 bảng, 13 tài liệu tham khảo; mục lục và danh mục hình/bảng tự động, không có phụ lục. Đã kiểm 146 liên kết số trang, bảng số liệu và định dạng trong [biên bản kiểm tra báo cáo](reports/evidence/report_qa.json).
+[Cấu trúc báo cáo hiện tại](reports/DAN_Y_BAO_CAO_CHI_TIET.md) gồm 6 chương theo mẫu `reports/templates/MAU_BAO_CAO_GOC.docx`, thay cho dàn ý 8 chương trước khi nhận mẫu. Mục lục và danh mục hình/bảng tự động, không có phụ lục. [QA báo cáo](reports/evidence/report_qa.json) và [QA slide](reports/evidence/slides_qa.json) gắn với SHA-256 của file đã kiểm.
 
 Giao diện đã nâng lên phiên bản 2.0 theo hướng TELCO Customer Operations: bảng khách hàng tìm kiếm/lọc được, mở hồ sơ điền sẵn, biểu đồ tương tác, biểu mẫu chia tab và kết quả đặt cạnh thông tin. Xem docs/GIAO_DIEN_V2.md và ảnh reports/evidence/ui_v2_*.jpg.
 
@@ -101,6 +112,7 @@ RF ở ngưỡng chính thức: TP=302, FP=293, FN=72, TN=742. Ưu tiên recall 
 | data/raw, splits, samples | Dữ liệu gốc, phân hoạch và CSV demo |
 | artifacts/eda | 8 PNG + CSV nguồn + nhận xét train |
 | artifacts/final_run | Model, metadata, CV, prediction, metrics, importance, hình |
+| src/diagnostics.py, artifacts/diagnostics | CI, reliability, Brier/log-loss, gain/lift; manifest nguồn |
 | notebooks/01_telco_churn.ipynb | Notebook có output thực thi |
 | tests/ | Unit, integration, Streamlit AppTest |
 | reports/evidence | Test XML, screenshot, tái lập, kiểm notebook |
@@ -123,7 +135,7 @@ Giới hạn 10 MiB, 10.000 dòng, UTF-8/BOM, dấu phẩy. Dòng lỗi không b
 Kiểm tests, notebook và tái huấn luyện đầy đủ cùng cấu hình trong một bản sao riêng:
 
 ~~~powershell
-.\.venv\Scripts\python.exe -X utf8 -m pytest -q --junitxml=reports/evidence/pytest_optimized.xml
+.\.venv\Scripts\python.exe -X utf8 -m pytest -q --junitxml=reports/evidence/pytest_upgrade.xml
 .\.venv\Scripts\python.exe -X utf8 -m tools.build_notebook
 .\.venv\Scripts\python.exe -X utf8 -m tools.verify_reproduction
 ~~~
@@ -137,6 +149,7 @@ Các bước sau chỉ tái dựng hình/nhận xét, không đổi model:
 ~~~powershell
 .\.venv\Scripts\python.exe -X utf8 -m src.eda
 .\.venv\Scripts\python.exe -X utf8 -m src.result_figures
+.\.venv\Scripts\python.exe -X utf8 -m tools.build_diagnostics
 ~~~
 
 Đóng gói yêu cầu hai báo cáo kiểm thử cùng bộ ca, đạt toàn bộ ở môi trường chính và môi trường kiểm chứng. Tạo báo cáo thứ hai trước khi đóng gói (venv này cài riêng cùng requirements.txt):
@@ -144,10 +157,10 @@ Các bước sau chỉ tái dựng hình/nhận xét, không đổi model:
 ~~~powershell
 python -m venv .venv_verify
 .\.venv_verify\Scripts\python.exe -m pip install -r requirements.txt
-.\.venv_verify\Scripts\python.exe -X utf8 -m pytest -q --junitxml=reports/evidence/pytest_optimized_clean.xml
+.\.venv_verify\Scripts\python.exe -X utf8 -m pytest -q --junitxml=reports/evidence/pytest_upgrade_clean.xml
 ~~~
 
-Đóng gói và kiểm hash gói; gói không chứa môi trường, cache hay secrets:
+Đóng gói và kiểm hash gói; gói không chứa môi trường, cache hay secrets. Công cụ cũng yêu cầu chẩn đoán và SHA-256 báo cáo/PDF/slide khớp hồ sơ QA; nếu sửa tài liệu cần kiểm lại trước khi đóng gói:
 
 ~~~powershell
 .\.venv\Scripts\python.exe -X utf8 -m tools.package_project
@@ -164,7 +177,7 @@ python -m venv .venv_verify
 
 ## Giới hạn và việc còn lại
 
-Dữ liệu là mẫu công ty hư cấu; mô hình snapshot không có kỳ dự báo tương lai đã được chứng minh. Xác suất chưa calibration. Chưa có chi phí thực, dữ liệu can thiệp, thời gian, hoặc đánh giá ngoài doanh nghiệp để khẳng định hiệu quả giữ chân. Báo cáo theo mẫu đã có; còn thông tin nhóm, slide và phần hiểu/bảo vệ của nhóm, cùng BM06 nếu giảng viên cung cấp thêm.
+Dữ liệu là mẫu công ty hư cấu; mô hình snapshot không có kỳ dự báo tương lai đã được chứng minh. Xác suất chưa calibration. Chưa có chi phí thực, dữ liệu can thiệp, thời gian, hoặc đánh giá ngoài doanh nghiệp để khẳng định hiệu quả giữ chân. Báo cáo và slide đã có; còn thông tin, đóng góp thực và phần hiểu/bảo vệ của nhóm. Đợt nâng cấp áp dụng hướng dẫn 6 trang hiện có; không giả định thêm BM06.
 
 Nhóm 5 người cần tự tham gia, kiểm chứng/chỉnh sửa và ghi đóng góp thực theo hướng dẫn môn học; không ghi nhận các phần do Codex làm như công sức đã có của sinh viên. Xem docs/AI_USAGE.md.
 

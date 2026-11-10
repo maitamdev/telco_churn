@@ -1,17 +1,17 @@
 {
   "status": "passed",
-  "output": "C:\\Users\\Asus\\Desktop\\TRITUENHANTAO\\DU_AN_TELCO_CHURN\\reports\\BAO_CAO_CUOI_KY_TELCO_CHURN.docx",
-  "document_sha256": "436020d2f9691283a814bf9270dbe98ec570744f8c30771e8eb8259749b5c8c3",
+  "output": "C:\\Users\\Asus\\Desktop\\TRITUENHANTAO\\DU_AN_TELCO_CHURN\\reports\\BAOCAO-TTNT.docx",
+  "document_sha256": "88b4d02fdef6ebf9358bad39ed7677954d8b7c670559fe9076d111020c5ddfe9",
   "source_sha256": "d48a769fe78a38063f9985502c1ee35b8822a055a6cf74e99c49c4555d2b7cab",
   "source_unchanged": true,
-  "pages": 64,
+  "pages": 68,
   "chapters": 6,
-  "figures": 17,
-  "captioned_tables": 25,
+  "figures": 19,
+  "captioned_tables": 28,
   "glossary_tables": 1,
-  "references": 13,
+  "references": 15,
   "automatic_tables_of_contents": 3,
-  "page_references_checked": 146,
+  "page_references_checked": 155,
   "all_reference_bookmarks_resolve": true,
   "all_tables_match_saved_artifacts": true,
   "format_parts": {
@@ -102,12 +102,16 @@
     61,
     62,
     63,
-    64
+    64,
+    65,
+    66,
+    67,
+    68
   ],
-  "renderer": "Microsoft Word PDF export + bundled pypdfium2 at 1.25 scale",
+  "renderer": "Microsoft Word PDF export + bundled pypdfium2 at 1.35 scale",
   "render_fallback_reason": "render_docx.py unavailable because soffice.exe is not installed",
-  "qa_pdf": "tmp/telco_report/BAO_CAO_QA_v3.pdf",
-  "qa_pdf_sha256": "9ef39fcdccda235eaef34ab3231abc9daaf9cc218550476f7a2d95917b7435c4",
+  "qa_pdf": "tmp/report_upgrade/BAO_CAO_QA.pdf",
+  "qa_pdf_sha256": "d1463574b5d453c7945b9da36bc0394389c31a019e565f376ae203845d89715f",
   "page_references": [
     {
       "target": "LỜI CẢM ƠN",
@@ -485,6 +489,11 @@
       "physical_page": 45
     },
     {
+      "target": "Phạm vi hỗ trợ của công cụ AI",
+      "page_label": "35",
+      "physical_page": 46
+    },
+    {
       "target": "KIỂM THỬ VÀ ĐÁNH GIÁ",
       "page_label": "36",
       "physical_page": 47
@@ -560,74 +569,89 @@
       "physical_page": 56
     },
     {
-      "target": "Kiểm thử chức năng và tính tái lập",
+      "target": "Độ bất định của kết quả đánh giá",
       "page_label": "46",
       "physical_page": 57
     },
     {
-      "target": "Bộ kiểm thử tự động",
-      "page_label": "46",
-      "physical_page": 57
-    },
-    {
-      "target": "Kiểm thử giao diện và tình huống dữ liệu",
-      "page_label": "46",
-      "physical_page": 57
-    },
-    {
-      "target": "Kiểm chứng số liệu và môi trường sạch",
+      "target": "Độ tin cậy của xác suất dự đoán",
       "page_label": "47",
       "physical_page": 58
     },
     {
-      "target": "Đánh giá tổng hợp",
+      "target": "Khả năng ưu tiên hồ sơ theo năng lực xử lý",
       "page_label": "48",
       "physical_page": 59
     },
     {
-      "target": "KẾT LUẬN VÀ HƯỚNG PHÁT TRIỂN",
-      "page_label": "49",
-      "physical_page": 60
-    },
-    {
-      "target": "Kết luận",
-      "page_label": "49",
-      "physical_page": 60
-    },
-    {
-      "target": "Kết quả đạt được",
-      "page_label": "49",
-      "physical_page": 60
-    },
-    {
-      "target": "Giới hạn phạm vi của đề tài",
+      "target": "Kiểm thử chức năng và tính tái lập",
       "page_label": "50",
       "physical_page": 61
     },
     {
-      "target": "Hướng phát triển",
+      "target": "Bộ kiểm thử tự động",
       "page_label": "50",
       "physical_page": 61
     },
     {
-      "target": "Bổ sung dữ liệu và xác định thời điểm dự báo",
+      "target": "Kiểm thử giao diện và tình huống dữ liệu",
       "page_label": "50",
       "physical_page": 61
     },
     {
-      "target": "Cải tiến đánh giá và lựa chọn mô hình",
-      "page_label": "50",
-      "physical_page": 61
-    },
-    {
-      "target": "Hoàn thiện khả năng sử dụng",
+      "target": "Kiểm chứng số liệu và môi trường sạch",
       "page_label": "51",
       "physical_page": 62
     },
     {
-      "target": "DANH MỤC TÀI LIỆU THAM KHẢO",
+      "target": "Đánh giá tổng hợp",
       "page_label": "52",
       "physical_page": 63
+    },
+    {
+      "target": "KẾT LUẬN VÀ HƯỚNG PHÁT TRIỂN",
+      "page_label": "53",
+      "physical_page": 64
+    },
+    {
+      "target": "Kết luận",
+      "page_label": "53",
+      "physical_page": 64
+    },
+    {
+      "target": "Kết quả đạt được",
+      "page_label": "53",
+      "physical_page": 64
+    },
+    {
+      "target": "Giới hạn phạm vi của đề tài",
+      "page_label": "54",
+      "physical_page": 65
+    },
+    {
+      "target": "Hướng phát triển",
+      "page_label": "54",
+      "physical_page": 65
+    },
+    {
+      "target": "Bổ sung dữ liệu và xác định thời điểm dự báo",
+      "page_label": "54",
+      "physical_page": 65
+    },
+    {
+      "target": "Cải tiến đánh giá và lựa chọn mô hình",
+      "page_label": "54",
+      "physical_page": 65
+    },
+    {
+      "target": "Hoàn thiện khả năng sử dụng",
+      "page_label": "55",
+      "physical_page": 66
+    },
+    {
+      "target": "DANH MỤC TÀI LIỆU THAM KHẢO",
+      "page_label": "56",
+      "physical_page": 67
     },
     {
       "target": "Hình 3.1. Phân bố nhãn Churn trên tập train",
@@ -713,6 +737,16 @@
       "target": "Hình 5.4. Độ quan trọng thuộc tính trên validation",
       "page_label": "42",
       "physical_page": 53
+    },
+    {
+      "target": "Hình 5.5. Độ tin cậy của xác suất trên validation",
+      "page_label": "47",
+      "physical_page": 58
+    },
+    {
+      "target": "Hình 5.6. Khả năng bao phủ churn theo tỷ lệ hồ sơ được xem xét trên validation",
+      "page_label": "49",
+      "physical_page": 60
     },
     {
       "target": "Bảng 1.1. Mục tiêu và tiêu chí đánh giá của đề tài",
@@ -825,20 +859,36 @@
       "physical_page": 56
     },
     {
-      "target": "Bảng 5.10. Kết quả bộ kiểm thử tự động theo nhóm",
+      "target": "Bảng 5.10. Khoảng ước lượng 95% trên test của các mô hình đã cố định",
       "page_label": "46",
       "physical_page": 57
     },
     {
-      "target": "Bảng 5.11. Các tình huống kiểm tra chức năng ứng dụng",
+      "target": "Bảng 5.11. Brier và log loss trên validation",
       "page_label": "47",
       "physical_page": 58
     },
     {
-      "target": "Bảng 5.12. Kết quả kiểm chứng tính nhất quán và tái lập",
-      "page_label": "48",
-      "physical_page": 59
+      "target": "Bảng 5.12. Đánh đổi giữa năng lực xử lý và khả năng bao phủ churn",
+      "page_label": "49",
+      "physical_page": 60
+    },
+    {
+      "target": "Bảng 5.13. Kết quả bộ kiểm thử tự động theo nhóm",
+      "page_label": "50",
+      "physical_page": 61
+    },
+    {
+      "target": "Bảng 5.14. Các tình huống kiểm tra chức năng ứng dụng",
+      "page_label": "51",
+      "physical_page": 62
+    },
+    {
+      "target": "Bảng 5.15. Kết quả kiểm chứng tính nhất quán và tái lập",
+      "page_label": "52",
+      "physical_page": 63
     }
   ],
-  "remaining_user_input": "Personal/class/instructor information intentionally blank; group contribution and slides remain separate tasks."
+  "ai_assistance_disclosed": true,
+  "remaining_user_input": "Personal/class/instructor information intentionally blank; students must record actual contributions and rehearse their defense."
 }

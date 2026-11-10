@@ -89,5 +89,19 @@
     "title": "Caching overview",
     "url": "https://docs.streamlit.io/develop/concepts/architecture/caching",
     "accessed": "2026-11-10"
+  },
+  {
+    "number": 14,
+    "author": "SciPy developers",
+    "title": "Binomial proportion confidence intervals",
+    "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats._result_classes.BinomTestResult.proportion_ci.html",
+    "accessed": "2026-11-10"
+  },
+  {
+    "number": 15,
+    "author": "SciPy developers",
+    "title": "Bootstrap confidence intervals",
+    "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.bootstrap.html",
+    "accessed": "2026-11-10"
   }
 ]

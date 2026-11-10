@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "date": "2026-11-10",
+  "url": "http://127.0.0.1:8501",
+  "checked_by": "OpenAI Codex, live browser accessibility and screenshots",
+  "checks": [
+    "Extended interval table matches saved results",
+    "Reliability chart rendered both models and the ideal diagonal",
+    "Capacity slider 20 to 40 changed 282 to 564 records, 50.3% to 78.1% recall, 2.51 to 1.95 lift"
+  ],
+  "metadata_sha256_after": "e98161a5f6870a3d5f862a24e54da420bc367fcd7440d0ebd31220cd6e0874fc",
+  "metadata_matches_diagnostic_source": true,
+  "screenshots": {
+    "ui_upgrade_capacity.png": "0bc717f45d3052db7871d9819b52358c2669d2632b2a86b20117cb4c17732705",
+    "ui_upgrade_intervals.png": "e0fe6db8a51c91f84c9c2f01e1c6d49765c1d9b83d504a2625a1f75ce10f6e3e"
+  },
+  "scope": "New diagnostic tabs verified live; complete existing app regressions also covered by pytest_upgrade.xml."
+}

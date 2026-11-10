@@ -11,6 +11,7 @@ Phạm vi hỗ trợ thực tế:
 - Thiết kế lại giao diện Streamlit 2.0 theo yêu cầu người dùng; thêm tìm/lọc/chọn hồ sơ và kiểm thao tác trên trình duyệt.
 - Rà soát sau triển khai theo hướng dẫn cuối kỳ; chạy lại 54 tests, đối soát số liệu, bổ sung bảng thiếu/ngoại lai và nhận định biểu đồ tổng cước, ghi ma trận yêu cầu và các phần chưa hoàn thành.
 - Tối ưu xử lý CSV và cảnh báo theo cột; đo tốc độ trước/sau với 10.000 dòng; sửa kết quả cũ trên giao diện, bổ sung kiểm thử hồi quy, chuẩn hóa kiểm tra đóng gói và cấu hình GitHub Actions. Chuẩn bị và push repository theo yêu cầu người dùng; xem docs/TOI_UU_HOA.md và bằng chứng kiểm thử mới.
+- Nâng cấp theo hướng dẫn 6 trang: viết mã tính CI/bootstrap, chẩn đoán xác suất và top-K; thêm kiểm thử và giao diện; cập nhật báo cáo theo mẫu; tạo 21 slide PowerPoint, notes, hồ sơ luyện bảo vệ và bản phân tích mức độ đáp ứng. Các lần kiểm 54/76 tests là lịch sử; xem báo cáo pytest_upgrade của phiên bản mới. Công việc này do Codex thực hiện, không phải đóng góp tự làm đã xác nhận của sinh viên.
 
 Hướng dẫn môn học cho phép hỗ trợ AI nhưng không cho phép nộp nguyên mã/phân tích hoàn toàn do AI tạo. Bản hiện tại là nền kỹ thuật được AI hỗ trợ, **chưa ghi nhận đóng góp tự thực hiện của nhóm**. Nhật ký có nhãn người thực hiện để không lẫn với công việc sinh viên.
 

@@ -8,6 +8,7 @@ import xml.etree.ElementTree as ET
 from src.config import ROOT,RUN_DIR
 from src.records import sha256,read_json,write_json,now,log_step
 from src.inference import load_bundle
+from src.diagnostics import load_diagnostics
 
 EXCLUDE_DIRS={".venv",".venv_verify",".reproduction",".pytest_cache","__pycache__",".ipynb_checkpoints",".git","dist","tmp"}
 MANIFEST=ROOT/"reports/evidence/package_manifest.json"
@@ -15,7 +16,7 @@ MANIFEST=ROOT/"reports/evidence/package_manifest.json"
 def files_to_ship():
     files=[]
     for base,dirs,names in os.walk(ROOT):
-        dirs[:]=[d for d in dirs if d not in EXCLUDE_DIRS]
+        dirs[:]=[d for d in dirs if d not in EXCLUDE_DIRS and not d.startswith('.chart-data-')]
         for name in names:
             path=Path(base)/name
             if path==MANIFEST or name.startswith("~$") or name.endswith((".pyc",".tmp")):
@@ -72,11 +73,10 @@ def check_test_reports(paths):
 
 
 def check_evidence():
-    load_bundle()
+    _, metadata = load_bundle()
+    load_diagnostics(metadata)
     directory=ROOT/"reports/evidence"
-    names=(["pytest_optimized.xml","pytest_optimized_clean.xml"]
-           if (directory/"pytest_optimized.xml").exists()
-           else ["pytest.xml","pytest_clean_env.xml"])
+    names=["pytest_upgrade.xml","pytest_upgrade_clean.xml"]
     counts=check_test_reports([directory/name for name in names])
     if read_json(ROOT/"reports/evidence/full_reproduction.json")["status"]!="passed":
         raise RuntimeError("Full reproduction not passed.")
@@ -92,7 +92,18 @@ def package():
     report_qa_path=ROOT/"reports/evidence/report_qa.json"
     report_qa=read_json(report_qa_path) if report_qa_path.exists() else {}
     report_ready=(report_path.exists() and report_qa.get("status")=="passed"
+                  and report_qa.get("visual_qa_complete")
                   and report_qa.get("document_sha256")==sha256(report_path))
+    slides_path=ROOT/"reports/BAO_VE_TELCO_CHURN.pptx"
+    slides_qa_path=ROOT/"reports/evidence/slides_qa.json"
+    slides_qa=read_json(slides_qa_path) if slides_qa_path.exists() else {}
+    slides_ready=(slides_path.exists() and slides_qa.get("status")=="passed"
+                  and slides_qa.get("visual_qa_complete")
+                  and slides_qa.get("presentation_sha256")==sha256(slides_path))
+    pdf_path=ROOT/"reports/BAOCAO-TTNT.pdf"
+    pdf_ready=pdf_path.exists() and report_qa.get("qa_pdf_sha256")==sha256(pdf_path)
+    if not (report_ready and slides_ready and pdf_ready):
+        raise RuntimeError("Report/PDF/slides missing or QA hashes are stale; validate current deliverables before packaging.")
     report_summary=(f"Báo cáo DOCX {report_qa['pages']} trang đã viết và kiểm tra theo mẫu; thông tin cá nhân/giảng viên để trống theo yêu cầu."
                     if report_ready else "Báo cáo DOCX chưa có xác nhận kiểm tra cho phiên bản hiện tại.")
     dist=ROOT/"dist"
@@ -104,14 +115,17 @@ def package():
         ["Kiểm đủ bằng chứng tests, notebook, tái lập và trình duyệt","Tạo ZIP không kèm môi trường/cache; kiểm CRC và SHA-256 từng thành viên","Ghi trạng thái và việc còn lại, đóng gói lại để chứa nhật ký hoàn chỉnh"],
         ["18/18 bước kỹ thuật có bằng chứng","ZIP kỹ thuật đã kiểm tính toàn vẹn"],
         ["dist/DU_AN_TELCO_CHURN_KY_THUAT.zip","dist/DU_AN_TELCO_CHURN_KY_THUAT.sha256","dist/package_verification.json","reports/evidence/package_manifest.json","docs/BANG_CHUNG_CHO_BAO_CAO.md","docs/AI_USAGE.md"],
-        [report_summary,"Chưa có slide; nhóm cần bổ sung thông tin và đóng góp thực, đọc lại báo cáo và chuẩn bị bảo vệ."])
+        [report_summary,"Đã có 21 slide đã kiểm bằng PowerPoint; nhóm cần bổ sung thông tin và đóng góp thực, đọc lại hồ sơ và luyện bảo vệ."])
     events=[json.loads(line) for line in (ROOT/"logs/events.jsonl").read_text(encoding="utf-8").splitlines() if line.strip()]
     steps={e["step"]:{"title":e["title"],"status":"completed","recorded_at":e["time"],"evidence":e["evidence"]} for e in events}
     status={"updated_at":now(),"technical_steps_total":18,"technical_steps_completed":18,
             "steps":{k:steps[k] for k in sorted(steps)},
             "model_run_id":read_json(RUN_DIR/"metadata.json")["run_id"],
             "tests_passed":test_count,"clean_environment_tests_passed":clean_test_count,"full_reproduction":"passed",
-            "interface_version":"2.0","report_written":report_ready,"slides_written":False,
+            "interface_version":"2.1","report_written":report_ready,"slides_written":slides_ready,
+            "slides_file":"reports/BAO_VE_TELCO_CHURN.pptx","slides_count":slides_qa["slides"],
+            "slides_qa":"reports/evidence/slides_qa.json","report_pdf":"reports/BAOCAO-TTNT.pdf",
+            "extended_diagnostics":"artifacts/diagnostics/summary.json",
             "report_template":"reports/templates/MAU_BAO_CAO_GOC.docx" if report_ready else "pending_user",
             "report_file":"reports/BAOCAO-TTNT.docx" if report_ready else None,
             "report_pages":report_qa.get("pages") if report_ready else None,
@@ -119,7 +133,7 @@ def package():
             "student_review_and_contribution":"not_yet_recorded","deployed":False,
             "requirements_audit":"reports/KIEM_TRA_YEU_CAU_CUOI_KY.md" if (ROOT/"reports/KIEM_TRA_YEU_CAU_CUOI_KY.md").exists() else None,
             "report_outline":"reports/DAN_Y_BAO_CAO_CHI_TIET.md" if (ROOT/"reports/DAN_Y_BAO_CAO_CHI_TIET.md").exists() else None,
-            "ready_for":"Nhóm đọc lại báo cáo 6 chương, bổ sung thông tin/đóng góp thực, chuẩn bị slide và bảo vệ." if report_ready else "Nhóm kiểm chứng/chỉnh sửa và chuẩn bị báo cáo theo mẫu."}
+            "ready_for":"Nhóm đọc lại báo cáo và 21 slide, bổ sung thông tin/đóng góp thực, chạy và luyện bảo vệ theo docs/HO_SO_BAO_VE.md."}
     if set(steps)!={f"{i:02}" for i in range(1,19)}:
         raise RuntimeError("Missing implementation step logs.")
     write_json(ROOT/"configs/execution_status.json",status)
@@ -133,7 +147,8 @@ def package():
            "\nĐối chiếu hướng dẫn và việc còn thiếu: reports/KIEM_TRA_YEU_CAU_CUOI_KY.md. 18/18 bước không đồng nghĩa hoàn tất báo cáo, slide hoặc yêu cầu đóng góp/bảo vệ.",
            "\n"+report_summary,
            "\nBáo cáo hiện tại: reports/BAOCAO-TTNT.docx. Sáu chương theo mẫu đã nhận; mục lục và danh mục hình/bảng tự động; tài liệu tham khảo ở cuối; không có phụ lục." if report_ready else "\nXem dàn ý tại reports/DAN_Y_BAO_CAO_CHI_TIET.md.",
-           "\nCòn lại: thông tin nhóm/giảng viên; đóng góp tự thực hiện và việc đọc/kiểm chứng của 5 người; slide và luyện bảo vệ. Chưa deploy."]
+           "\nĐã có reports/BAOCAO-TTNT.pdf và 21 slide reports/BAO_VE_TELCO_CHURN.pptx, kiểm bằng Word/PowerPoint. Phân tích nâng cấp: reports/PHAN_TICH_VA_NANG_CAP.md.",
+           "\nCòn lại: thông tin nhóm/giảng viên; đóng góp tự thực hiện và việc đọc/kiểm chứng của 5 người; luyện bảo vệ theo docs/HO_SO_BAO_VE.md. Chưa deploy."]
     (ROOT/"docs/TIEN_DO_HIEN_TAI.md").write_text("\n".join(lines)+"\n",encoding="utf-8")
     count=build_zip(path)
     digest=sha256(path)

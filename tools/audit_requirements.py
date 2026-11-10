@@ -7,6 +7,8 @@ from sklearn.metrics import roc_auc_score, average_precision_score
 from src.config import ROOT, RAW_PATH, RUN_DIR, NUMERIC, FEATURES
 from src.data import load_partition
 from src.inference import load_bundle
+from src.diagnostics import load_diagnostics
+from tools.package_project import check_test_reports
 from src.records import read_json, write_json, now, sha256
 from src.validation import normalize_features, validate_frame
 
@@ -79,15 +81,25 @@ def run():
     cells = [cell for cell in notebook["cells"] if cell["cell_type"] == "code"]
     assert len(cells) == 6 and all(cell["execution_count"] is not None for cell in cells)
     assert not any(output.get("output_type") == "error" for cell in cells for output in cell.get("outputs", []))
-    suites = list(ET.parse(evidence / "pytest_requirements_audit.xml").getroot().iter("testsuite"))
+    test_paths = [evidence / name for name in ("pytest_upgrade.xml", "pytest_upgrade_clean.xml")]
+    counts = check_test_reports(test_paths)
+    suites = list(ET.parse(test_paths[0]).getroot().iter("testsuite"))
     tests = {key: sum(int(s.attrib.get(key, 0)) for s in suites) for key in ["tests", "failures", "errors", "skipped"]}
-    assert tests == {"tests": 54, "failures": 0, "errors": 0, "skipped": 0}
+    assert tests == {"tests": counts[0], "failures": 0, "errors": 0, "skipped": 0}
+    diagnostics = load_diagnostics(metadata)
     reproduction = read_json(evidence / "full_reproduction.json")
     replica = ROOT / reproduction["replica_directory"]
     reproduction_sources = ["src/train.py", "src/data.py", "src/preprocessing.py", "src/evaluation.py",
                             "src/validation.py", "src/config.py", "configs/project_spec.json"]
     matched = {name: sha256(ROOT / name) == sha256(replica / name) for name in reproduction_sources} if replica.exists() else {}
-    assert reproduction["status"] == "passed" and all(matched.values())
+    assert reproduction["status"] == "passed"
+    # This is historical training evidence. Changes to validation/diagnostics
+    # are checked with current regression tests and direct probability parity.
+    report_qa = read_json(evidence / "report_qa.json")
+    slides_qa = read_json(evidence / "slides_qa.json")
+    assert report_qa["status"] == slides_qa["status"] == "passed"
+    assert report_qa["document_sha256"] == sha256(ROOT / "reports/BAOCAO-TTNT.docx")
+    assert slides_qa["presentation_sha256"] == sha256(ROOT / "reports/BAO_VE_TELCO_CHURN.pptx")
     assert sha256(RUN_DIR / "churn_pipeline.joblib") == original_model_hash
     result = {"checked_at": now(), "status": "technical_checks_passed_submission_incomplete",
               "guide_sha256": sha256(ROOT.parent / "Huong_Dan_Do_An_CuoiKy.pdf") if (ROOT.parent / "Huong_Dan_Do_An_CuoiKy.pdf").exists() else None,
@@ -101,13 +113,15 @@ def run():
               "previous_clean_environment_reproduction": reproduction["time"],
               "reproduction_source_hashes_match": matched, "model_or_threshold_changed": False,
               "replica_source_check_performed": replica.exists(),
-              "report_written": False, "slides_written": False, "student_contribution_recorded": False,
+              "report_written": True, "slides_written": True, "student_contribution_recorded": False,
+              "diagnostics_verified": True, "diagnostics_run_id": diagnostics["run_id"],
+              "clean_environment_test_count": counts[1],
               "teacher_registration_confirmed": False, "bm06_available": False,
-              "limits": ["No new training in this audit; prior reproduction verified against current core source hashes.",
+              "limits": ["No new training in this audit. Historical reproduction is retained; source hash differences are reported rather than claimed identical. Current model parity and tests were rerun.",
                          "Snapshot cannot establish all features existed before a prospective prediction date.",
                          "Submission and oral defense cannot be certified by software tests."]}
     write_json(evidence / "requirements_audit.json", result)
-    print("Audit passed: data/splits, 5 metric records, model parity, 8 EDA figures, 6 executed cells, 54 tests.")
+    print(f"Audit passed: data/splits, 5 metric records, model parity, 8 EDA figures, 6 executed cells, {counts[0]} tests in both environments, diagnostics and document hashes.")
     print(pd.DataFrame(outliers)[["churn_group", "feature", "outside_1_5_iqr"]].to_string(index=False))
     print("Missing TotalCharges: 11/7043 =", 100 * 11 / 7043, "%")
 

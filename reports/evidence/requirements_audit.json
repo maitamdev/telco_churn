@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-10T10:29:24+07:00",
+  "checked_at": "2026-11-10T14:25:35+07:00",
   "status": "technical_checks_passed_submission_incomplete",
   "guide_sha256": "6d9cc9630c84ad1c33e55182f867b473dd721e809c411b996fa4c95c33b2b893",
   "model_run_id": "telco_20261110T093056_0700",
@@ -22,7 +22,7 @@
   "eda_png_count": 8,
   "executed_notebook_code_cells": 6,
   "pytest": {
-    "tests": 54,
+    "tests": 99,
     "failures": 0,
     "errors": 0,
     "skipped": 0
@@ -32,27 +32,24 @@
     "src/train.py": true,
     "src/data.py": true,
     "src/preprocessing.py": true,
-    "src/evaluation.py": true,
-    "src/validation.py": true,
+    "src/evaluation.py": false,
+    "src/validation.py": false,
     "src/config.py": true,
     "configs/project_spec.json": true
   },
   "model_or_threshold_changed": false,
   "replica_source_check_performed": true,
   "report_written": true,
-  "slides_written": false,
+  "slides_written": true,
   "student_contribution_recorded": false,
+  "diagnostics_verified": true,
+  "diagnostics_run_id": "telco_20261110T093056_0700",
+  "clean_environment_test_count": 99,
   "teacher_registration_confirmed": false,
   "bm06_available": false,
   "limits": [
-    "No new training in this audit; prior reproduction verified against current core source hashes.",
+    "No new training in this audit. Historical reproduction is retained; source hash differences are reported rather than claimed identical. Current model parity and tests were rerun.",
     "Snapshot cannot establish all features existed before a prospective prediction date.",
     "Submission and oral defense cannot be certified by software tests."
-  ],
-  "report_review": {
-    "pages": 64,
-    "evidence": "reports/evidence/report_qa.json",
-    "sha256": "436020d2f9691283a814bf9270dbe98ec570744f8c30771e8eb8259749b5c8c3",
-    "personal_fields": "blank_by_user_request"
-  }
+  ]
 }

@@ -6,6 +6,7 @@ from src.records import read_json
 from src.evaluation import metrics
 from ui.components import heading,panel
 from ui.charts import threshold_curve,importance_chart
+from ui.diagnostics import render as render_diagnostics
 
 MODEL_LABELS={"baseline":"Dummy · lớp đa số","logistic_regression":"Logistic Regression","random_forest":"Random Forest"}
 
@@ -48,6 +49,7 @@ def evaluation(metadata):
             st.dataframe(pd.read_csv(RUN_DIR/"cv_summary.csv"),hide_index=True,width="stretch")
         with groups:
             st.dataframe(pd.read_csv(RUN_DIR/"subgroup_metrics.csv"),hide_index=True,width="stretch")
+    render_diagnostics(metadata)
 
 def threshold(metadata):
     heading("Ngưỡng & giải thích")

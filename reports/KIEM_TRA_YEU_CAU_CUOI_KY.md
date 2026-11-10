@@ -6,23 +6,23 @@ Nguồn chuẩn: `../Huong_Dan_Do_An_CuoiKy.pdf`, 6 trang. Đã đọc toàn b�
 
 SHA-256 hướng dẫn: `6d9cc9630c84ad1c33e55182f867b473dd721e809c411b996fa4c95c33b2b893`.
 
-**Cập nhật sau khi viết báo cáo:** đã hoàn thiện `BAO_CAO_CUOI_KY_TELCO_CHURN.docx`, 64 trang, 6 chương theo mẫu đúng do người dùng gửi, giữ định dạng gốc. Đã kiểm toàn bộ trang, 17 hình, 25 bảng, 13 nguồn tham khảo và 146 liên kết số trang; bằng chứng ở `evidence/report_qa.json`. Thông tin cá nhân/lớp/giảng viên để trống theo yêu cầu, không có phụ lục hay ghi chú biên tập trong báo cáo.
+**Cập nhật sau nâng cấp:** đã có `BAOCAO-TTNT.docx` và PDF 68 trang, 6 chương theo mẫu người dùng gửi, giữ định dạng gốc. Đã kiểm toàn bộ trang, 19 hình, 28 bảng, 15 nguồn và 155 liên kết số trang. Có `BAO_VE_TELCO_CHURN.pptx` gồm 21 slide, bảng/biểu đồ chỉnh sửa được, đã mở và kiểm từng slide trong PowerPoint. Bằng chứng gắn SHA-256 ở `evidence/report_qa.json` và `evidence/slides_qa.json`. Thông tin cá nhân/lớp/giảng viên để trống theo yêu cầu; báo cáo công khai phạm vi AI hỗ trợ.
 
-**Kết luận: triển khai kỹ thuật và nội dung báo cáo phù hợp phạm vi đề tài 1, có bằng chứng thực nghiệm. Bộ nộp cuối kỳ CHƯA hoàn thành.** Còn slide, thông tin/phân công và đóng góp thực của nhóm; chưa có bằng chứng giảng viên xác nhận đăng ký. Không thể chứng nhận đạt tối đa 10 điểm hay đáp ứng chi tiết BM06 chưa được cung cấp. Các phép kiểm kỹ thuật bên dưới là kết quả đợt kiểm đã ghi ngày 10/11/2026; lượt viết báo cáo không huấn luyện lại mô hình.
+**Kết luận: phần kỹ thuật, báo cáo và slide có bằng chứng thực nghiệm; nghĩa vụ của nhóm trước khi nộp CHƯA được xác nhận hoàn tất.** Còn thông tin/phân công, đóng góp thực và luyện bảo vệ; chưa có bằng chứng giảng viên xác nhận đăng ký. Người dùng xác nhận áp dụng hướng dẫn 6 trang hiện có. Không tự thêm tiêu chí BM06 hoặc chứng nhận 10/10. Lượt nâng cấp không huấn luyện lại/chọn lại mô hình; xem `PHAN_TICH_VA_NANG_CAP.md` và `../docs/HO_SO_BAO_VE.md`.
 
 ## 1. Phạm vi kiểm chứng thực tế
 
 - Đọc mã dữ liệu, tiền xử lý, huấn luyện, đánh giá, dự đoán, EDA, giao diện và công cụ tái lập/đóng gói; đối chiếu với artifact, không coi kế hoạch là kết quả đã làm.
-- Chạy lại toàn bộ 54 tests trên mã giao diện hiện tại: 54 đạt, 0 lỗi, 0 bỏ qua. `pip check` không phát hiện phụ thuộc hỏng.
+- Chạy lại 99 tests trên mã hiện tại trong cả hai venv: đều đạt, 0 lỗi, 0 bỏ qua. `pip check` không phát hiện phụ thuộc hỏng ở cả hai môi trường.
 - Kiểm hash bundle và mô hình; so dự đoán của model đã lưu với toàn bộ test: sai khác lớn nhất 0.
 - Tính lại 5 dòng đánh giá (baseline; LR/RF ở ngưỡng mặc định và ngưỡng validation): sai khác số thực lớn nhất khoảng 1,11e-16, trong sai số làm tròn máy.
 - Ghép lại 3 tập bằng ID: đủ 7.043 hồ sơ, không trùng giữa các tập, từng giá trị khớp dữ liệu gốc.
 - Kiểm 8 ảnh EDA, nhận xét và số liệu nguồn; notebook có đủ 6 ô mã đã chạy và không có output lỗi.
-- Xem lại bằng chứng cài mới/tái huấn luyện ở môi trường sạch; hash của 7 tệp mã/cấu hình lõi hiện tại khớp bản đã tái lập. Không huấn luyện hoặc chọn lại ngưỡng trong lượt kiểm tra này.
-- Kiểm giao diện đang chạy: Tổng quan, dự đoán cá nhân, CSV lỗi, đánh giá và trang ngưỡng. Xem thêm `reports/evidence/audit_browser_check.json`.
+- Giữ bằng chứng cài mới/tái huấn luyện của đợt ban đầu. Lượt mới đối chiếu trực tiếp prediction và chạy bộ test hiện tại; một số mã kiểm đầu vào/đánh giá đã thay đổi nên không gọi toàn bộ mã hiện tại giống bản tái huấn luyện cũ. Chi tiết hash trong requirements_audit.json. Không huấn luyện hoặc chọn lại ngưỡng.
+- Bằng chứng 5 luồng cũ ở `reports/evidence/audit_browser_check.json`. Lượt mới kiểm 3 thẻ chẩn đoán; thanh trượt 20% → 40% đổi 282 → 564 hồ sơ, recall 50,3% → 78,1%, lift 2,51 → 1,95; không thay ngưỡng chính thức. Xem `reports/evidence/ui_upgrade_*.png` và `upgrade_browser_check.json`.
 - Bổ sung bảng thiếu/kiểu dữ liệu và kiểm ngoại lai; bổ sung nhận định định lượng cho biểu đồ tổng cước. Loại thư mục tạm khỏi gói kỹ thuật.
 
-Bằng chứng máy đọc được: `reports/evidence/requirements_audit.json`, `pytest_requirements_audit.xml`, `data_quality_audit.csv`, `outlier_audit_train.csv`; nhật ký kiểm thử: `logs/pytest_requirements_audit.log`.
+Bằng chứng hiện tại: `reports/evidence/requirements_audit.json`, `pytest_upgrade.xml`, `pytest_upgrade_clean.xml`, `data_quality_audit.csv`, `outlier_audit_train.csv`, `artifacts/diagnostics/manifest.json`. XML 54/76 tests và log cũ giữ lại để truy vết lịch sử, không dùng làm chứng nhận số ca hiện tại.
 
 ## 2. Ma trận yêu cầu và trạng thái
 
@@ -43,12 +43,12 @@ Các nội dung chuyên môn đã được đưa vào báo cáo 6 chương. Bằ
 | RQ11 | Kiểm định chéo và tuning trong pipeline; tr.1 bước 7 | 5-fold; 8 cấu hình LR và 18 RF; toàn bộ cv_results | Đủ bằng chứng thực nghiệm |
 | RQ12 | Mẫu sai, giới hạn, cải tiến; tr.1 bước 8 | 10 FP/FN cases, subgroup metrics, PHAN_TICH_KET_QUA.md | Đã phân tích 10 FP/FN ở Chương 5; giới hạn/cải tiến ở Chương 6 |
 | RQ13 | Demo, lưu pipeline; tr.1 bước 9 + yêu cầu người dùng | Streamlit 5 trang, joblib, metadata, tests và kiểm trình duyệt | Có demo hoạt động thật; vẫn phải trình bày trực tiếp khi bảo vệ |
-| RQ14 | Báo cáo PDF hoặc DOCX; tr.2 mục 4/7 | BAO_CAO_CUOI_KY_TELCO_CHURN.docx; evidence/report_qa.json | Đã viết và kiểm 64 trang theo mẫu; thông tin nhóm/giảng viên để trống để người dùng bổ sung |
+| RQ14 | Báo cáo PDF hoặc DOCX; tr.2 mục 4/7 | BAOCAO-TTNT.docx, BAOCAO-TTNT.pdf; evidence/report_qa.json | Đã viết và kiểm 68 trang theo mẫu; thông tin nhóm/giảng viên để trống để người dùng bổ sung |
 | RQ15 | Notebook hoặc module chạy được; requirements, README; tr.2 mục 4 | Module, notebook đã chạy, dependencies khóa phiên bản, hướng dẫn | Có; notebook trình bày bằng chứng, module chịu trách nhiệm huấn luyện từ đầu |
 | RQ16 | Dữ liệu hoặc liên kết; tr.2 mục 4 | data/raw, split, sample, URL IBM và SHA-256 | Có dữ liệu và nguồn đối chiếu |
-| RQ17 | Slide, trình bày, demo, vấn đáp; tr.2 mục 4/8 | BAO_VE_VA_DEMO.md; demo local | CHƯA có slide PPTX; chưa ghi nhận từng thành viên tập trình bày và sửa mã |
-| RQ18 | Git hoặc ZIP; chạy môi trường sạch; tr.2 mục 4 | ZIP có manifest/CRC/hash; logs cài mới; 54 tests môi trường sạch; full_reproduction.json | Gói đã có báo cáo DOCX; còn slide và hồ sơ đóng góp nhóm trước khi chốt bộ nộp |
-| RQ19 | Seed và phiên bản; tr.2 mục 5 | Seed 42, requirements, environment, selection/metadata | Có và kiểm lại mã lõi so với bản tái lập |
+| RQ17 | Slide, trình bày, demo, vấn đáp; tr.2 mục 4/8 | 21 slide PPTX, speaker notes, HO_SO_BAO_VE.md; demo local | Slide đã kiểm; từng thành viên cần thực sự tập trình bày và sửa mã |
+| RQ18 | Git hoặc ZIP; chạy môi trường sạch; tr.2 mục 4 | Git; ZIP kiểm manifest/CRC/hash; 99 tests ở venv kiểm chứng; tái huấn luyện lịch sử | Có DOCX/PDF/PPTX; còn hồ sơ đóng góp và xác nhận của nhóm trước khi chốt bộ nộp |
+| RQ19 | Seed và phiên bản; tr.2 mục 5 | Seed 42, requirements, environment, selection/metadata | Có; hash nguồn mới/cũ được báo riêng, prediction hiện tại được đối chiếu trực tiếp |
 | RQ20 | Khai báo AI, đóng góp và hiểu/sửa mã; tr.1 mục 2, tr.2 mục 6 | docs/AI_USAGE.md mô tả hỗ trợ của Codex | Mới có khai báo; CHƯA có đóng góp tự thực hiện của nhóm, chưa đủ để coi là hoàn thành yêu cầu này |
 | RQ21 | Nguồn dữ liệu, quyền sử dụng, riêng tư; tr.2 mục 6 | Nguồn IBM công khai, mẫu công ty hư cấu, file gốc/hash, provenance | Có truy xuất nguồn và phạm vi dữ liệu; không tự gọi giấy phép mã của repo là giấy phép riêng cho dataset; giữ ghi công nguồn trong báo cáo |
 
@@ -103,8 +103,8 @@ Trang thử ngưỡng mặc định làm tròn thanh trượt thành 0,479, tron
 ## 5. Phần còn lại trước khi nộp
 
 1. Xác nhận việc đăng ký đề tài/nguồn/câu hỏi với giảng viên; bổ sung yêu cầu mới nếu có. Chưa có bằng chứng này trong workspace, không kết luận nhóm chưa từng đăng ký.
-2. Nhóm đọc và kiểm chứng bản báo cáo 64 trang đã viết; bổ sung tên/MSSV/lớp/giảng viên và ghi đóng góp thực vào hồ sơ nhóm. Mẫu báo cáo đã nhận; phần thông tin được để trống theo chỉ dẫn người dùng.
-3. Viết slide nhất quán số liệu với báo cáo; chuẩn bị tình huống demo và câu hỏi.
+2. Nhóm đọc và kiểm chứng bản báo cáo 68 trang; bổ sung tên/MSSV/lớp/giảng viên và ghi đóng góp thực. Thông tin được để trống theo chỉ dẫn người dùng.
+3. Đọc 21 slide và speaker notes; thực hành kịch bản demo, 13 câu hỏi và bài tập từng vai trò trong HO_SO_BAO_VE.md.
 4. Ghi đóng góp thực của 5 thành viên và khai báo AI trung thực. Trang 2 mục 6 nêu: “Không nộp bài mà mã nguồn hoặc phần phân tích do AI sinh ra toàn bộ”; mỗi thành viên phải giải thích và chỉnh sửa được mã. Bản hiện tại có phần đáng kể do Codex sinh, không được ghi toàn bộ là công sức tự làm của sinh viên. Việc có file AI_USAGE chưa tự đáp ứng yêu cầu này.
 5. Sau khi có báo cáo/slide, rà lại định dạng, số liệu, nguồn trích dẫn và gói nộp; luyện bảo vệ toàn bộ quy trình, không chỉ phần chia cho từng người.
 
@@ -113,7 +113,7 @@ Trang thử ngưỡng mặc định làm tròn thanh trượt thành 0,479, tron
 | Phần | Điểm trong hướng dẫn | Đánh giá bằng chứng hiện tại |
 |---|---:|---|
 | Câu 1: dữ liệu, khám phá, chuẩn bị, báo cáo/mã tái lập | 4,0 | Có dữ liệu, làm sạch, 8 hình EDA, pipeline và báo cáo theo mẫu; việc cho điểm phụ thuộc đánh giá của giảng viên |
-| Câu 2: mô hình, đánh giá, CV/tuning, lỗi | 4,0 | Có bằng chứng đầy đủ ở mức triển khai; điểm phụ thuộc cách giải thích và tiêu chí chi tiết |
-| Câu 3: trình bày, demo, vấn đáp từng thành viên | 2,0 | Demo hoạt động; slide và phần bảo vệ/đóng góp nhóm chưa hoàn tất |
+| Câu 2: mô hình, đánh giá, CV/tuning, lỗi | 4,0 | Có bằng chứng, bổ sung CI, chẩn đoán xác suất và top-K; điểm phụ thuộc giải thích đúng phương pháp/giới hạn |
+| Câu 3: trình bày, demo, vấn đáp từng thành viên | 2,0 | Demo hoạt động, slide đã kiểm; phần bảo vệ/đóng góp thật cần nhóm hoàn thành |
 
-PDF tr.3 dẫn tới Đáp án BM06 nhưng workspace chưa có BM06. Không tự quy đổi 54 tests hay 18 bước kỹ thuật thành điểm môn học, không cam kết 10/10. Dòng “18/18” là tiến độ triển khai kỹ thuật, không có nghĩa đã xong bộ nộp và nghĩa vụ của nhóm.
+PDF tr.3 dẫn tới Đáp án BM06 nhưng workspace chưa có BM06; lượt này theo hướng dẫn 6 trang như người dùng xác nhận. Không tự quy đổi 99 tests hay 18 bước kỹ thuật thành điểm môn học, không cam kết 10/10. Dòng “18/18” là tiến độ triển khai kỹ thuật, không xác nhận đã xong nghĩa vụ của nhóm.

@@ -1,10 +1,8 @@
 # Cấu trúc báo cáo theo mẫu đã nhận
 
-Phiên bản 2.0, ngày 10/11/2026. Báo cáo hiện tại: `reports/BAO_CAO_CUOI_KY_TELCO_CHURN.docx`, 64 trang, 6 chương, 17 hình, 25 bảng và 13 tài liệu tham khảo.
+Phiên bản nâng cấp ngày 10/11/2026. Báo cáo `reports/BAOCAO-TTNT.docx` và PDF: 68 trang, 6 chương, 19 hình, 28 bảng và 15 nguồn tham khảo.
 
-Mẫu sử dụng: `MaiTranThienTam_2305CT2070.docx`. Cấu trúc này thay thế dàn ý 8 chương lập trước khi nhận mẫu; bản cũ được lưu tại `docs/planning_snapshot/DAN_Y_BAO_CAO_8_CHUONG_TRUOC_MAU.md`.
-
-Hai bìa, lời cảm ơn, lời cam đoan, mục lục tự động, danh mục hình tự động, danh mục bảng tự động và danh mục ký hiệu/từ viết tắt giữ vị trí theo mẫu. Thông tin cá nhân/lớp/khóa/giảng viên để trống theo yêu cầu. Không có phụ lục; tài liệu tham khảo là phần cuối.
+Mẫu gốc: `reports/templates/MAU_BAO_CAO_GOC.docx`. Giữ định dạng mẫu; thông tin cá nhân/lớp/giảng viên để trống theo yêu cầu. Hai bìa, lời cảm ơn, lời cam đoan, mục lục và danh mục hình/bảng tự động, danh mục từ viết tắt; tài liệu tham khảo ở cuối, không có phụ lục.
 
 ## Dàn ý đã triển khai
 
@@ -77,6 +75,7 @@ Hai bìa, lời cảm ơn, lời cam đoan, mục lục tự động, danh mục
     - 4.4.4. Màn hình hiệu quả mô hình
     - 4.4.5. Màn hình ngưỡng và giải thích
   - 4.5. Cấu hình và vận hành demo
+  - 4.6. Phạm vi hỗ trợ của công cụ AI
 - 5. KIỂM THỬ VÀ ĐÁNH GIÁ
   - 5.1. Mục tiêu và phạm vi đánh giá
   - 5.2. Kết quả kiểm định chéo
@@ -92,11 +91,14 @@ Hai bìa, lời cảm ơn, lời cam đoan, mục lục tự động, danh mục
   - 5.7. Đánh giá theo nhóm khách hàng
     - 5.7.1. Hợp đồng và loại dịch vụ Internet
     - 5.7.2. Giới tính và nhóm tuổi
-  - 5.8. Kiểm thử chức năng và tính tái lập
-    - 5.8.1. Bộ kiểm thử tự động
-    - 5.8.2. Kiểm thử giao diện và tình huống dữ liệu
-    - 5.8.3. Kiểm chứng số liệu và môi trường sạch
-  - 5.9. Đánh giá tổng hợp
+  - 5.8. Độ bất định của kết quả đánh giá
+  - 5.9. Độ tin cậy của xác suất dự đoán
+  - 5.10. Khả năng ưu tiên hồ sơ theo năng lực xử lý
+  - 5.11. Kiểm thử chức năng và tính tái lập
+    - 5.11.1. Bộ kiểm thử tự động
+    - 5.11.2. Kiểm thử giao diện và tình huống dữ liệu
+    - 5.11.3. Kiểm chứng số liệu và môi trường sạch
+  - 5.12. Đánh giá tổng hợp
 - 6. KẾT LUẬN VÀ HƯỚNG PHÁT TRIỂN
   - 6.1. Kết luận
   - 6.2. Kết quả đạt được
@@ -106,7 +108,7 @@ Hai bìa, lời cảm ơn, lời cam đoan, mục lục tự động, danh mục
     - 6.4.2. Cải tiến đánh giá và lựa chọn mô hình
     - 6.4.3. Hoàn thiện khả năng sử dụng
 
-## Danh sách hình
+## Danh mục hình
 
 - Hình 3.1. Phân bố nhãn Churn trên tập train
 - Hình 3.2. Tỷ lệ churn theo loại hợp đồng trên train
@@ -125,8 +127,10 @@ Hai bìa, lời cảm ơn, lời cam đoan, mục lục tự động, danh mục
 - Hình 5.2. Đường ROC và precision–recall trên test
 - Hình 5.3. Precision và recall theo ngưỡng trên validation
 - Hình 5.4. Độ quan trọng thuộc tính trên validation
+- Hình 5.5. Độ tin cậy của xác suất trên validation
+- Hình 5.6. Khả năng bao phủ churn theo tỷ lệ hồ sơ được xem xét trên validation
 
-## Danh sách bảng
+## Danh mục bảng
 
 - Bảng 1.1. Mục tiêu và tiêu chí đánh giá của đề tài
 - Bảng 2.1. Ý nghĩa các kết quả phân loại trong bài toán churn
@@ -150,22 +154,17 @@ Hai bìa, lời cảm ơn, lời cam đoan, mục lục tự động, danh mục
 - Bảng 5.7. Một số trường hợp FN trên test
 - Bảng 5.8. Kết quả test theo hợp đồng và dịch vụ Internet
 - Bảng 5.9. Kết quả test theo giới tính và nhóm tuổi
-- Bảng 5.10. Kết quả bộ kiểm thử tự động theo nhóm
-- Bảng 5.11. Các tình huống kiểm tra chức năng ứng dụng
-- Bảng 5.12. Kết quả kiểm chứng tính nhất quán và tái lập
+- Bảng 5.10. Khoảng ước lượng 95% trên test của các mô hình đã cố định
+- Bảng 5.11. Brier và log loss trên validation
+- Bảng 5.12. Đánh đổi giữa năng lực xử lý và khả năng bao phủ churn
+- Bảng 5.13. Kết quả bộ kiểm thử tự động theo nhóm
+- Bảng 5.14. Các tình huống kiểm tra chức năng ứng dụng
+- Bảng 5.15. Kết quả kiểm chứng tính nhất quán và tái lập
 
-## Đối chiếu nội dung và thực nghiệm
+## Kiểm chứng và phần nhóm cần làm
 
-- Chương 1: mục tiêu, câu hỏi, nhãn, phạm vi, vai trò hỗ trợ sàng lọc.
-- Chương 2: học có giám sát, pipeline, LR/RF/baseline, CV, độ đo, importance và công nghệ.
-- Chương 3: yêu cầu, nguồn/từ điển dữ liệu, thiếu/trùng/ngoại lai, phân hoạch, 8 hình EDA, kiến trúc và luồng.
-- Chương 4: môi trường, module, tiền xử lý, tuning, lựa chọn mô hình/ngưỡng, 5 ảnh ứng dụng, cách chạy.
-- Chương 5: CV và test, các ngưỡng, confusion/ROC/PR, importance, 10 mẫu sai, phân nhóm, kiểm thử và tái lập.
-- Chương 6: kết luận, kết quả, giới hạn và hướng phát triển.
-- 13 nguồn tham khảo được đánh số theo lần xuất hiện đầu, có trích dẫn nội dung và liên kết.
+QA báo cáo kiểm 155 liên kết số trang, tất cả bảng với artifact và các thành phần định dạng với mẫu. 68 trang được xuất bằng Word và kiểm trực quan; SHA-256 trong `reports/evidence/report_qa.json`.
 
-## Kiểm tra hoàn tất
+Các phần mới: 4.6 khai báo AI; 5.8 độ bất định; 5.9 chất lượng xác suất; 5.10 năng lực xử lý; kiểm thử/tái lập ở 5.11. Bộ slide riêng gồm 21 trang ở `reports/BAO_VE_TELCO_CHURN.pptx`, có QA bằng PowerPoint.
 
-`reports/evidence/report_qa.json` ghi kết quả soát 64 trang, 146 liên kết số trang, đối chiếu 25 bảng, cấu trúc trường Word và định dạng mẫu. Nhật ký thực hiện ở `logs/NHAT_KY_THUC_HIEN.md`.
-
-Nhóm còn bổ sung thông tin cá nhân/giảng viên và đóng góp thực, đọc lại nội dung, chuẩn bị slide và bảo vệ.
+Nhóm đọc lại, điền thông tin thật, ghi đóng góp tự thực hiện và luyện demo/vấn đáp theo `docs/HO_SO_BAO_VE.md`. Dàn ý 8 chương trước khi nhận mẫu được giữ ở `docs/planning_snapshot` để truy vết.

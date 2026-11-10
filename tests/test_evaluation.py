@@ -37,3 +37,9 @@ def test_bad_probabilities_rejected(proba):
     with pytest.raises(ValueError):
         threshold_sweep([1],proba)
 
+
+@pytest.mark.parametrize("labels",[[.5],[[1]],[2]])
+def test_invalid_labels_not_silently_coerced(labels):
+    with pytest.raises(ValueError):
+        threshold_sweep(labels,[.5])
+

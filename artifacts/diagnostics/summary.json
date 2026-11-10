@@ -1,0 +1,169 @@
+{
+  "created_at": "2026-11-10T13:38:57+07:00",
+  "run_id": "telco_20261110T093056_0700",
+  "sources": {
+    "metadata.json": "e98161a5f6870a3d5f862a24e54da420bc367fcd7440d0ebd31220cd6e0874fc",
+    "selection_record.json": "9c0ea58ad1e9a67acfb53a2c26b56642c61cc76dd4b4243ec6590f45531ef83b",
+    "test_predictions.csv": "69ac5093ce49e51a9c5ce58ba257156fd522e21e09692668c3a1141c6f84f115",
+    "validation_predictions.csv": "82e1352d7e8638555e1eb9db852c7891e27e7689a7380d6c3ae74572c0ba647e"
+  },
+  "selected_model": "random_forest",
+  "selected_threshold": 0.4788031716353531,
+  "bootstrap_repeats": 2000,
+  "seed": 42,
+  "test_intervals": {
+    "precision_churn": {
+      "estimate": 0.507563025210084,
+      "lower": 0.46747278319123386,
+      "upper": 0.5475562363721808,
+      "n": 595,
+      "method": "wilson",
+      "confidence": 0.95
+    },
+    "recall_churn": {
+      "estimate": 0.8074866310160428,
+      "lower": 0.7644827664523938,
+      "upper": 0.8442381524162453,
+      "n": 374,
+      "method": "wilson",
+      "confidence": 0.95
+    },
+    "accuracy": {
+      "estimate": 0.7409510290986515,
+      "lower": 0.7174417165911013,
+      "upper": 0.7631500693880311,
+      "n": 1409,
+      "method": "wilson",
+      "confidence": 0.95
+    },
+    "average_precision": {
+      "estimate": 0.6482362911420345,
+      "lower": 0.5932209840181297,
+      "upper": 0.7001627728694718,
+      "method": "paired_iid_percentile_bootstrap",
+      "confidence": 0.95,
+      "resamples_used": 2000,
+      "resamples_skipped": 0,
+      "seed": 42
+    },
+    "roc_auc": {
+      "estimate": 0.8434511353948694,
+      "lower": 0.820130372970902,
+      "upper": 0.8645188880666347,
+      "method": "paired_iid_percentile_bootstrap",
+      "confidence": 0.95,
+      "resamples_used": 2000,
+      "resamples_skipped": 0,
+      "seed": 42
+    },
+    "f1_churn": {
+      "estimate": 0.6233230134158927,
+      "lower": 0.5864615909242131,
+      "upper": 0.6584640324214792,
+      "method": "paired_iid_percentile_bootstrap",
+      "confidence": 0.95,
+      "resamples_used": 2000,
+      "resamples_skipped": 0,
+      "seed": 42
+    },
+    "ap_difference": {
+      "estimate": 0.019697122977098247,
+      "lower": 0.0016130640494860461,
+      "upper": 0.036606874269792374,
+      "method": "paired_iid_percentile_bootstrap",
+      "confidence": 0.95,
+      "resamples_used": 2000,
+      "resamples_skipped": 0,
+      "seed": 42
+    }
+  },
+  "probability_scores_validation": [
+    {
+      "model": "logistic_regression",
+      "brier": 0.1378133934185185,
+      "log_loss": 0.4281112894839995
+    },
+    {
+      "model": "random_forest",
+      "brier": 0.16520817396462537,
+      "log_loss": 0.49417330441415763
+    },
+    {
+      "model": "train_prevalence_reference",
+      "brier": 0.19497996730765565,
+      "log_loss": 0.5786668716736689
+    }
+  ],
+  "capacity_validation": [
+    {
+      "requested_fraction": 0.1,
+      "contact_count": 141,
+      "actual_fraction": 0.10007097232079488,
+      "captured_churn": 103,
+      "precision": 0.7304964539007093,
+      "recall": 0.27540106951871657,
+      "lift": 2.752057496112565,
+      "cutoff_probability": 0.788200751830262
+    },
+    {
+      "requested_fraction": 0.2,
+      "contact_count": 282,
+      "actual_fraction": 0.20014194464158977,
+      "captured_churn": 188,
+      "precision": 0.6666666666666666,
+      "recall": 0.5026737967914439,
+      "lift": 2.511586452762923,
+      "cutoff_probability": 0.6995562040797672
+    },
+    {
+      "requested_fraction": 0.3,
+      "contact_count": 423,
+      "actual_fraction": 0.30021291696238467,
+      "captured_churn": 254,
+      "precision": 0.6004728132387707,
+      "recall": 0.679144385026738,
+      "lift": 2.262209074474406,
+      "cutoff_probability": 0.6123572363041447
+    },
+    {
+      "requested_fraction": 0.4,
+      "contact_count": 564,
+      "actual_fraction": 0.40028388928317954,
+      "captured_churn": 292,
+      "precision": 0.5177304964539007,
+      "recall": 0.7807486631016043,
+      "lift": 1.9504873516137593,
+      "cutoff_probability": 0.5096064335459901
+    },
+    {
+      "requested_fraction": 0.5,
+      "contact_count": 705,
+      "actual_fraction": 0.5003548616039745,
+      "captured_churn": 321,
+      "precision": 0.4553191489361702,
+      "recall": 0.8582887700534759,
+      "lift": 1.7153601092274433,
+      "cutoff_probability": 0.3952150471679989
+    },
+    {
+      "requested_fraction": 1.0,
+      "contact_count": 1409,
+      "actual_fraction": 1.0,
+      "captured_churn": 374,
+      "precision": 0.2654364797728886,
+      "recall": 1.0,
+      "lift": 1.0,
+      "cutoff_probability": 0.00911898022010352
+    }
+  ],
+  "method": "Wilson for binomial proportions; paired IID percentile bootstrap for AP, AUC, F1 and RF-minus-LR AP.",
+  "scope": "Descriptive diagnostics of frozen predictions. No refit, threshold tuning or model promotion.",
+  "limitations": [
+    "Intervals condition on the fitted model; they exclude training/model-selection uncertainty and dataset shift.",
+    "IID row resampling is an assumption, not a verified property of future customer streams.",
+    "Validation ranking/calibration diagnostics are exploratory because validation was used for threshold selection.",
+    "Ranking lift measures captured observed churn, not customers retained or causal business uplift.",
+    "Brier/log-loss combine calibration and discrimination; they are not pure calibration measures.",
+    "The train-prevalence probability reference is distinct from the official most-frequent Dummy baseline."
+  ]
+}

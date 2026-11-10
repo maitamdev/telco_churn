@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-10T13:25:42+07:00",
+  "updated_at": "2026-11-10T14:31:13+07:00",
   "technical_steps_total": 18,
   "technical_steps_completed": 18,
   "steps": {
@@ -194,7 +194,7 @@
     "18": {
       "title": "Tổng hợp và đóng gói kỹ thuật",
       "status": "completed",
-      "recorded_at": "2026-11-10T13:25:42+07:00",
+      "recorded_at": "2026-11-10T14:31:13+07:00",
       "evidence": [
         "dist/DU_AN_TELCO_CHURN_KY_THUAT.zip",
         "dist/DU_AN_TELCO_CHURN_KY_THUAT.sha256",
@@ -206,19 +206,24 @@
     }
   },
   "model_run_id": "telco_20261110T093056_0700",
-  "tests_passed": 76,
-  "clean_environment_tests_passed": 76,
+  "tests_passed": 99,
+  "clean_environment_tests_passed": 99,
   "full_reproduction": "passed",
-  "interface_version": "2.0",
+  "interface_version": "2.1",
   "report_written": true,
-  "slides_written": false,
+  "slides_written": true,
+  "slides_file": "reports/BAO_VE_TELCO_CHURN.pptx",
+  "slides_count": 21,
+  "slides_qa": "reports/evidence/slides_qa.json",
+  "report_pdf": "reports/BAOCAO-TTNT.pdf",
+  "extended_diagnostics": "artifacts/diagnostics/summary.json",
   "report_template": "reports/templates/MAU_BAO_CAO_GOC.docx",
   "report_file": "reports/BAOCAO-TTNT.docx",
-  "report_pages": 64,
+  "report_pages": 68,
   "report_qa": "reports/evidence/report_qa.json",
   "student_review_and_contribution": "not_yet_recorded",
   "deployed": false,
   "requirements_audit": "reports/KIEM_TRA_YEU_CAU_CUOI_KY.md",
   "report_outline": "reports/DAN_Y_BAO_CAO_CHI_TIET.md",
-  "ready_for": "Nhóm đọc lại báo cáo 6 chương, bổ sung thông tin/đóng góp thực, chuẩn bị slide và bảo vệ."
+  "ready_for": "Nhóm đọc lại báo cáo và 21 slide, bổ sung thông tin/đóng góp thực, chạy và luyện bảo vệ theo docs/HO_SO_BAO_VE.md."
 }

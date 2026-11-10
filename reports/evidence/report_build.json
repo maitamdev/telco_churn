@@ -1,5 +1,5 @@
 {
-  "output": "C:\\Users\\Asus\\Desktop\\TRITUENHANTAO\\DU_AN_TELCO_CHURN\\reports\\BAO_CAO_CUOI_KY_TELCO_CHURN.docx",
+  "output": "C:\\Users\\Asus\\Desktop\\TRITUENHANTAO\\DU_AN_TELCO_CHURN\\reports\\BAOCAO-TTNT.docx",
   "source_sha256": "d48a769fe78a38063f9985502c1ee35b8822a055a6cf74e99c49c4555d2b7cab",
   "chapters": 6,
   "figures": [
@@ -87,6 +87,16 @@
       "chapter": 5,
       "number": 4,
       "title": "Độ quan trọng thuộc tính trên validation"
+    },
+    {
+      "chapter": 5,
+      "number": 5,
+      "title": "Độ tin cậy của xác suất trên validation"
+    },
+    {
+      "chapter": 5,
+      "number": 6,
+      "title": "Khả năng bao phủ churn theo tỷ lệ hồ sơ được xem xét trên validation"
     }
   ],
   "tables": [
@@ -203,16 +213,31 @@
     {
       "chapter": 5,
       "number": 10,
-      "title": "Kết quả bộ kiểm thử tự động theo nhóm"
+      "title": "Khoảng ước lượng 95% trên test của các mô hình đã cố định"
     },
     {
       "chapter": 5,
       "number": 11,
-      "title": "Các tình huống kiểm tra chức năng ứng dụng"
+      "title": "Brier và log loss trên validation"
     },
     {
       "chapter": 5,
       "number": 12,
+      "title": "Đánh đổi giữa năng lực xử lý và khả năng bao phủ churn"
+    },
+    {
+      "chapter": 5,
+      "number": 13,
+      "title": "Kết quả bộ kiểm thử tự động theo nhóm"
+    },
+    {
+      "chapter": 5,
+      "number": 14,
+      "title": "Các tình huống kiểm tra chức năng ứng dụng"
+    },
+    {
+      "chapter": 5,
+      "number": 15,
       "title": "Kết quả kiểm chứng tính nhất quán và tái lập"
     }
   ],
@@ -668,178 +693,202 @@
       "bookmark": "Heading_75"
     },
     {
+      "text": "Phạm vi hỗ trợ của công cụ AI",
+      "level": 2,
+      "number": "4.6",
+      "bookmark": "Heading_76"
+    },
+    {
       "text": "KIỂM THỬ VÀ ĐÁNH GIÁ",
       "level": 1,
       "number": "5",
-      "bookmark": "Heading_76"
+      "bookmark": "Heading_77"
     },
     {
       "text": "Mục tiêu và phạm vi đánh giá",
       "level": 2,
       "number": "5.1",
-      "bookmark": "Heading_77"
+      "bookmark": "Heading_78"
     },
     {
       "text": "Kết quả kiểm định chéo",
       "level": 2,
       "number": "5.2",
-      "bookmark": "Heading_78"
+      "bookmark": "Heading_79"
     },
     {
       "text": "Kết quả đánh giá trên test",
       "level": 2,
       "number": "5.3",
-      "bookmark": "Heading_79"
+      "bookmark": "Heading_80"
     },
     {
       "text": "So sánh các mô hình và ngưỡng",
       "level": 3,
       "number": "5.3.1",
-      "bookmark": "Heading_80"
+      "bookmark": "Heading_81"
     },
     {
       "text": "Ma trận nhầm lẫn và khối lượng sàng lọc",
       "level": 3,
       "number": "5.3.2",
-      "bookmark": "Heading_81"
+      "bookmark": "Heading_82"
     },
     {
       "text": "Đường ROC và precision–recall",
       "level": 3,
       "number": "5.3.3",
-      "bookmark": "Heading_82"
+      "bookmark": "Heading_83"
     },
     {
       "text": "Đánh giá lựa chọn ngưỡng",
       "level": 2,
       "number": "5.4",
-      "bookmark": "Heading_83"
+      "bookmark": "Heading_84"
     },
     {
       "text": "Phân tích độ quan trọng thuộc tính",
       "level": 2,
       "number": "5.5",
-      "bookmark": "Heading_84"
+      "bookmark": "Heading_85"
     },
     {
       "text": "Phân tích các trường hợp dự đoán sai",
       "level": 2,
       "number": "5.6",
-      "bookmark": "Heading_85"
+      "bookmark": "Heading_86"
     },
     {
       "text": "Các trường hợp báo động nhầm",
       "level": 3,
       "number": "5.6.1",
-      "bookmark": "Heading_86"
+      "bookmark": "Heading_87"
     },
     {
       "text": "Các trường hợp bỏ sót",
       "level": 3,
       "number": "5.6.2",
-      "bookmark": "Heading_87"
+      "bookmark": "Heading_88"
     },
     {
       "text": "Đánh giá theo nhóm khách hàng",
       "level": 2,
       "number": "5.7",
-      "bookmark": "Heading_88"
+      "bookmark": "Heading_89"
     },
     {
       "text": "Hợp đồng và loại dịch vụ Internet",
       "level": 3,
       "number": "5.7.1",
-      "bookmark": "Heading_89"
+      "bookmark": "Heading_90"
     },
     {
       "text": "Giới tính và nhóm tuổi",
       "level": 3,
       "number": "5.7.2",
-      "bookmark": "Heading_90"
+      "bookmark": "Heading_91"
+    },
+    {
+      "text": "Độ bất định của kết quả đánh giá",
+      "level": 2,
+      "number": "5.8",
+      "bookmark": "Heading_92"
+    },
+    {
+      "text": "Độ tin cậy của xác suất dự đoán",
+      "level": 2,
+      "number": "5.9",
+      "bookmark": "Heading_93"
+    },
+    {
+      "text": "Khả năng ưu tiên hồ sơ theo năng lực xử lý",
+      "level": 2,
+      "number": "5.10",
+      "bookmark": "Heading_94"
     },
     {
       "text": "Kiểm thử chức năng và tính tái lập",
       "level": 2,
-      "number": "5.8",
-      "bookmark": "Heading_91"
+      "number": "5.11",
+      "bookmark": "Heading_95"
     },
     {
       "text": "Bộ kiểm thử tự động",
       "level": 3,
-      "number": "5.8.1",
-      "bookmark": "Heading_92"
+      "number": "5.11.1",
+      "bookmark": "Heading_96"
     },
     {
       "text": "Kiểm thử giao diện và tình huống dữ liệu",
       "level": 3,
-      "number": "5.8.2",
-      "bookmark": "Heading_93"
+      "number": "5.11.2",
+      "bookmark": "Heading_97"
     },
     {
       "text": "Kiểm chứng số liệu và môi trường sạch",
       "level": 3,
-      "number": "5.8.3",
-      "bookmark": "Heading_94"
+      "number": "5.11.3",
+      "bookmark": "Heading_98"
     },
     {
       "text": "Đánh giá tổng hợp",
       "level": 2,
-      "number": "5.9",
-      "bookmark": "Heading_95"
+      "number": "5.12",
+      "bookmark": "Heading_99"
     },
     {
       "text": "KẾT LUẬN VÀ HƯỚNG PHÁT TRIỂN",
       "level": 1,
       "number": "6",
-      "bookmark": "Heading_96"
+      "bookmark": "Heading_100"
     },
     {
       "text": "Kết luận",
       "level": 2,
       "number": "6.1",
-      "bookmark": "Heading_97"
+      "bookmark": "Heading_101"
     },
     {
       "text": "Kết quả đạt được",
       "level": 2,
       "number": "6.2",
-      "bookmark": "Heading_98"
+      "bookmark": "Heading_102"
     },
     {
       "text": "Giới hạn phạm vi của đề tài",
       "level": 2,
       "number": "6.3",
-      "bookmark": "Heading_99"
+      "bookmark": "Heading_103"
     },
     {
       "text": "Hướng phát triển",
       "level": 2,
       "number": "6.4",
-      "bookmark": "Heading_100"
+      "bookmark": "Heading_104"
     },
     {
       "text": "Bổ sung dữ liệu và xác định thời điểm dự báo",
       "level": 3,
       "number": "6.4.1",
-      "bookmark": "Heading_101"
+      "bookmark": "Heading_105"
     },
     {
       "text": "Cải tiến đánh giá và lựa chọn mô hình",
       "level": 3,
       "number": "6.4.2",
-      "bookmark": "Heading_102"
+      "bookmark": "Heading_106"
     },
     {
       "text": "Hoàn thiện khả năng sử dụng",
       "level": 3,
       "number": "6.4.3",
-      "bookmark": "Heading_103"
+      "bookmark": "Heading_107"
     },
     {
       "text": "DANH MỤC TÀI LIỆU THAM KHẢO",
       "level": 1,
       "number": "",
-      "bookmark": "Heading_104"
+      "bookmark": "Heading_108"
     }
   ],
   "reference_order": {
@@ -855,7 +904,9 @@
     "5": 10,
     "6": 11,
     "8": 12,
-    "9": 13
+    "9": 13,
+    "15": 14,
+    "14": 15
   },
   "preserved_parts": [
     "word/styles.xml",
@@ -863,9 +914,9 @@
     "word/fontTable.xml",
     "word/theme/theme1.xml"
   ],
-  "content_words": 13180,
+  "content_words": 14470,
   "fields_refreshed": true,
   "visual_qa_complete": true,
-  "pages": 64,
-  "final_sha256": "436020d2f9691283a814bf9270dbe98ec570744f8c30771e8eb8259749b5c8c3"
+  "pages": 68,
+  "final_sha256": "88b4d02fdef6ebf9358bad39ed7677954d8b7c670559fe9076d111020c5ddfe9"
 }

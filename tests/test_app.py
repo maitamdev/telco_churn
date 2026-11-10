@@ -77,3 +77,14 @@ def test_model_or_threshold_change_invalidates_result_signature(bundle):
     assert original!=request_signature(b"same customer",{**metadata,"selected_threshold":.9})
     assert original!=request_signature(b"same customer",{**metadata,"pipeline_sha256":"new model"})
 
+
+def test_capacity_preview_changes_workload_without_changing_model():
+    before=sha256(RUN_DIR/"metadata.json")
+    app=open_page("Đánh giá")
+    initial=next(m for m in app.metric if m.label=="Hồ sơ ưu tiên").value
+    app.slider(key="capacity_preview").set_value(50).run()
+    assert not app.exception and not app.error
+    updated=next(m for m in app.metric if m.label=="Hồ sơ ưu tiên").value
+    assert int(updated)>int(initial)
+    assert sha256(RUN_DIR/"metadata.json")==before
+

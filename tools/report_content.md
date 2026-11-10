@@ -343,6 +343,11 @@ Khi chuẩn bị demo, người thực hiện kiểm tra bundle, mở màn hình
 
 Trong quá trình sử dụng, thay đổi nội dung biểu mẫu không làm thay đổi mô hình đã lưu. Muốn thực hiện một thiết kế thực nghiệm mới cần tạo lần chạy riêng, giữ dữ liệu đánh giá phù hợp và không ghi đè kết quả hiện tại chỉ để làm đẹp các chỉ số test. Cách quản lý này giúp nội dung demo, báo cáo và artifact giữ cùng một nguồn số liệu.
 
+## Phạm vi hỗ trợ của công cụ AI
+OpenAI Codex hỗ trợ xây dựng một phần đáng kể mã nguồn, kiểm thử, nội dung phân tích và tài liệu của dự án. Phạm vi hỗ trợ bao gồm rà soát đầu vào, tổ chức pipeline, tạo công cụ kiểm chứng, tối ưu xử lý CSV, bổ sung đánh giá độ bất định và chuẩn bị nội dung trình bày. Các kết quả định lượng trong báo cáo lấy từ dữ liệu và artifact thực thi, không thay bằng con số do công cụ tự suy đoán.
+
+Nhật ký sử dụng AI được lưu trong docs/AI_USAGE.md; hồ sơ đóng góp riêng của từng thành viên phải ghi công việc thực sự tự đọc, chạy, sửa và kiểm chứng. Sự hỗ trợ của công cụ không thay thế trách nhiệm giải thích thuật toán, sửa mã trực tiếp và bảo vệ các quyết định của nhóm. Việc đánh giá tính đúng đắn phải dựa vào dữ liệu, kiểm thử, nguồn tài liệu và lập luận của người thực hiện.
+
 # KIỂM THỬ VÀ ĐÁNH GIÁ
 ## Mục tiêu và phạm vi đánh giá
 Đánh giá của đề tài gồm hai nhóm. Nhóm thứ nhất kiểm tra chất lượng học máy: mô hình có cải thiện so với baseline hay không, mức đánh đổi giữa các loại sai số và khả năng khái quát trên test. Nhóm thứ hai kiểm tra tính đúng đắn của hệ thống: dữ liệu có được xử lý nhất quán, mô hình đã lưu có cho cùng kết quả, CSV lỗi có được phát hiện và các màn hình có thực hiện đúng luồng chức năng hay không.
@@ -439,9 +444,42 @@ Trên test, nhóm Female có 687 hồ sơ, precision khoảng 0,5315 và recall 
 
 Các chênh lệch được trình bày nhằm kiểm tra thêm hành vi mô hình, chưa đủ để kết luận công bằng hoặc bất công giữa các nhóm. Quy mô mẫu, tỷ lệ churn, phân bố hợp đồng và sai số ước lượng đều có thể ảnh hưởng đến các độ đo. Dữ liệu cần được mở rộng và xác định tiêu chí đánh giá phù hợp trước khi đưa ra kết luận về công bằng khi triển khai.
 
+## Độ bất định của kết quả đánh giá
+Các độ đo trên test là ước lượng từ 1.409 hồ sơ hữu hạn, vì vậy cần trình bày khoảng ước lượng cùng giá trị điểm. Precision và recall sử dụng khoảng Wilson 95% theo mô hình tỷ lệ nhị thức [15]. AP, ROC-AUC, F1 và chênh lệch AP giữa RF với LR sử dụng 2.000 mẫu bootstrap theo hàng có hoàn lại, seed 42, lấy phân vị 2,5% và 97,5% [14]. Hai mô hình dùng cùng chỉ số lấy mẫu ở mỗi lần lặp để giữ tính ghép cặp trên cùng khách hàng.
+
+@table uncertainty|Khoảng ước lượng 95% trên test của các mô hình đã cố định
+
+Tại ngưỡng chính thức, recall của RF bằng 0,8075, với khoảng Wilson từ 0,7645 đến 0,8442. Precision bằng 0,5076, với khoảng từ 0,4675 đến 0,5476. Như vậy, precision quan sát vượt 50% không đồng nghĩa đã chứng minh precision quần thể luôn vượt mức đó. Mục tiêu 80% recall cũng là mục tiêu vận hành trên một mẫu, không phải cam kết cho mọi nhóm khách hàng hoặc giai đoạn mới.
+
+Chênh lệch AP trên test của RF trừ LR bằng 0,0197; khoảng bootstrap ghép cặp từ 0,0016 đến 0,0366 nằm phía dương trong phép tính này. Kết quả mô tả lợi thế của RF đối với hai mô hình đã fit và mẫu test hiện có. Nó không thay thế tiêu chí chọn mô hình bằng CV trên train, không được dùng để chọn lại siêu tham số và không bao gồm sai số do thử nhiều cấu hình. Độ lệch chuẩn giữa năm fold CV ở phần trước là một đại lượng khác với các khoảng này.
+
+Bootstrap giả định các hàng có thể được xem là những quan sát độc lập cùng phân bố. Dữ liệu hiện tại không cho phép kiểm chứng giả định đó đối với khách hàng tương lai hoặc các cụm hộ gia đình. Khoảng phân vị là xấp xỉ có điều kiện trên mô hình đã huấn luyện, không phản ánh bất định của toàn bộ quá trình huấn luyện, lựa chọn mô hình, thay đổi thị trường hoặc hiệu quả can thiệp. Các khoảng được đọc riêng từng độ đo, không phải một tập khoảng đồng thời đã hiệu chỉnh cho so sánh nhiều lần.
+
+## Độ tin cậy của xác suất dự đoán
+Khả năng xếp hạng tốt và khả năng ước lượng xác suất đúng là hai thuộc tính khác nhau. Đường độ tin cậy chia xác suất validation thành 10 khoảng đều nhau, rồi so xác suất dự đoán trung bình với tỷ lệ churn thực tế trong từng khoảng. Điểm gần đường chéo thể hiện sự phù hợp giữa hai đại lượng; khoảng ít mẫu có độ bất định lớn hơn. Tệp dữ liệu đi kèm lưu số mẫu và khoảng Wilson của từng khoảng để hỗ trợ kiểm tra [12].
+
+@figure artifacts/diagnostics/reliability_validation.png|Độ tin cậy của xác suất trên validation
+@table calibration|Brier và log loss trên validation
+
+Logistic Regression có Brier 0,1378 và log loss 0,4281, thấp hơn RF tương ứng 0,1652 và 0,4942; cả hai tốt hơn mốc xác suất train cố định. Điều này cho thấy ưu thế AP của RF không đồng nghĩa RF tốt nhất về chất lượng xác suất. Quyết định chọn RF vẫn theo tiêu chí CV AP đã chốt, trong khi sự khác biệt này được ghi nhận như một giới hạn cần cân nhắc nếu mục đích sử dụng chuyển sang dự báo xác suất gắn với chi phí.
+
+Brier là trung bình bình phương sai số giữa xác suất và nhãn nhị phân; log loss phạt mạnh dự đoán tự tin nhưng sai. Cả hai càng thấp càng tốt, nhưng cùng phản ánh hiệu chỉnh, khả năng phân biệt và đặc điểm nhãn nên không được diễn giải như thước đo riêng của calibration [12]. Mốc tham chiếu xác suất cố định lấy tỷ lệ churn trên train; đây là phép tham chiếu bổ sung cho chất lượng xác suất, khác với Dummy most_frequent chính thức luôn dự đoán No.
+
+Phân tích này là chẩn đoán mô tả trên validation đã tham gia chọn ngưỡng. Dự án không fit bộ hiệu chỉnh trên test và không đổi xác suất của mô hình demo. Nếu cần hiệu chỉnh ở lần nghiên cứu tiếp theo, dữ liệu dùng để fit bộ hiệu chỉnh phải độc lập với dữ liệu đánh giá cuối, hoặc quy trình hiệu chỉnh phải nằm trong thiết kế kiểm định chéo phù hợp. Các điểm churn hiện có vẫn được gọi là xác suất ước lượng chưa hiệu chỉnh.
+
+## Khả năng ưu tiên hồ sơ theo năng lực xử lý
+Trong một chiến dịch có số nhân viên hữu hạn, câu hỏi vận hành có thể là cần xem xét bao nhiêu hồ sơ để bao phủ một phần khách hàng churn. Phép khảo sát sắp xác suất RF trên validation theo thứ tự giảm dần, lấy số hồ sơ bằng phần nguyên làm tròn lên của tỷ lệ năng lực nhân với 1.409. Nếu điểm bằng nhau, thứ tự customerID phá hòa; nhãn không tham gia xếp hạng.
+
+@figure artifacts/diagnostics/capacity_validation.png|Khả năng bao phủ churn theo tỷ lệ hồ sơ được xem xét trên validation
+@table capacity|Đánh đổi giữa năng lực xử lý và khả năng bao phủ churn
+
+Khi xem xét 20% hồ sơ, danh sách gồm 282 khách và chứa 188 trong 374 trường hợp churn của validation. Recall đạt 50,27%, precision đạt 66,67% và lift so với chọn ngẫu nhiên bằng khoảng 2,51. Khi năng lực tăng đến 40%, danh sách gồm 564 khách, chứa 292 trường hợp churn, tương ứng recall 78,07%. Những con số này giúp giải thích đánh đổi giữa độ phủ và khối lượng công việc thay vì chỉ đưa ra một ngưỡng thiếu bối cảnh.
+
+Lift được tính bằng precision trong danh sách chia cho tỷ lệ churn toàn validation. Đại lượng này đo mức tập trung khách churn quan sát trong danh sách, không phải mức tăng giữ chân hay lợi nhuận. Để đánh giá tác động kinh doanh cần dữ liệu can thiệp có nhóm đối chứng, chi phí liên hệ, giá trị giữ chân và phản hồi thực tế. Thanh trượt năng lực trong ứng dụng chỉ minh họa trên validation, không thay ngưỡng chính thức đã khóa.
+
 ## Kiểm thử chức năng và tính tái lập
 ### Bộ kiểm thử tự động
-Bộ kiểm thử hiện tại gồm 54 ca và đều đạt trong lần kiểm tra trên mã dự án hiện hành; không có lỗi hoặc ca bị bỏ qua. Nội dung kiểm thử bao quát kiểm tra dữ liệu, chia tập, tiền xử lý, lựa chọn ngưỡng, nạp bundle, dự đoán CSV và các luồng Streamlit. Kết quả được lưu dưới dạng nhật ký và JUnit XML để có thể kiểm tra số ca cùng trạng thái thực thi.
+Bộ kiểm thử hiện tại đều đạt trong lần kiểm tra trên mã dự án hiện hành; số ca theo từng nhóm lấy trực tiếp từ JUnit XML và trình bày ở bảng dưới. Nội dung bao quát dữ liệu, phân hoạch, tiền xử lý, lựa chọn ngưỡng, suy luận, CSV, các luồng Streamlit, đóng gói, khoảng ước lượng và phân tích năng lực xử lý. Không có ca lỗi hoặc bị bỏ qua trong lần kiểm chứng được trình bày.
 
 @table tests|Kết quả bộ kiểm thử tự động theo nhóm
 
@@ -457,7 +495,7 @@ Tệp CSV có dòng thiếu cột bắt buộc được từ chối ở mức c�
 ### Kiểm chứng số liệu và môi trường sạch
 Khi nạp lại pipeline đã lưu và tính xác suất cho toàn bộ test, sai khác lớn nhất so với tệp dự đoán đã lưu bằng 0. Năm dòng kết quả đánh giá được tính lại từ nhãn và dự đoán, với sai khác số thực lớn nhất khoảng 1,11 × 10⁻¹⁶. Sai khác này thuộc mức biểu diễn số thực của máy, không phải thay đổi kết quả phân loại.
 
-Ba tập được ghép lại theo customerID, đủ 7.043 hồ sơ và không trùng ID giữa các tập. Notebook có sáu ô mã đã được thực thi và không có output lỗi. Trong lần chạy lại ở môi trường sạch, bộ 54 kiểm thử đều đạt; quy trình huấn luyện với cùng cấu hình tạo ra cùng kết quả CV, tham số lựa chọn, ngưỡng và xác suất trong phạm vi so sánh của dự án.
+Ba tập được ghép lại theo customerID, đủ 7.043 hồ sơ và không trùng ID giữa các tập. Notebook có sáu ô mã đã được thực thi và không có output lỗi. Bộ kiểm thử mới được chạy ở môi trường chính và môi trường kiểm chứng độc lập với cùng phiên bản thư viện. Bằng chứng tái huấn luyện của lần triển khai ban đầu cho cùng kết quả CV, tham số lựa chọn, ngưỡng và xác suất; lần nâng cấp đánh giá hiện tại không huấn luyện hoặc chọn lại mô hình.
 
 @table reproducibility|Kết quả kiểm chứng tính nhất quán và tái lập
 
@@ -479,12 +517,12 @@ Về dữ liệu, đề tài kiểm tra đủ 7.043 hồ sơ, xác định 11 gi
 
 Về phương pháp, đề tài xây dựng pipeline dùng chung, so sánh hai mô hình với baseline, khảo sát 26 cấu hình học máy bằng CV năm fold và tách việc lựa chọn ngưỡng khỏi đánh giá test. Kết quả có đầy đủ độ đo, ma trận nhầm lẫn, ROC/PR, phân tích FP/FN và đánh giá theo nhóm. Cấu hình cùng ngưỡng được lưu để sử dụng thống nhất ở ứng dụng.
 
-Về triển khai, ứng dụng có khả năng dự đoán một hồ sơ và danh sách, kiểm tra đầu vào, giữ dòng lỗi để phản hồi và xuất kết quả. Bộ 54 kiểm thử cùng các phép đối chiếu mô hình, số liệu và môi trường sạch cung cấp bằng chứng cho tính đúng đắn của luồng xử lý. Người sử dụng có thể kiểm tra được kết quả bằng dữ liệu và artifact đi kèm dự án.
+Về triển khai, ứng dụng có khả năng dự đoán một hồ sơ và danh sách, kiểm tra đầu vào, giữ dòng lỗi để phản hồi và xuất kết quả. Bộ 99 kiểm thử cùng các phép đối chiếu mô hình, số liệu và môi trường sạch cung cấp bằng chứng cho tính đúng đắn của luồng xử lý. Người sử dụng có thể kiểm tra được kết quả bằng dữ liệu và artifact đi kèm dự án.
 
 ## Giới hạn phạm vi của đề tài
 Bộ dữ liệu là dữ liệu mẫu của một doanh nghiệp hư cấu và chưa được xác nhận đại diện cho khách hàng của một nhà mạng cụ thể. Các quan hệ được phát hiện chỉ phản ánh bộ dữ liệu và cách chia tập hiện tại. Không thể từ kết quả này suy ra tỷ lệ giữ chân hoặc doanh thu tăng thêm khi triển khai tại doanh nghiệp.
 
-Dữ liệu không có lịch sử thời điểm đầy đủ nên đề tài chưa xác nhận một kỳ dự báo sớm. Xác suất Random Forest chưa được hiệu chỉnh; các giá trị hiển thị không được xem là xác suất chính xác cho một thời hạn tương lai đã xác định. Kiểm định chéo được thực hiện với một cấu hình chia cố định, chưa có đánh giá độ bất định qua nhiều lần chia hoặc qua các giai đoạn thời gian khác nhau.
+Dữ liệu không có lịch sử thời điểm đầy đủ nên đề tài chưa xác nhận một kỳ dự báo sớm. Xác suất Random Forest chưa được hiệu chỉnh; các giá trị hiển thị không được xem là xác suất chính xác cho một thời hạn tương lai đã xác định. Khoảng Wilson và bootstrap mới bổ sung mô tả bất định của mẫu holdout có điều kiện trên mô hình cố định. Kiểm định chéo vẫn dùng một cấu hình chia, chưa lượng hóa biến động của toàn bộ quá trình huấn luyện qua nhiều lần chia hoặc qua các giai đoạn thời gian.
 
 Mô hình còn yếu ở nhóm khách hàng có hợp đồng dài. Đặc biệt, trên test, cả 9 trường hợp churn của nhóm hợp đồng hai năm đều bị bỏ sót tại ngưỡng chính thức. Phân tích importance là phân tích tổng thể, chưa có phương pháp giải thích cục bộ cho từng dự đoán. Ngoài ra, hệ thống hiện chạy local, chưa có quản lý tài khoản, kết nối CRM, lịch huấn luyện lại hoặc giám sát mô hình trong vận hành.
 

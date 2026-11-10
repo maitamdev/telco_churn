@@ -3,6 +3,7 @@
 .reproduction/
 dist/
 tmp/
+.chart-data-*/
 __pycache__/
 .pytest_cache/
 .ipynb_checkpoints/
