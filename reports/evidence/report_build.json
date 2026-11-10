@@ -249,646 +249,634 @@
       "bookmark": "Heading_1"
     },
     {
-      "text": "LỜI CAM ĐOAN",
+      "text": "MỤC LỤC",
       "level": 1,
       "number": "",
       "bookmark": "Heading_2"
     },
     {
-      "text": "MỤC LỤC",
+      "text": "DANH MỤC CÁC HÌNH VẼ",
       "level": 1,
       "number": "",
       "bookmark": "Heading_3"
     },
     {
-      "text": "DANH MỤC CÁC HÌNH VẼ",
+      "text": "DANH MỤC CÁC BẢNG",
       "level": 1,
       "number": "",
       "bookmark": "Heading_4"
     },
     {
-      "text": "DANH MỤC CÁC BẢNG",
+      "text": "DANH MỤC CÁC KÝ HIỆU VÀ TỪ VIẾT TẮT",
       "level": 1,
       "number": "",
       "bookmark": "Heading_5"
     },
     {
-      "text": "DANH MỤC CÁC KÝ HIỆU VÀ TỪ VIẾT TẮT",
-      "level": 1,
-      "number": "",
-      "bookmark": "Heading_6"
-    },
-    {
       "text": "TỔNG QUAN ĐỀ TÀI",
       "level": 1,
       "number": "1",
-      "bookmark": "Heading_7"
+      "bookmark": "Heading_6"
     },
     {
       "text": "Đặt vấn đề",
       "level": 2,
       "number": "1.1",
-      "bookmark": "Heading_8"
+      "bookmark": "Heading_7"
     },
     {
       "text": "Mục tiêu đề tài",
       "level": 2,
       "number": "1.2",
-      "bookmark": "Heading_9"
+      "bookmark": "Heading_8"
     },
     {
       "text": "Mục tiêu tổng quát",
       "level": 3,
       "number": "1.2.1",
-      "bookmark": "Heading_10"
+      "bookmark": "Heading_9"
     },
     {
       "text": "Mục tiêu cụ thể",
       "level": 3,
       "number": "1.2.2",
-      "bookmark": "Heading_11"
+      "bookmark": "Heading_10"
     },
     {
       "text": "Câu hỏi nghiên cứu",
       "level": 3,
       "number": "1.2.3",
-      "bookmark": "Heading_12"
+      "bookmark": "Heading_11"
     },
     {
       "text": "Đối tượng và phạm vi đề tài",
       "level": 2,
       "number": "1.3",
-      "bookmark": "Heading_13"
+      "bookmark": "Heading_12"
     },
     {
       "text": "Đối tượng nghiên cứu",
       "level": 3,
       "number": "1.3.1",
-      "bookmark": "Heading_14"
+      "bookmark": "Heading_13"
     },
     {
       "text": "Phạm vi thực hiện",
       "level": 3,
       "number": "1.3.2",
-      "bookmark": "Heading_15"
+      "bookmark": "Heading_14"
     },
     {
       "text": "Phương pháp thực hiện",
       "level": 2,
       "number": "1.4",
-      "bookmark": "Heading_16"
+      "bookmark": "Heading_15"
     },
     {
       "text": "Cấu trúc báo cáo",
       "level": 2,
       "number": "1.5",
-      "bookmark": "Heading_17"
+      "bookmark": "Heading_16"
     },
     {
       "text": "CƠ SỞ LÝ THUYẾT",
       "level": 1,
       "number": "2",
-      "bookmark": "Heading_18"
+      "bookmark": "Heading_17"
     },
     {
       "text": "Bài toán phân loại khách hàng rời dịch vụ",
       "level": 2,
       "number": "2.1",
-      "bookmark": "Heading_19"
+      "bookmark": "Heading_18"
     },
     {
       "text": "Tiền xử lý dữ liệu dạng bảng",
       "level": 2,
       "number": "2.2",
-      "bookmark": "Heading_20"
+      "bookmark": "Heading_19"
     },
     {
       "text": "Xử lý giá trị thiếu và chuẩn hóa",
       "level": 3,
       "number": "2.2.1",
-      "bookmark": "Heading_21"
+      "bookmark": "Heading_20"
     },
     {
       "text": "Mã hóa thuộc tính phân loại",
       "level": 3,
       "number": "2.2.2",
-      "bookmark": "Heading_22"
+      "bookmark": "Heading_21"
     },
     {
       "text": "Pipeline và phòng tránh rò rỉ dữ liệu",
       "level": 3,
       "number": "2.2.3",
-      "bookmark": "Heading_23"
+      "bookmark": "Heading_22"
     },
     {
       "text": "Các mô hình phân loại",
       "level": 2,
       "number": "2.3",
-      "bookmark": "Heading_24"
+      "bookmark": "Heading_23"
     },
     {
       "text": "Mô hình đối chứng DummyClassifier",
       "level": 3,
       "number": "2.3.1",
-      "bookmark": "Heading_25"
+      "bookmark": "Heading_24"
     },
     {
       "text": "Logistic Regression",
       "level": 3,
       "number": "2.3.2",
-      "bookmark": "Heading_26"
+      "bookmark": "Heading_25"
     },
     {
       "text": "Random Forest",
       "level": 3,
       "number": "2.3.3",
-      "bookmark": "Heading_27"
+      "bookmark": "Heading_26"
     },
     {
       "text": "Kiểm định chéo và lựa chọn siêu tham số",
       "level": 2,
       "number": "2.4",
-      "bookmark": "Heading_28"
+      "bookmark": "Heading_27"
     },
     {
       "text": "Các độ đo đánh giá",
       "level": 2,
       "number": "2.5",
-      "bookmark": "Heading_29"
+      "bookmark": "Heading_28"
     },
     {
       "text": "Ma trận nhầm lẫn",
       "level": 3,
       "number": "2.5.1",
-      "bookmark": "Heading_30"
+      "bookmark": "Heading_29"
     },
     {
       "text": "Accuracy, precision, recall và F1",
       "level": 3,
       "number": "2.5.2",
-      "bookmark": "Heading_31"
+      "bookmark": "Heading_30"
     },
     {
       "text": "ROC-AUC và Average Precision",
       "level": 3,
       "number": "2.5.3",
-      "bookmark": "Heading_32"
+      "bookmark": "Heading_31"
     },
     {
       "text": "Độ quan trọng thuộc tính",
       "level": 2,
       "number": "2.6",
-      "bookmark": "Heading_33"
+      "bookmark": "Heading_32"
     },
     {
       "text": "Công nghệ xây dựng ứng dụng",
       "level": 2,
       "number": "2.7",
-      "bookmark": "Heading_34"
+      "bookmark": "Heading_33"
     },
     {
       "text": "PHÂN TÍCH VÀ THIẾT KẾ HỆ THỐNG",
       "level": 1,
       "number": "3",
-      "bookmark": "Heading_35"
+      "bookmark": "Heading_34"
     },
     {
       "text": "Phân tích yêu cầu hệ thống",
       "level": 2,
       "number": "3.1",
-      "bookmark": "Heading_36"
+      "bookmark": "Heading_35"
     },
     {
       "text": "Yêu cầu chức năng",
       "level": 3,
       "number": "3.1.1",
-      "bookmark": "Heading_37"
+      "bookmark": "Heading_36"
     },
     {
       "text": "Yêu cầu phi chức năng",
       "level": 3,
       "number": "3.1.2",
-      "bookmark": "Heading_38"
+      "bookmark": "Heading_37"
     },
     {
       "text": "Nguồn dữ liệu và cấu trúc thuộc tính",
       "level": 2,
       "number": "3.2",
-      "bookmark": "Heading_39"
+      "bookmark": "Heading_38"
     },
     {
       "text": "Nguồn và quy mô",
       "level": 3,
       "number": "3.2.1",
-      "bookmark": "Heading_40"
+      "bookmark": "Heading_39"
     },
     {
       "text": "Kiểu dữ liệu và giá trị thiếu",
       "level": 3,
       "number": "3.2.2",
-      "bookmark": "Heading_41"
+      "bookmark": "Heading_40"
     },
     {
       "text": "Thiết kế quy trình chuẩn bị dữ liệu",
       "level": 2,
       "number": "3.3",
-      "bookmark": "Heading_42"
+      "bookmark": "Heading_41"
     },
     {
       "text": "Làm sạch và kiểm tra ngoại lai",
       "level": 3,
       "number": "3.3.1",
-      "bookmark": "Heading_43"
+      "bookmark": "Heading_42"
     },
     {
       "text": "Chia tập dữ liệu",
       "level": 3,
       "number": "3.3.2",
-      "bookmark": "Heading_44"
+      "bookmark": "Heading_43"
     },
     {
       "text": "Phòng tránh sử dụng thông tin không phù hợp",
       "level": 3,
       "number": "3.3.3",
-      "bookmark": "Heading_45"
+      "bookmark": "Heading_44"
     },
     {
       "text": "Phân tích khám phá dữ liệu",
       "level": 2,
       "number": "3.4",
-      "bookmark": "Heading_46"
+      "bookmark": "Heading_45"
     },
     {
       "text": "Phân bố nhãn churn",
       "level": 3,
       "number": "3.4.1",
-      "bookmark": "Heading_47"
+      "bookmark": "Heading_46"
     },
     {
       "text": "Churn theo loại hợp đồng",
       "level": 3,
       "number": "3.4.2",
-      "bookmark": "Heading_48"
+      "bookmark": "Heading_47"
     },
     {
       "text": "Churn theo dịch vụ Internet",
       "level": 3,
       "number": "3.4.3",
-      "bookmark": "Heading_49"
+      "bookmark": "Heading_48"
     },
     {
       "text": "Churn theo phương thức thanh toán",
       "level": 3,
       "number": "3.4.4",
-      "bookmark": "Heading_50"
+      "bookmark": "Heading_49"
     },
     {
       "text": "Thời gian sử dụng và churn",
       "level": 3,
       "number": "3.4.5",
-      "bookmark": "Heading_51"
+      "bookmark": "Heading_50"
     },
     {
       "text": "Cước hàng tháng và tổng cước",
       "level": 3,
       "number": "3.4.6",
-      "bookmark": "Heading_52"
+      "bookmark": "Heading_51"
     },
     {
       "text": "Tương quan giữa các thuộc tính số",
       "level": 3,
       "number": "3.4.7",
-      "bookmark": "Heading_53"
+      "bookmark": "Heading_52"
     },
     {
       "text": "Thiết kế kiến trúc hệ thống",
       "level": 2,
       "number": "3.5",
-      "bookmark": "Heading_54"
+      "bookmark": "Heading_53"
     },
     {
       "text": "Thiết kế luồng xử lý và giao diện",
       "level": 2,
       "number": "3.6",
-      "bookmark": "Heading_55"
+      "bookmark": "Heading_54"
     },
     {
       "text": "Luồng phân tích một khách hàng",
       "level": 3,
       "number": "3.6.1",
-      "bookmark": "Heading_56"
+      "bookmark": "Heading_55"
     },
     {
       "text": "Luồng xử lý danh sách",
       "level": 3,
       "number": "3.6.2",
-      "bookmark": "Heading_57"
+      "bookmark": "Heading_56"
     },
     {
       "text": "Luồng xem hiệu quả và khảo sát ngưỡng",
       "level": 3,
       "number": "3.6.3",
-      "bookmark": "Heading_58"
+      "bookmark": "Heading_57"
     },
     {
       "text": "XÂY DỰNG HỆ THỐNG",
       "level": 1,
       "number": "4",
-      "bookmark": "Heading_59"
+      "bookmark": "Heading_58"
     },
     {
       "text": "Môi trường phát triển và tổ chức mã nguồn",
       "level": 2,
       "number": "4.1",
-      "bookmark": "Heading_60"
+      "bookmark": "Heading_59"
     },
     {
       "text": "Môi trường thực nghiệm",
       "level": 3,
       "number": "4.1.1",
-      "bookmark": "Heading_61"
+      "bookmark": "Heading_60"
     },
     {
       "text": "Tổ chức mã nguồn",
       "level": 3,
       "number": "4.1.2",
-      "bookmark": "Heading_62"
+      "bookmark": "Heading_61"
     },
     {
       "text": "Xây dựng pipeline tiền xử lý",
       "level": 2,
       "number": "4.2",
-      "bookmark": "Heading_63"
+      "bookmark": "Heading_62"
     },
     {
       "text": "Huấn luyện và lựa chọn mô hình",
       "level": 2,
       "number": "4.3",
-      "bookmark": "Heading_64"
+      "bookmark": "Heading_63"
     },
     {
       "text": "Thiết lập tìm kiếm siêu tham số",
       "level": 3,
       "number": "4.3.1",
-      "bookmark": "Heading_65"
+      "bookmark": "Heading_64"
     },
     {
       "text": "Cấu hình được chọn",
       "level": 3,
       "number": "4.3.2",
-      "bookmark": "Heading_66"
+      "bookmark": "Heading_65"
     },
     {
       "text": "Lựa chọn ngưỡng trên validation",
       "level": 3,
       "number": "4.3.3",
-      "bookmark": "Heading_67"
+      "bookmark": "Heading_66"
     },
     {
       "text": "Lưu mô hình và cố định lựa chọn",
       "level": 3,
       "number": "4.3.4",
-      "bookmark": "Heading_68"
+      "bookmark": "Heading_67"
     },
     {
       "text": "Xây dựng ứng dụng Streamlit",
       "level": 2,
       "number": "4.4",
-      "bookmark": "Heading_69"
+      "bookmark": "Heading_68"
     },
     {
       "text": "Màn hình tổng quan",
       "level": 3,
       "number": "4.4.1",
-      "bookmark": "Heading_70"
+      "bookmark": "Heading_69"
     },
     {
       "text": "Màn hình phân tích khách hàng",
       "level": 3,
       "number": "4.4.2",
-      "bookmark": "Heading_71"
+      "bookmark": "Heading_70"
     },
     {
       "text": "Màn hình nhập danh sách",
       "level": 3,
       "number": "4.4.3",
-      "bookmark": "Heading_72"
+      "bookmark": "Heading_71"
     },
     {
       "text": "Màn hình hiệu quả mô hình",
       "level": 3,
       "number": "4.4.4",
-      "bookmark": "Heading_73"
+      "bookmark": "Heading_72"
     },
     {
       "text": "Màn hình ngưỡng và giải thích",
       "level": 3,
       "number": "4.4.5",
-      "bookmark": "Heading_74"
+      "bookmark": "Heading_73"
     },
     {
       "text": "Cấu hình và vận hành demo",
       "level": 2,
       "number": "4.5",
-      "bookmark": "Heading_75"
-    },
-    {
-      "text": "Phạm vi hỗ trợ của công cụ AI",
-      "level": 2,
-      "number": "4.6",
-      "bookmark": "Heading_76"
+      "bookmark": "Heading_74"
     },
     {
       "text": "KIỂM THỬ VÀ ĐÁNH GIÁ",
       "level": 1,
       "number": "5",
-      "bookmark": "Heading_77"
+      "bookmark": "Heading_75"
     },
     {
       "text": "Mục tiêu và phạm vi đánh giá",
       "level": 2,
       "number": "5.1",
-      "bookmark": "Heading_78"
+      "bookmark": "Heading_76"
     },
     {
       "text": "Kết quả kiểm định chéo",
       "level": 2,
       "number": "5.2",
-      "bookmark": "Heading_79"
+      "bookmark": "Heading_77"
     },
     {
       "text": "Kết quả đánh giá trên test",
       "level": 2,
       "number": "5.3",
-      "bookmark": "Heading_80"
+      "bookmark": "Heading_78"
     },
     {
       "text": "So sánh các mô hình và ngưỡng",
       "level": 3,
       "number": "5.3.1",
-      "bookmark": "Heading_81"
+      "bookmark": "Heading_79"
     },
     {
       "text": "Ma trận nhầm lẫn và khối lượng sàng lọc",
       "level": 3,
       "number": "5.3.2",
-      "bookmark": "Heading_82"
+      "bookmark": "Heading_80"
     },
     {
       "text": "Đường ROC và precision–recall",
       "level": 3,
       "number": "5.3.3",
-      "bookmark": "Heading_83"
+      "bookmark": "Heading_81"
     },
     {
       "text": "Đánh giá lựa chọn ngưỡng",
       "level": 2,
       "number": "5.4",
-      "bookmark": "Heading_84"
+      "bookmark": "Heading_82"
     },
     {
       "text": "Phân tích độ quan trọng thuộc tính",
       "level": 2,
       "number": "5.5",
-      "bookmark": "Heading_85"
+      "bookmark": "Heading_83"
     },
     {
       "text": "Phân tích các trường hợp dự đoán sai",
       "level": 2,
       "number": "5.6",
-      "bookmark": "Heading_86"
+      "bookmark": "Heading_84"
     },
     {
       "text": "Các trường hợp báo động nhầm",
       "level": 3,
       "number": "5.6.1",
-      "bookmark": "Heading_87"
+      "bookmark": "Heading_85"
     },
     {
       "text": "Các trường hợp bỏ sót",
       "level": 3,
       "number": "5.6.2",
-      "bookmark": "Heading_88"
+      "bookmark": "Heading_86"
     },
     {
       "text": "Đánh giá theo nhóm khách hàng",
       "level": 2,
       "number": "5.7",
-      "bookmark": "Heading_89"
+      "bookmark": "Heading_87"
     },
     {
       "text": "Hợp đồng và loại dịch vụ Internet",
       "level": 3,
       "number": "5.7.1",
-      "bookmark": "Heading_90"
+      "bookmark": "Heading_88"
     },
     {
       "text": "Giới tính và nhóm tuổi",
       "level": 3,
       "number": "5.7.2",
-      "bookmark": "Heading_91"
+      "bookmark": "Heading_89"
     },
     {
       "text": "Độ bất định của kết quả đánh giá",
       "level": 2,
       "number": "5.8",
-      "bookmark": "Heading_92"
+      "bookmark": "Heading_90"
     },
     {
       "text": "Độ tin cậy của xác suất dự đoán",
       "level": 2,
       "number": "5.9",
-      "bookmark": "Heading_93"
+      "bookmark": "Heading_91"
     },
     {
       "text": "Khả năng ưu tiên hồ sơ theo năng lực xử lý",
       "level": 2,
       "number": "5.10",
-      "bookmark": "Heading_94"
+      "bookmark": "Heading_92"
     },
     {
       "text": "Kiểm thử chức năng và tính tái lập",
       "level": 2,
       "number": "5.11",
-      "bookmark": "Heading_95"
+      "bookmark": "Heading_93"
     },
     {
       "text": "Bộ kiểm thử tự động",
       "level": 3,
       "number": "5.11.1",
-      "bookmark": "Heading_96"
+      "bookmark": "Heading_94"
     },
     {
       "text": "Kiểm thử giao diện và tình huống dữ liệu",
       "level": 3,
       "number": "5.11.2",
-      "bookmark": "Heading_97"
+      "bookmark": "Heading_95"
     },
     {
       "text": "Kiểm chứng số liệu và môi trường sạch",
       "level": 3,
       "number": "5.11.3",
-      "bookmark": "Heading_98"
+      "bookmark": "Heading_96"
     },
     {
       "text": "Đánh giá tổng hợp",
       "level": 2,
       "number": "5.12",
-      "bookmark": "Heading_99"
+      "bookmark": "Heading_97"
     },
     {
       "text": "KẾT LUẬN VÀ HƯỚNG PHÁT TRIỂN",
       "level": 1,
       "number": "6",
-      "bookmark": "Heading_100"
+      "bookmark": "Heading_98"
     },
     {
       "text": "Kết luận",
       "level": 2,
       "number": "6.1",
-      "bookmark": "Heading_101"
+      "bookmark": "Heading_99"
     },
     {
       "text": "Kết quả đạt được",
       "level": 2,
       "number": "6.2",
-      "bookmark": "Heading_102"
+      "bookmark": "Heading_100"
     },
     {
       "text": "Giới hạn phạm vi của đề tài",
       "level": 2,
       "number": "6.3",
-      "bookmark": "Heading_103"
+      "bookmark": "Heading_101"
     },
     {
       "text": "Hướng phát triển",
       "level": 2,
       "number": "6.4",
-      "bookmark": "Heading_104"
+      "bookmark": "Heading_102"
     },
     {
       "text": "Bổ sung dữ liệu và xác định thời điểm dự báo",
       "level": 3,
       "number": "6.4.1",
-      "bookmark": "Heading_105"
+      "bookmark": "Heading_103"
     },
     {
       "text": "Cải tiến đánh giá và lựa chọn mô hình",
       "level": 3,
       "number": "6.4.2",
-      "bookmark": "Heading_106"
+      "bookmark": "Heading_104"
     },
     {
       "text": "Hoàn thiện khả năng sử dụng",
       "level": 3,
       "number": "6.4.3",
-      "bookmark": "Heading_107"
+      "bookmark": "Heading_105"
     },
     {
       "text": "DANH MỤC TÀI LIỆU THAM KHẢO",
       "level": 1,
       "number": "",
-      "bookmark": "Heading_108"
+      "bookmark": "Heading_106"
     }
   ],
   "reference_order": {
@@ -914,9 +902,9 @@
     "word/fontTable.xml",
     "word/theme/theme1.xml"
   ],
-  "content_words": 14470,
+  "content_words": 14292,
   "fields_refreshed": true,
   "visual_qa_complete": true,
-  "pages": 68,
-  "final_sha256": "88b4d02fdef6ebf9358bad39ed7677954d8b7c670559fe9076d111020c5ddfe9"
+  "pages": 67,
+  "final_sha256": "c2d52a05f61ffb8133c79be5053f0e4004e0793d05922aeaa1792ef18ad87a33"
 }

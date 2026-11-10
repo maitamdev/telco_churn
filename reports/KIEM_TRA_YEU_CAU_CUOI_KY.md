@@ -6,7 +6,7 @@ Nguồn chuẩn: `../Huong_Dan_Do_An_CuoiKy.pdf`, 6 trang. Đã đọc toàn b�
 
 SHA-256 hướng dẫn: `6d9cc9630c84ad1c33e55182f867b473dd721e809c411b996fa4c95c33b2b893`.
 
-**Cập nhật sau nâng cấp:** đã có `BAOCAO-TTNT.docx` và PDF 68 trang, 6 chương theo mẫu người dùng gửi, giữ định dạng gốc. Đã kiểm toàn bộ trang, 19 hình, 28 bảng, 15 nguồn và 155 liên kết số trang. Có `BAO_VE_TELCO_CHURN.pptx` gồm 21 slide, bảng/biểu đồ chỉnh sửa được, đã mở và kiểm từng slide trong PowerPoint. Bằng chứng gắn SHA-256 ở `evidence/report_qa.json` và `evidence/slides_qa.json`. Thông tin cá nhân/lớp/giảng viên để trống theo yêu cầu; báo cáo công khai phạm vi AI hỗ trợ.
+**Cập nhật sau nâng cấp:** đã có `BAOCAO-TTNT.docx` và PDF 67 trang, 6 chương theo mẫu người dùng gửi, giữ định dạng gốc. Đã kiểm toàn bộ trang, 19 hình, 28 bảng, 15 nguồn và 153 liên kết số trang. Có `BAO_VE_TELCO_CHURN.pptx` gồm 21 slide, bảng/biểu đồ chỉnh sửa được, đã mở và kiểm từng slide trong PowerPoint. Bằng chứng gắn SHA-256 ở `evidence/report_qa.json` và `evidence/slides_qa.json`. Thông tin cá nhân/lớp/giảng viên để trống theo yêu cầu.
 
 **Kết luận: phần kỹ thuật, báo cáo và slide có bằng chứng thực nghiệm; nghĩa vụ của nhóm trước khi nộp CHƯA được xác nhận hoàn tất.** Còn thông tin/phân công, đóng góp thực và luyện bảo vệ; chưa có bằng chứng giảng viên xác nhận đăng ký. Người dùng xác nhận áp dụng hướng dẫn 6 trang hiện có. Không tự thêm tiêu chí BM06 hoặc chứng nhận 10/10. Lượt nâng cấp không huấn luyện lại/chọn lại mô hình; xem `PHAN_TICH_VA_NANG_CAP.md` và `../docs/HO_SO_BAO_VE.md`.
 
@@ -43,7 +43,7 @@ Các nội dung chuyên môn đã được đưa vào báo cáo 6 chương. Bằ
 | RQ11 | Kiểm định chéo và tuning trong pipeline; tr.1 bước 7 | 5-fold; 8 cấu hình LR và 18 RF; toàn bộ cv_results | Đủ bằng chứng thực nghiệm |
 | RQ12 | Mẫu sai, giới hạn, cải tiến; tr.1 bước 8 | 10 FP/FN cases, subgroup metrics, PHAN_TICH_KET_QUA.md | Đã phân tích 10 FP/FN ở Chương 5; giới hạn/cải tiến ở Chương 6 |
 | RQ13 | Demo, lưu pipeline; tr.1 bước 9 + yêu cầu người dùng | Streamlit 5 trang, joblib, metadata, tests và kiểm trình duyệt | Có demo hoạt động thật; vẫn phải trình bày trực tiếp khi bảo vệ |
-| RQ14 | Báo cáo PDF hoặc DOCX; tr.2 mục 4/7 | BAOCAO-TTNT.docx, BAOCAO-TTNT.pdf; evidence/report_qa.json | Đã viết và kiểm 68 trang theo mẫu; thông tin nhóm/giảng viên để trống để người dùng bổ sung |
+| RQ14 | Báo cáo PDF hoặc DOCX; tr.2 mục 4/7 | BAOCAO-TTNT.docx, BAOCAO-TTNT.pdf; evidence/report_qa.json | Đã viết và kiểm 67 trang theo mẫu; thông tin nhóm/giảng viên để trống để người dùng bổ sung |
 | RQ15 | Notebook hoặc module chạy được; requirements, README; tr.2 mục 4 | Module, notebook đã chạy, dependencies khóa phiên bản, hướng dẫn | Có; notebook trình bày bằng chứng, module chịu trách nhiệm huấn luyện từ đầu |
 | RQ16 | Dữ liệu hoặc liên kết; tr.2 mục 4 | data/raw, split, sample, URL IBM và SHA-256 | Có dữ liệu và nguồn đối chiếu |
 | RQ17 | Slide, trình bày, demo, vấn đáp; tr.2 mục 4/8 | 21 slide PPTX, speaker notes, HO_SO_BAO_VE.md; demo local | Slide đã kiểm; từng thành viên cần thực sự tập trình bày và sửa mã |
@@ -103,7 +103,7 @@ Trang thử ngưỡng mặc định làm tròn thanh trượt thành 0,479, tron
 ## 5. Phần còn lại trước khi nộp
 
 1. Xác nhận việc đăng ký đề tài/nguồn/câu hỏi với giảng viên; bổ sung yêu cầu mới nếu có. Chưa có bằng chứng này trong workspace, không kết luận nhóm chưa từng đăng ký.
-2. Nhóm đọc và kiểm chứng bản báo cáo 68 trang; bổ sung tên/MSSV/lớp/giảng viên và ghi đóng góp thực. Thông tin được để trống theo chỉ dẫn người dùng.
+2. Nhóm đọc và kiểm chứng bản báo cáo 67 trang; bổ sung tên/MSSV/lớp/giảng viên và ghi đóng góp thực. Thông tin được để trống theo chỉ dẫn người dùng.
 3. Đọc 21 slide và speaker notes; thực hành kịch bản demo, 13 câu hỏi và bài tập từng vai trò trong HO_SO_BAO_VE.md.
 4. Ghi đóng góp thực của 5 thành viên và khai báo AI trung thực. Trang 2 mục 6 nêu: “Không nộp bài mà mã nguồn hoặc phần phân tích do AI sinh ra toàn bộ”; mỗi thành viên phải giải thích và chỉnh sửa được mã. Bản hiện tại có phần đáng kể do Codex sinh, không được ghi toàn bộ là công sức tự làm của sinh viên. Việc có file AI_USAGE chưa tự đáp ứng yêu cầu này.
 5. Sau khi có báo cáo/slide, rà lại định dạng, số liệu, nguồn trích dẫn và gói nộp; luyện bảo vệ toàn bộ quy trình, không chỉ phần chia cho từng người.

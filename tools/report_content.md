@@ -343,11 +343,6 @@ Khi chuẩn bị demo, người thực hiện kiểm tra bundle, mở màn hình
 
 Trong quá trình sử dụng, thay đổi nội dung biểu mẫu không làm thay đổi mô hình đã lưu. Muốn thực hiện một thiết kế thực nghiệm mới cần tạo lần chạy riêng, giữ dữ liệu đánh giá phù hợp và không ghi đè kết quả hiện tại chỉ để làm đẹp các chỉ số test. Cách quản lý này giúp nội dung demo, báo cáo và artifact giữ cùng một nguồn số liệu.
 
-## Phạm vi hỗ trợ của công cụ AI
-OpenAI Codex hỗ trợ xây dựng một phần đáng kể mã nguồn, kiểm thử, nội dung phân tích và tài liệu của dự án. Phạm vi hỗ trợ bao gồm rà soát đầu vào, tổ chức pipeline, tạo công cụ kiểm chứng, tối ưu xử lý CSV, bổ sung đánh giá độ bất định và chuẩn bị nội dung trình bày. Các kết quả định lượng trong báo cáo lấy từ dữ liệu và artifact thực thi, không thay bằng con số do công cụ tự suy đoán.
-
-Nhật ký sử dụng AI được lưu trong docs/AI_USAGE.md; hồ sơ đóng góp riêng của từng thành viên phải ghi công việc thực sự tự đọc, chạy, sửa và kiểm chứng. Sự hỗ trợ của công cụ không thay thế trách nhiệm giải thích thuật toán, sửa mã trực tiếp và bảo vệ các quyết định của nhóm. Việc đánh giá tính đúng đắn phải dựa vào dữ liệu, kiểm thử, nguồn tài liệu và lập luận của người thực hiện.
-
 # KIỂM THỬ VÀ ĐÁNH GIÁ
 ## Mục tiêu và phạm vi đánh giá
 Đánh giá của đề tài gồm hai nhóm. Nhóm thứ nhất kiểm tra chất lượng học máy: mô hình có cải thiện so với baseline hay không, mức đánh đổi giữa các loại sai số và khả năng khái quát trên test. Nhóm thứ hai kiểm tra tính đúng đắn của hệ thống: dữ liệu có được xử lý nhất quán, mô hình đã lưu có cho cùng kết quả, CSV lỗi có được phát hiện và các màn hình có thực hiện đúng luồng chức năng hay không.

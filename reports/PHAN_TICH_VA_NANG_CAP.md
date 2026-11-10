@@ -24,7 +24,7 @@ Mức bao phủ kỹ thuật không tự chuyển thành 10/10. Yêu cầu về 
 2. Kiểm xác suất bằng reliability diagram, Brier và log-loss trên validation; thêm mốc xác suất hằng lấy prevalence train, phân biệt với Dummy most_frequent chính thức.
 3. Bảng gain/lift theo năng lực 10–100%, chọn theo điểm giảm dần và ID phá hòa, không dùng nhãn để xếp hạng. Thêm điều khiển tương tác ở trang Hiệu quả mô hình.
 4. Bắt lỗi nhãn không nhị phân/không đúng chiều trước khi ép kiểu trong threshold_sweep; bổ sung kiểm thử thống kê, bootstrap, tie, hash và giao diện.
-5. Cập nhật báo cáo theo mẫu, bổ sung 3 phần đánh giá và công khai AI; tạo bộ 21 slide có bảng/biểu đồ gốc, nguồn trong notes; thêm hồ sơ luyện bảo vệ và bản đồ bằng chứng.
+5. Cập nhật báo cáo theo mẫu, bổ sung 3 phần đánh giá; tạo bộ 21 slide có bảng/biểu đồ gốc, nguồn trong notes; thêm hồ sơ luyện bảo vệ và bản đồ bằng chứng.
 
 ## Kết luận định lượng cần nói chính xác
 
@@ -42,4 +42,4 @@ CI giả định dữ liệu IID và mô hình cố định; validation đã dù
 
 Kết quả kiểm thử ở `evidence/pytest_upgrade.xml` và `pytest_upgrade_clean.xml`; báo cáo ở `evidence/report_qa.json`; slide ở `evidence/slides_qa.json`; đối chiếu dữ liệu/model ở `evidence/requirements_audit.json`. QA tài liệu chỉ hợp lệ khi SHA-256 trùng file hiện tại. Các lần kiểm cũ được giữ để truy vết, không phải chứng nhận mã mới.
 
-Nhóm thực hiện các bài thực hành và ghi đóng góp thật theo `docs/HO_SO_BAO_VE.md` và `docs/AI_USAGE.md`. Báo cáo/slide có khai báo phạm vi AI; không gán công việc do AI thực hiện cho sinh viên. Sau khi sửa tài liệu hoặc mã, chạy và kiểm lại đúng phần thay đổi trước nộp.
+Nhóm thực hiện các bài thực hành và ghi đóng góp thật theo `docs/HO_SO_BAO_VE.md` và `docs/AI_USAGE.md`. Tài liệu AI_USAGE và slide có khai báo phạm vi AI; không gán công việc do AI thực hiện cho sinh viên. Sau khi sửa tài liệu hoặc mã, chạy và kiểm lại đúng phần thay đổi trước nộp.

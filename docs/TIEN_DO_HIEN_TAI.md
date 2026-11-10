@@ -1,6 +1,6 @@
 # Trạng thái hiện tại
 
-Cập nhật: 2026-11-10T14:31:13+07:00. 18/18 bước kỹ thuật hoàn thành và có bằng chứng.
+Cập nhật: 2026-11-10T14:44:21+07:00. 18/18 bước kỹ thuật hoàn thành và có bằng chứng.
 
 | Phần | Bước | Trạng thái |
 |---|---|---|
@@ -17,7 +17,7 @@ Nhật ký chi tiết: logs/NHAT_KY_THUC_HIEN.md. Gói ZIP là bộ kỹ thuật
 
 Đối chiếu hướng dẫn và việc còn thiếu: reports/KIEM_TRA_YEU_CAU_CUOI_KY.md. 18/18 bước không đồng nghĩa hoàn tất báo cáo, slide hoặc yêu cầu đóng góp/bảo vệ.
 
-Báo cáo DOCX 68 trang đã viết và kiểm tra theo mẫu; thông tin cá nhân/giảng viên để trống theo yêu cầu.
+Báo cáo DOCX 67 trang đã viết và kiểm tra theo mẫu; thông tin cá nhân/giảng viên để trống theo yêu cầu.
 
 Báo cáo hiện tại: reports/BAOCAO-TTNT.docx. Sáu chương theo mẫu đã nhận; mục lục và danh mục hình/bảng tự động; tài liệu tham khảo ở cuối; không có phụ lục.
 

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-10T14:31:13+07:00",
+  "updated_at": "2026-11-10T14:44:21+07:00",
   "technical_steps_total": 18,
   "technical_steps_completed": 18,
   "steps": {
@@ -194,7 +194,7 @@
     "18": {
       "title": "Tổng hợp và đóng gói kỹ thuật",
       "status": "completed",
-      "recorded_at": "2026-11-10T14:31:13+07:00",
+      "recorded_at": "2026-11-10T14:44:21+07:00",
       "evidence": [
         "dist/DU_AN_TELCO_CHURN_KY_THUAT.zip",
         "dist/DU_AN_TELCO_CHURN_KY_THUAT.sha256",
@@ -219,7 +219,7 @@
   "extended_diagnostics": "artifacts/diagnostics/summary.json",
   "report_template": "reports/templates/MAU_BAO_CAO_GOC.docx",
   "report_file": "reports/BAOCAO-TTNT.docx",
-  "report_pages": 68,
+  "report_pages": 67,
   "report_qa": "reports/evidence/report_qa.json",
   "student_review_and_contribution": "not_yet_recorded",
   "deployed": false,

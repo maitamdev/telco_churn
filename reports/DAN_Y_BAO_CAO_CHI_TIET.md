@@ -1,8 +1,8 @@
 # Cấu trúc báo cáo theo mẫu đã nhận
 
-Phiên bản nâng cấp ngày 10/11/2026. Báo cáo `reports/BAOCAO-TTNT.docx` và PDF: 68 trang, 6 chương, 19 hình, 28 bảng và 15 nguồn tham khảo.
+Phiên bản nâng cấp ngày 10/11/2026. Báo cáo `reports/BAOCAO-TTNT.docx` và PDF: 67 trang, 6 chương, 19 hình, 28 bảng và 15 nguồn tham khảo.
 
-Mẫu gốc: `reports/templates/MAU_BAO_CAO_GOC.docx`. Giữ định dạng mẫu; thông tin cá nhân/lớp/giảng viên để trống theo yêu cầu. Hai bìa, lời cảm ơn, lời cam đoan, mục lục và danh mục hình/bảng tự động, danh mục từ viết tắt; tài liệu tham khảo ở cuối, không có phụ lục.
+Mẫu gốc: `reports/templates/MAU_BAO_CAO_GOC.docx`. Giữ định dạng mẫu; thông tin cá nhân/lớp/giảng viên để trống theo yêu cầu. Hai bìa, lời cảm ơn, mục lục và danh mục hình/bảng tự động, danh mục từ viết tắt; tài liệu tham khảo ở cuối, không có phụ lục.
 
 ## Dàn ý đã triển khai
 
@@ -75,7 +75,6 @@ Mẫu gốc: `reports/templates/MAU_BAO_CAO_GOC.docx`. Giữ định dạng mẫ
     - 4.4.4. Màn hình hiệu quả mô hình
     - 4.4.5. Màn hình ngưỡng và giải thích
   - 4.5. Cấu hình và vận hành demo
-  - 4.6. Phạm vi hỗ trợ của công cụ AI
 - 5. KIỂM THỬ VÀ ĐÁNH GIÁ
   - 5.1. Mục tiêu và phạm vi đánh giá
   - 5.2. Kết quả kiểm định chéo
@@ -163,8 +162,8 @@ Mẫu gốc: `reports/templates/MAU_BAO_CAO_GOC.docx`. Giữ định dạng mẫ
 
 ## Kiểm chứng và phần nhóm cần làm
 
-QA báo cáo kiểm 155 liên kết số trang, tất cả bảng với artifact và các thành phần định dạng với mẫu. 68 trang được xuất bằng Word và kiểm trực quan; SHA-256 trong `reports/evidence/report_qa.json`.
+QA báo cáo kiểm 153 liên kết số trang, tất cả bảng với artifact và các thành phần định dạng với mẫu. 67 trang được xuất bằng Word và kiểm trực quan; SHA-256 trong `reports/evidence/report_qa.json`.
 
-Các phần mới: 4.6 khai báo AI; 5.8 độ bất định; 5.9 chất lượng xác suất; 5.10 năng lực xử lý; kiểm thử/tái lập ở 5.11. Bộ slide riêng gồm 21 trang ở `reports/BAO_VE_TELCO_CHURN.pptx`, có QA bằng PowerPoint.
+Các phần mới: 5.8 độ bất định; 5.9 chất lượng xác suất; 5.10 năng lực xử lý; kiểm thử/tái lập ở 5.11. Bộ slide riêng gồm 21 trang ở `reports/BAO_VE_TELCO_CHURN.pptx`, có QA bằng PowerPoint.
 
 Nhóm đọc lại, điền thông tin thật, ghi đóng góp tự thực hiện và luyện demo/vấn đáp theo `docs/HO_SO_BAO_VE.md`. Dàn ý 8 chương trước khi nhận mẫu được giữ ở `docs/planning_snapshot` để truy vết.

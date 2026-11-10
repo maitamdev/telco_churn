@@ -1,17 +1,17 @@
 {
   "status": "passed",
   "output": "C:\\Users\\Asus\\Desktop\\TRITUENHANTAO\\DU_AN_TELCO_CHURN\\reports\\BAOCAO-TTNT.docx",
-  "document_sha256": "88b4d02fdef6ebf9358bad39ed7677954d8b7c670559fe9076d111020c5ddfe9",
+  "document_sha256": "c2d52a05f61ffb8133c79be5053f0e4004e0793d05922aeaa1792ef18ad87a33",
   "source_sha256": "d48a769fe78a38063f9985502c1ee35b8822a055a6cf74e99c49c4555d2b7cab",
   "source_unchanged": true,
-  "pages": 68,
+  "pages": 67,
   "chapters": 6,
   "figures": 19,
   "captioned_tables": 28,
   "glossary_tables": 1,
   "references": 15,
   "automatic_tables_of_contents": 3,
-  "page_references_checked": 155,
+  "page_references_checked": 153,
   "all_reference_bookmarks_resolve": true,
   "all_tables_match_saved_artifacts": true,
   "format_parts": {
@@ -105,13 +105,13 @@
     64,
     65,
     66,
-    67,
-    68
+    67
   ],
+  "visual_review_method": "All 8 changed pages inspected at full resolution; remaining 59 page PNGs are byte-identical to pages covered by the previous complete visual review.",
   "renderer": "Microsoft Word PDF export + bundled pypdfium2 at 1.35 scale",
   "render_fallback_reason": "render_docx.py unavailable because soffice.exe is not installed",
   "qa_pdf": "tmp/report_upgrade/BAO_CAO_QA.pdf",
-  "qa_pdf_sha256": "d1463574b5d453c7945b9da36bc0394389c31a019e565f376ae203845d89715f",
+  "qa_pdf_sha256": "269ea2339e296de8fc3dc0b1422a7428f40c8debc8a1e5779cd3d6703ee4c002",
   "page_references": [
     {
       "target": "LỜI CẢM ƠN",
@@ -119,776 +119,768 @@
       "physical_page": 3
     },
     {
-      "target": "LỜI CAM ĐOAN",
+      "target": "MỤC LỤC",
       "page_label": "ii",
       "physical_page": 4
     },
     {
-      "target": "MỤC LỤC",
-      "page_label": "iii",
-      "physical_page": 5
+      "target": "DANH MỤC CÁC HÌNH VẼ",
+      "page_label": "vi",
+      "physical_page": 8
     },
     {
-      "target": "DANH MỤC CÁC HÌNH VẼ",
+      "target": "DANH MỤC CÁC BẢNG",
       "page_label": "vii",
       "physical_page": 9
     },
     {
-      "target": "DANH MỤC CÁC BẢNG",
+      "target": "DANH MỤC CÁC KÝ HIỆU VÀ TỪ VIẾT TẮT",
       "page_label": "viii",
       "physical_page": 10
     },
     {
-      "target": "DANH MỤC CÁC KÝ HIỆU VÀ TỪ VIẾT TẮT",
-      "page_label": "ix",
-      "physical_page": 11
-    },
-    {
       "target": "TỔNG QUAN ĐỀ TÀI",
       "page_label": "1",
-      "physical_page": 12
+      "physical_page": 11
     },
     {
       "target": "Đặt vấn đề",
       "page_label": "1",
-      "physical_page": 12
+      "physical_page": 11
     },
     {
       "target": "Mục tiêu đề tài",
       "page_label": "2",
-      "physical_page": 13
+      "physical_page": 12
     },
     {
       "target": "Mục tiêu tổng quát",
       "page_label": "2",
-      "physical_page": 13
+      "physical_page": 12
     },
     {
       "target": "Mục tiêu cụ thể",
       "page_label": "2",
-      "physical_page": 13
+      "physical_page": 12
     },
     {
       "target": "Câu hỏi nghiên cứu",
       "page_label": "3",
-      "physical_page": 14
+      "physical_page": 13
     },
     {
       "target": "Đối tượng và phạm vi đề tài",
       "page_label": "3",
-      "physical_page": 14
+      "physical_page": 13
     },
     {
       "target": "Đối tượng nghiên cứu",
       "page_label": "3",
-      "physical_page": 14
+      "physical_page": 13
     },
     {
       "target": "Phạm vi thực hiện",
       "page_label": "4",
-      "physical_page": 15
+      "physical_page": 14
     },
     {
       "target": "Phương pháp thực hiện",
       "page_label": "4",
-      "physical_page": 15
+      "physical_page": 14
     },
     {
       "target": "Cấu trúc báo cáo",
       "page_label": "4",
-      "physical_page": 15
+      "physical_page": 14
     },
     {
       "target": "CƠ SỞ LÝ THUYẾT",
       "page_label": "5",
-      "physical_page": 16
+      "physical_page": 15
     },
     {
       "target": "Bài toán phân loại khách hàng rời dịch vụ",
       "page_label": "5",
-      "physical_page": 16
+      "physical_page": 15
     },
     {
       "target": "Tiền xử lý dữ liệu dạng bảng",
       "page_label": "5",
-      "physical_page": 16
+      "physical_page": 15
     },
     {
       "target": "Xử lý giá trị thiếu và chuẩn hóa",
       "page_label": "5",
-      "physical_page": 16
+      "physical_page": 15
     },
     {
       "target": "Mã hóa thuộc tính phân loại",
       "page_label": "6",
-      "physical_page": 17
+      "physical_page": 16
     },
     {
       "target": "Pipeline và phòng tránh rò rỉ dữ liệu",
       "page_label": "6",
-      "physical_page": 17
+      "physical_page": 16
     },
     {
       "target": "Các mô hình phân loại",
       "page_label": "6",
-      "physical_page": 17
+      "physical_page": 16
     },
     {
       "target": "Mô hình đối chứng DummyClassifier",
       "page_label": "6",
-      "physical_page": 17
+      "physical_page": 16
     },
     {
       "target": "Logistic Regression",
       "page_label": "7",
-      "physical_page": 18
+      "physical_page": 17
     },
     {
       "target": "Random Forest",
       "page_label": "7",
-      "physical_page": 18
+      "physical_page": 17
     },
     {
       "target": "Kiểm định chéo và lựa chọn siêu tham số",
       "page_label": "7",
-      "physical_page": 18
+      "physical_page": 17
     },
     {
       "target": "Các độ đo đánh giá",
       "page_label": "8",
-      "physical_page": 19
+      "physical_page": 18
     },
     {
       "target": "Ma trận nhầm lẫn",
       "page_label": "8",
-      "physical_page": 19
+      "physical_page": 18
     },
     {
       "target": "Accuracy, precision, recall và F1",
       "page_label": "8",
-      "physical_page": 19
+      "physical_page": 18
     },
     {
       "target": "ROC-AUC và Average Precision",
       "page_label": "9",
-      "physical_page": 20
+      "physical_page": 19
     },
     {
       "target": "Độ quan trọng thuộc tính",
       "page_label": "9",
-      "physical_page": 20
+      "physical_page": 19
     },
     {
       "target": "Công nghệ xây dựng ứng dụng",
       "page_label": "9",
-      "physical_page": 20
+      "physical_page": 19
     },
     {
       "target": "PHÂN TÍCH VÀ THIẾT KẾ HỆ THỐNG",
       "page_label": "10",
-      "physical_page": 21
+      "physical_page": 20
     },
     {
       "target": "Phân tích yêu cầu hệ thống",
       "page_label": "10",
-      "physical_page": 21
+      "physical_page": 20
     },
     {
       "target": "Yêu cầu chức năng",
       "page_label": "10",
-      "physical_page": 21
+      "physical_page": 20
     },
     {
       "target": "Yêu cầu phi chức năng",
       "page_label": "10",
-      "physical_page": 21
+      "physical_page": 20
     },
     {
       "target": "Nguồn dữ liệu và cấu trúc thuộc tính",
       "page_label": "11",
-      "physical_page": 22
+      "physical_page": 21
     },
     {
       "target": "Nguồn và quy mô",
       "page_label": "11",
-      "physical_page": 22
+      "physical_page": 21
     },
     {
       "target": "Kiểu dữ liệu và giá trị thiếu",
       "page_label": "13",
-      "physical_page": 24
+      "physical_page": 23
     },
     {
       "target": "Thiết kế quy trình chuẩn bị dữ liệu",
       "page_label": "13",
-      "physical_page": 24
+      "physical_page": 23
     },
     {
       "target": "Làm sạch và kiểm tra ngoại lai",
       "page_label": "13",
-      "physical_page": 24
+      "physical_page": 23
     },
     {
       "target": "Chia tập dữ liệu",
       "page_label": "14",
-      "physical_page": 25
+      "physical_page": 24
     },
     {
       "target": "Phòng tránh sử dụng thông tin không phù hợp",
       "page_label": "15",
-      "physical_page": 26
+      "physical_page": 25
     },
     {
       "target": "Phân tích khám phá dữ liệu",
       "page_label": "15",
-      "physical_page": 26
+      "physical_page": 25
     },
     {
       "target": "Phân bố nhãn churn",
       "page_label": "15",
-      "physical_page": 26
+      "physical_page": 25
     },
     {
       "target": "Churn theo loại hợp đồng",
       "page_label": "16",
-      "physical_page": 27
+      "physical_page": 26
     },
     {
       "target": "Churn theo dịch vụ Internet",
       "page_label": "16",
-      "physical_page": 27
+      "physical_page": 26
     },
     {
       "target": "Churn theo phương thức thanh toán",
       "page_label": "17",
-      "physical_page": 28
+      "physical_page": 27
     },
     {
       "target": "Thời gian sử dụng và churn",
       "page_label": "18",
-      "physical_page": 29
+      "physical_page": 28
     },
     {
       "target": "Cước hàng tháng và tổng cước",
       "page_label": "19",
-      "physical_page": 30
+      "physical_page": 29
     },
     {
       "target": "Tương quan giữa các thuộc tính số",
       "page_label": "21",
-      "physical_page": 32
+      "physical_page": 31
     },
     {
       "target": "Thiết kế kiến trúc hệ thống",
       "page_label": "22",
-      "physical_page": 33
+      "physical_page": 32
     },
     {
       "target": "Thiết kế luồng xử lý và giao diện",
       "page_label": "23",
-      "physical_page": 34
+      "physical_page": 33
     },
     {
       "target": "Luồng phân tích một khách hàng",
       "page_label": "23",
-      "physical_page": 34
+      "physical_page": 33
     },
     {
       "target": "Luồng xử lý danh sách",
       "page_label": "23",
-      "physical_page": 34
+      "physical_page": 33
     },
     {
       "target": "Luồng xem hiệu quả và khảo sát ngưỡng",
       "page_label": "23",
-      "physical_page": 34
+      "physical_page": 33
     },
     {
       "target": "XÂY DỰNG HỆ THỐNG",
       "page_label": "25",
-      "physical_page": 36
+      "physical_page": 35
     },
     {
       "target": "Môi trường phát triển và tổ chức mã nguồn",
       "page_label": "25",
-      "physical_page": 36
+      "physical_page": 35
     },
     {
       "target": "Môi trường thực nghiệm",
       "page_label": "25",
-      "physical_page": 36
+      "physical_page": 35
     },
     {
       "target": "Tổ chức mã nguồn",
       "page_label": "25",
-      "physical_page": 36
+      "physical_page": 35
     },
     {
       "target": "Xây dựng pipeline tiền xử lý",
       "page_label": "26",
-      "physical_page": 37
+      "physical_page": 36
     },
     {
       "target": "Huấn luyện và lựa chọn mô hình",
       "page_label": "27",
-      "physical_page": 38
+      "physical_page": 37
     },
     {
       "target": "Thiết lập tìm kiếm siêu tham số",
       "page_label": "27",
-      "physical_page": 38
+      "physical_page": 37
     },
     {
       "target": "Cấu hình được chọn",
       "page_label": "28",
-      "physical_page": 39
+      "physical_page": 38
     },
     {
       "target": "Lựa chọn ngưỡng trên validation",
       "page_label": "28",
-      "physical_page": 39
+      "physical_page": 38
     },
     {
       "target": "Lưu mô hình và cố định lựa chọn",
       "page_label": "29",
-      "physical_page": 40
+      "physical_page": 39
     },
     {
       "target": "Xây dựng ứng dụng Streamlit",
       "page_label": "29",
-      "physical_page": 40
+      "physical_page": 39
     },
     {
       "target": "Màn hình tổng quan",
       "page_label": "29",
-      "physical_page": 40
+      "physical_page": 39
     },
     {
       "target": "Màn hình phân tích khách hàng",
       "page_label": "30",
-      "physical_page": 41
+      "physical_page": 40
     },
     {
       "target": "Màn hình nhập danh sách",
       "page_label": "31",
-      "physical_page": 42
+      "physical_page": 41
     },
     {
       "target": "Màn hình hiệu quả mô hình",
       "page_label": "32",
-      "physical_page": 43
+      "physical_page": 42
     },
     {
       "target": "Màn hình ngưỡng và giải thích",
       "page_label": "33",
-      "physical_page": 44
+      "physical_page": 43
     },
     {
       "target": "Cấu hình và vận hành demo",
       "page_label": "34",
-      "physical_page": 45
-    },
-    {
-      "target": "Phạm vi hỗ trợ của công cụ AI",
-      "page_label": "35",
-      "physical_page": 46
+      "physical_page": 44
     },
     {
       "target": "KIỂM THỬ VÀ ĐÁNH GIÁ",
       "page_label": "36",
-      "physical_page": 47
+      "physical_page": 46
     },
     {
       "target": "Mục tiêu và phạm vi đánh giá",
       "page_label": "36",
-      "physical_page": 47
+      "physical_page": 46
     },
     {
       "target": "Kết quả kiểm định chéo",
       "page_label": "36",
-      "physical_page": 47
+      "physical_page": 46
     },
     {
       "target": "Kết quả đánh giá trên test",
       "page_label": "37",
-      "physical_page": 48
+      "physical_page": 47
     },
     {
       "target": "So sánh các mô hình và ngưỡng",
       "page_label": "37",
-      "physical_page": 48
+      "physical_page": 47
     },
     {
       "target": "Ma trận nhầm lẫn và khối lượng sàng lọc",
       "page_label": "38",
-      "physical_page": 49
+      "physical_page": 48
     },
     {
       "target": "Đường ROC và precision–recall",
       "page_label": "39",
-      "physical_page": 50
+      "physical_page": 49
     },
     {
       "target": "Đánh giá lựa chọn ngưỡng",
       "page_label": "40",
-      "physical_page": 51
+      "physical_page": 50
     },
     {
       "target": "Phân tích độ quan trọng thuộc tính",
       "page_label": "41",
-      "physical_page": 52
+      "physical_page": 51
     },
     {
       "target": "Phân tích các trường hợp dự đoán sai",
       "page_label": "43",
-      "physical_page": 54
+      "physical_page": 53
     },
     {
       "target": "Các trường hợp báo động nhầm",
       "page_label": "43",
-      "physical_page": 54
+      "physical_page": 53
     },
     {
       "target": "Các trường hợp bỏ sót",
       "page_label": "44",
-      "physical_page": 55
+      "physical_page": 54
     },
     {
       "target": "Đánh giá theo nhóm khách hàng",
       "page_label": "44",
-      "physical_page": 55
+      "physical_page": 54
     },
     {
       "target": "Hợp đồng và loại dịch vụ Internet",
       "page_label": "44",
-      "physical_page": 55
+      "physical_page": 54
     },
     {
       "target": "Giới tính và nhóm tuổi",
       "page_label": "45",
-      "physical_page": 56
+      "physical_page": 55
     },
     {
       "target": "Độ bất định của kết quả đánh giá",
       "page_label": "46",
-      "physical_page": 57
+      "physical_page": 56
     },
     {
       "target": "Độ tin cậy của xác suất dự đoán",
       "page_label": "47",
-      "physical_page": 58
+      "physical_page": 57
     },
     {
       "target": "Khả năng ưu tiên hồ sơ theo năng lực xử lý",
       "page_label": "48",
-      "physical_page": 59
+      "physical_page": 58
     },
     {
       "target": "Kiểm thử chức năng và tính tái lập",
       "page_label": "50",
-      "physical_page": 61
+      "physical_page": 60
     },
     {
       "target": "Bộ kiểm thử tự động",
       "page_label": "50",
-      "physical_page": 61
+      "physical_page": 60
     },
     {
       "target": "Kiểm thử giao diện và tình huống dữ liệu",
       "page_label": "50",
-      "physical_page": 61
+      "physical_page": 60
     },
     {
       "target": "Kiểm chứng số liệu và môi trường sạch",
       "page_label": "51",
-      "physical_page": 62
+      "physical_page": 61
     },
     {
       "target": "Đánh giá tổng hợp",
       "page_label": "52",
-      "physical_page": 63
+      "physical_page": 62
     },
     {
       "target": "KẾT LUẬN VÀ HƯỚNG PHÁT TRIỂN",
       "page_label": "53",
-      "physical_page": 64
+      "physical_page": 63
     },
     {
       "target": "Kết luận",
       "page_label": "53",
-      "physical_page": 64
+      "physical_page": 63
     },
     {
       "target": "Kết quả đạt được",
       "page_label": "53",
-      "physical_page": 64
+      "physical_page": 63
     },
     {
       "target": "Giới hạn phạm vi của đề tài",
       "page_label": "54",
-      "physical_page": 65
+      "physical_page": 64
     },
     {
       "target": "Hướng phát triển",
       "page_label": "54",
-      "physical_page": 65
+      "physical_page": 64
     },
     {
       "target": "Bổ sung dữ liệu và xác định thời điểm dự báo",
       "page_label": "54",
-      "physical_page": 65
+      "physical_page": 64
     },
     {
       "target": "Cải tiến đánh giá và lựa chọn mô hình",
       "page_label": "54",
-      "physical_page": 65
+      "physical_page": 64
     },
     {
       "target": "Hoàn thiện khả năng sử dụng",
       "page_label": "55",
-      "physical_page": 66
+      "physical_page": 65
     },
     {
       "target": "DANH MỤC TÀI LIỆU THAM KHẢO",
       "page_label": "56",
-      "physical_page": 67
+      "physical_page": 66
     },
     {
       "target": "Hình 3.1. Phân bố nhãn Churn trên tập train",
       "page_label": "15",
-      "physical_page": 26
+      "physical_page": 25
     },
     {
       "target": "Hình 3.2. Tỷ lệ churn theo loại hợp đồng trên train",
       "page_label": "16",
-      "physical_page": 27
+      "physical_page": 26
     },
     {
       "target": "Hình 3.3. Tỷ lệ churn theo dịch vụ Internet trên train",
       "page_label": "17",
-      "physical_page": 28
+      "physical_page": 27
     },
     {
       "target": "Hình 3.4. Tỷ lệ churn theo phương thức thanh toán trên train",
       "page_label": "18",
-      "physical_page": 29
+      "physical_page": 28
     },
     {
       "target": "Hình 3.5. Phân bố thời gian sử dụng theo Churn trên train",
       "page_label": "19",
-      "physical_page": 30
+      "physical_page": 29
     },
     {
       "target": "Hình 3.6. Phân bố cước hàng tháng theo Churn trên train",
       "page_label": "20",
-      "physical_page": 31
+      "physical_page": 30
     },
     {
       "target": "Hình 3.7. Phân bố tổng cước theo Churn trên train",
       "page_label": "21",
-      "physical_page": 32
+      "physical_page": 31
     },
     {
       "target": "Hình 3.8. Ma trận tương quan các biến số trên train",
       "page_label": "22",
-      "physical_page": 33
+      "physical_page": 32
     },
     {
       "target": "Hình 4.1. Màn hình tổng quan khách hàng",
       "page_label": "30",
-      "physical_page": 41
+      "physical_page": 40
     },
     {
       "target": "Hình 4.2. Màn hình phân tích một khách hàng",
       "page_label": "31",
-      "physical_page": 42
+      "physical_page": 41
     },
     {
       "target": "Hình 4.3. Màn hình xử lý danh sách khách hàng từ CSV",
       "page_label": "32",
-      "physical_page": 43
+      "physical_page": 42
     },
     {
       "target": "Hình 4.4. Màn hình đánh giá hiệu quả mô hình",
       "page_label": "33",
-      "physical_page": 44
+      "physical_page": 43
     },
     {
       "target": "Hình 4.5. Màn hình khảo sát ngưỡng phân loại",
       "page_label": "34",
-      "physical_page": 45
+      "physical_page": 44
     },
     {
       "target": "Hình 5.1. Ma trận nhầm lẫn của Random Forest trên test",
       "page_label": "38",
-      "physical_page": 49
+      "physical_page": 48
     },
     {
       "target": "Hình 5.2. Đường ROC và precision–recall trên test",
       "page_label": "40",
-      "physical_page": 51
+      "physical_page": 50
     },
     {
       "target": "Hình 5.3. Precision và recall theo ngưỡng trên validation",
       "page_label": "41",
-      "physical_page": 52
+      "physical_page": 51
     },
     {
       "target": "Hình 5.4. Độ quan trọng thuộc tính trên validation",
       "page_label": "42",
-      "physical_page": 53
+      "physical_page": 52
     },
     {
       "target": "Hình 5.5. Độ tin cậy của xác suất trên validation",
       "page_label": "47",
-      "physical_page": 58
+      "physical_page": 57
     },
     {
       "target": "Hình 5.6. Khả năng bao phủ churn theo tỷ lệ hồ sơ được xem xét trên validation",
       "page_label": "49",
-      "physical_page": 60
+      "physical_page": 59
     },
     {
       "target": "Bảng 1.1. Mục tiêu và tiêu chí đánh giá của đề tài",
       "page_label": "3",
-      "physical_page": 14
+      "physical_page": 13
     },
     {
       "target": "Bảng 2.1. Ý nghĩa các kết quả phân loại trong bài toán churn",
       "page_label": "8",
-      "physical_page": 19
+      "physical_page": 18
     },
     {
       "target": "Bảng 3.1. Các yêu cầu chức năng của hệ thống",
       "page_label": "10",
-      "physical_page": 21
+      "physical_page": 20
     },
     {
       "target": "Bảng 3.2. Tổng quan bộ dữ liệu sử dụng",
       "page_label": "11",
-      "physical_page": 22
+      "physical_page": 21
     },
     {
       "target": "Bảng 3.3. Từ điển dữ liệu Telco Customer Churn",
       "page_label": "12",
-      "physical_page": 23
+      "physical_page": 22
     },
     {
       "target": "Bảng 3.4. Kết quả kiểm tra chất lượng và cách xử lý dữ liệu",
       "page_label": "13",
-      "physical_page": 24
+      "physical_page": 23
     },
     {
       "target": "Bảng 3.5. Phân bố dữ liệu sau khi chia tập",
       "page_label": "14",
-      "physical_page": 25
+      "physical_page": 24
     },
     {
       "target": "Bảng 3.6. Các thành phần trong kiến trúc hệ thống",
       "page_label": "23",
-      "physical_page": 34
+      "physical_page": 33
     },
     {
       "target": "Bảng 4.1. Các thành phần chính của môi trường thực nghiệm",
       "page_label": "25",
-      "physical_page": 36
+      "physical_page": 35
     },
     {
       "target": "Bảng 4.2. Tổ chức các thành phần mã nguồn và dữ liệu",
       "page_label": "26",
-      "physical_page": 37
+      "physical_page": 36
     },
     {
       "target": "Bảng 4.3. Cấu hình các bước tiền xử lý",
       "page_label": "27",
-      "physical_page": 38
+      "physical_page": 37
     },
     {
       "target": "Bảng 4.4. Không gian tìm kiếm siêu tham số",
       "page_label": "28",
-      "physical_page": 39
+      "physical_page": 38
     },
     {
       "target": "Bảng 4.5. Kết quả lựa chọn ngưỡng trên validation",
       "page_label": "29",
-      "physical_page": 40
+      "physical_page": 39
     },
     {
       "target": "Bảng 5.1. Kết quả kiểm định chéo trên tập train",
       "page_label": "36",
-      "physical_page": 47
+      "physical_page": 46
     },
     {
       "target": "Bảng 5.2. Precision, recall và F1 của các cấu hình trên test",
       "page_label": "37",
-      "physical_page": 48
+      "physical_page": 47
     },
     {
       "target": "Bảng 5.3. Accuracy, ROC-AUC và AP của các cấu hình trên test",
       "page_label": "37",
-      "physical_page": 48
+      "physical_page": 47
     },
     {
       "target": "Bảng 5.4. Khối lượng sàng lọc của Random Forest theo hai ngưỡng",
       "page_label": "39",
-      "physical_page": 50
+      "physical_page": 49
     },
     {
       "target": "Bảng 5.5. Mười thuộc tính có mức giảm AP trung bình cao nhất",
       "page_label": "42",
-      "physical_page": 53
+      "physical_page": 52
     },
     {
       "target": "Bảng 5.6. Một số trường hợp FP trên test",
       "page_label": "43",
-      "physical_page": 54
+      "physical_page": 53
     },
     {
       "target": "Bảng 5.7. Một số trường hợp FN trên test",
       "page_label": "44",
-      "physical_page": 55
+      "physical_page": 54
     },
     {
       "target": "Bảng 5.8. Kết quả test theo hợp đồng và dịch vụ Internet",
       "page_label": "45",
-      "physical_page": 56
+      "physical_page": 55
     },
     {
       "target": "Bảng 5.9. Kết quả test theo giới tính và nhóm tuổi",
       "page_label": "45",
-      "physical_page": 56
+      "physical_page": 55
     },
     {
       "target": "Bảng 5.10. Khoảng ước lượng 95% trên test của các mô hình đã cố định",
       "page_label": "46",
-      "physical_page": 57
+      "physical_page": 56
     },
     {
       "target": "Bảng 5.11. Brier và log loss trên validation",
       "page_label": "47",
-      "physical_page": 58
+      "physical_page": 57
     },
     {
       "target": "Bảng 5.12. Đánh đổi giữa năng lực xử lý và khả năng bao phủ churn",
       "page_label": "49",
-      "physical_page": 60
+      "physical_page": 59
     },
     {
       "target": "Bảng 5.13. Kết quả bộ kiểm thử tự động theo nhóm",
       "page_label": "50",
-      "physical_page": 61
+      "physical_page": 60
     },
     {
       "target": "Bảng 5.14. Các tình huống kiểm tra chức năng ứng dụng",
       "page_label": "51",
-      "physical_page": 62
+      "physical_page": 61
     },
     {
       "target": "Bảng 5.15. Kết quả kiểm chứng tính nhất quán và tái lập",
       "page_label": "52",
-      "physical_page": 63
+      "physical_page": 62
     }
   ],
-  "ai_assistance_disclosed": true,
-  "remaining_user_input": "Personal/class/instructor information intentionally blank; students must record actual contributions and rehearse their defense."
+  "declaration_section_present": false,
+  "ai_assistance_section_present": false,
+  "contribution_table_present": false,
+  "remaining_user_input": "Personal/class/instructor information intentionally blank."
 }

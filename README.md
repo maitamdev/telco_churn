@@ -1,6 +1,6 @@
 # Telco Customer Churn · Đề tài 01
 
-Bản triển khai cho đồ án gồm dữ liệu IBM đã kiểm hash, EDA, baseline + hai mô hình, thí nghiệm cố định, Streamlit 5 trang, notebook và bằng chứng kiểm thử. Đã có [báo cáo Word](reports/BAOCAO-TTNT.docx), [PDF 68 trang](reports/BAOCAO-TTNT.pdf) và [21 slide PowerPoint](reports/BAO_VE_TELCO_CHURN.pptx). Thông tin nhóm/lớp/giảng viên để trống theo yêu cầu; nhóm cần ghi đóng góp thực và luyện bảo vệ.
+Bản triển khai cho đồ án gồm dữ liệu IBM đã kiểm hash, EDA, baseline + hai mô hình, thí nghiệm cố định, Streamlit 5 trang, notebook và bằng chứng kiểm thử. Đã có [báo cáo Word](reports/BAOCAO-TTNT.docx), [PDF 67 trang](reports/BAOCAO-TTNT.pdf) và [21 slide PowerPoint](reports/BAO_VE_TELCO_CHURN.pptx). Thông tin nhóm/lớp/giảng viên để trống theo yêu cầu; nhóm cần ghi đóng góp thực và luyện bảo vệ.
 
 ## Nâng cấp theo hướng dẫn 6 trang
 
@@ -9,7 +9,7 @@ Xem [phân tích mức độ đáp ứng và nâng cấp](reports/PHAN_TICH_VA_N
 - Bổ sung Wilson/paired bootstrap 95% từ prediction đã cố định; không fit/chọn lại mô hình theo test.
 - Reliability diagram, Brier/log-loss và top-K/lift trên validation; giao diện cho khảo sát năng lực xem xét hồ sơ.
 - **99 kiểm thử đạt ở cả hai venv**, bao gồm dữ liệu lỗi, hồi quy xác suất, CI/bootstrap, hash, giao diện và đóng gói.
-- Báo cáo kiểm bằng Word: 68 trang, 19 hình, 28 bảng, 15 nguồn, 155 liên kết số trang. Slide mở và kiểm toàn bộ trong PowerPoint, có bảng/biểu đồ gốc và nguồn trong notes.
+- Báo cáo kiểm bằng Word: 67 trang, 19 hình, 28 bảng, 15 nguồn, 153 liên kết số trang. Slide mở và kiểm toàn bộ trong PowerPoint, có bảng/biểu đồ gốc và nguồn trong notes.
 
 Test recall 80,75% có Wilson 95% 76,45–84,42%; precision 50,76% có khoảng 46,75–54,76%. Điểm quan sát không bảo đảm đạt ngưỡng trên quần thể mới. Top 20% validation gồm 282 hồ sơ, chứa 188/374 trường hợp churn (50,27%), lift 2,51; đây không phải số khách được giữ chân.
 

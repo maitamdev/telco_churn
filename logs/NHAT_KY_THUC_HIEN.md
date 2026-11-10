@@ -932,3 +932,30 @@ Giới hạn / việc còn lại:
 - Đã có 21 slide đã kiểm bằng PowerPoint; nhóm cần bổ sung thông tin và đóng góp thực, đọc lại hồ sơ và luyện bảo vệ.
 
 Thực hiện với hỗ trợ OpenAI Codex; đóng góp và việc tự kiểm chứng của nhóm cần được ghi bổ sung.
+
+## 18 · Tổng hợp và đóng gói kỹ thuật
+
+Thời điểm: 2026-11-10T14:44:21+07:00 (UTC+7).
+
+Đã thực hiện:
+- Kiểm đủ bằng chứng tests, notebook, tái lập và trình duyệt
+- Tạo ZIP không kèm môi trường/cache; kiểm CRC và SHA-256 từng thành viên
+- Ghi trạng thái và việc còn lại, đóng gói lại để chứa nhật ký hoàn chỉnh
+
+Kết quả:
+- 18/18 bước kỹ thuật có bằng chứng
+- ZIP kỹ thuật đã kiểm tính toàn vẹn
+
+Tệp bằng chứng:
+- `dist/DU_AN_TELCO_CHURN_KY_THUAT.zip`
+- `dist/DU_AN_TELCO_CHURN_KY_THUAT.sha256`
+- `dist/package_verification.json`
+- `reports/evidence/package_manifest.json`
+- `docs/BANG_CHUNG_CHO_BAO_CAO.md`
+- `docs/AI_USAGE.md`
+
+Giới hạn / việc còn lại:
+- Báo cáo DOCX 67 trang đã viết và kiểm tra theo mẫu; thông tin cá nhân/giảng viên để trống theo yêu cầu.
+- Đã có 21 slide đã kiểm bằng PowerPoint; nhóm cần bổ sung thông tin và đóng góp thực, đọc lại hồ sơ và luyện bảo vệ.
+
+Thực hiện với hỗ trợ OpenAI Codex; đóng góp và việc tự kiểm chứng của nhóm cần được ghi bổ sung.

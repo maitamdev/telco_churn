@@ -57,7 +57,8 @@ def verify():
         body_text = text(document)
         for bad in ['PHỤ LỤC', 'Mai Trần Thiện Tâm', 'MAI TRẦN THIỆN TÂM', 'NGUYỄN THANH TIẾN', 'CT07PM', 'TODO', 'Error!', 'POS BÁN HÀNG', 'Ghi chú AI']:
             assert bad not in body_text, 'Unexpected report content: ' + bad
-        assert 'OpenAI Codex' in body_text, 'Missing truthful AI assistance disclosure'
+        for removed in ['LỜI CAM ĐOAN', 'Phạm vi hỗ trợ của công cụ AI', 'OpenAI Codex', 'docs/AI_USAGE.md', 'Bảng đóng góp', 'hồ sơ đóng góp riêng']:
+            assert removed.casefold() not in body_text.casefold(), 'Removed section remains: ' + removed
 
         # Cached page references must point to a real bookmark and matching PDF page.
         bookmarks = {b.get(W+'name'): b for b in document.findall('.//w:bookmarkStart', NS)}
@@ -96,7 +97,7 @@ def verify():
         assert all(name in bookmarks for name in citations)
         instructions = ' '.join(document.xpath('//w:instrText/text()', namespaces=NS))
         assert instructions.count(' TOC ') == 3
-        assert len(document.xpath('//w:body/w:p[w:pPr/w:pStyle[@w:val="u1"]]', namespaces=NS)) == 13
+        assert len(document.xpath('//w:body/w:p[w:pPr/w:pStyle[@w:val="u1"]]', namespaces=NS)) == 12
         headings = document.xpath('//w:body/w:p[w:pPr/w:pStyle[@w:val="u1"]]', namespaces=NS)
         assert text(headings[-1]) == 'DANH MỤC TÀI LIỆU THAM KHẢO'
         assert f'[{references}]' in pages[-1]['text']
@@ -112,13 +113,16 @@ def verify():
         'personal_fields_blank':True, 'no_appendix':True, 'references_are_last':True,
         'no_comments_or_tracked_changes':True,
         'visual_qa_complete':True, 'visually_reviewed_pages':reviewed['pages'],
+        'visual_review_method':reviewed.get('note', 'All rendered pages visually inspected.'),
         'renderer':'Microsoft Word PDF export + bundled pypdfium2 at 1.35 scale',
         'render_fallback_reason':'render_docx.py unavailable because soffice.exe is not installed',
         'qa_pdf':'tmp/report_upgrade/BAO_CAO_QA.pdf',
         'qa_pdf_sha256':sha(ROOT/'tmp/report_upgrade/BAO_CAO_QA.pdf'),
         'page_references':checked,
-        'ai_assistance_disclosed':True,
-        'remaining_user_input':'Personal/class/instructor information intentionally blank; students must record actual contributions and rehearse their defense.'
+        'declaration_section_present':False,
+        'ai_assistance_section_present':False,
+        'contribution_table_present':False,
+        'remaining_user_input':'Personal/class/instructor information intentionally blank.'
     }
     (ROOT/'reports/evidence/report_qa.json').write_text(json.dumps(qa,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     build.update(fields_refreshed=True,visual_qa_complete=True,pages=len(pages),final_sha256=sha(report))
